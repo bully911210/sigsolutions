@@ -19,7 +19,7 @@ const Footer = () => {
               <p className="text-sm text-sig-dark/70">SUSTAINABLE INCOME GENERATOR</p>
             </Link>
             <p className="text-sig-dark/70 mb-6">
-              Transforming call centers with our innovative Click to Collection solution for lead generation, sales, and premium collection.
+              Transforming businesses with our innovative Click to Collection solution for subscription-based products.
             </p>
             <div className="flex space-x-4">
               <SocialLink icon={<Facebook size={18} />} href="#" />
@@ -58,14 +58,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-sig-blue mr-3 flex-shrink-0" />
-                <a href="tel:+27123456789" className="text-sig-dark/70 hover:text-sig-blue transition-colors">
-                  +27 12 345 6789
+                <a href="tel:+27621779799" className="text-sig-dark/70 hover:text-sig-blue transition-colors">
+                  +27 62 177 9799
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-sig-blue mr-3 flex-shrink-0" />
-                <a href="mailto:info@sigsolutions.co.za" className="text-sig-dark/70 hover:text-sig-blue transition-colors">
-                  info@sigsolutions.co.za
+                <a href="mailto:sales@sigsolutions.co.za" className="text-sig-dark/70 hover:text-sig-blue transition-colors">
+                  sales@sigsolutions.co.za
                 </a>
               </li>
             </ul>

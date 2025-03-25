@@ -19,7 +19,7 @@ const ClickToCollection = () => {
           </span>
           <h2 className="mb-6">Click to Collection Solution</h2>
           <p className="text-lg text-sig-dark/70">
-            Our comprehensive end-to-end process ensures maximum conversion and client retention through our three-step approach.
+            Our comprehensive end-to-end process ensures maximum conversion and customer retention for your subscription-based business.
           </p>
         </div>
         
@@ -28,7 +28,7 @@ const ClickToCollection = () => {
             icon={<PhoneCall size={40} />}
             title="Click"
             description="Generate high-quality leads through our advanced targeting and outreach process."
-            details="We identify and engage potential clients through data-driven lead generation strategies tailored to your specific market."
+            details="We identify and engage potential clients through data-driven lead generation strategies tailored to your subscription-based product."
             delay={100}
             color="bg-blue-50"
             iconColor="text-blue-500"
@@ -38,7 +38,7 @@ const ClickToCollection = () => {
             icon={<TrendingUp size={40} />}
             title="Sell"
             description="We sell YOUR products to OUR qualified leads, maximizing conversion rates."
-            details="Our expert sales teams are trained in your products and services, ensuring persuasive and accurate representation to our qualified leads."
+            details="Our expert sales teams are trained in your subscription-based products, ensuring persuasive and accurate representation to our qualified leads."
             delay={300}
             color="bg-purple-50"
             iconColor="text-purple-500"
@@ -48,8 +48,8 @@ const ClickToCollection = () => {
           <ProcessCard 
             icon={<Shield size={40} />}
             title="Collection"
-            description="We collect premiums and implement retention strategies to ensure long-term client value."
-            details="Our customer success teams maintain relationships with clients, handle premium collection, and implement proactive measures to improve client retention."
+            description="We manage subscription payments and build lasting customer loyalty."
+            details="Our customer success teams maintain relationships with subscribers, handle payment processing, and implement strategies to reduce cancellation rates and increase lifetime value."
             delay={500}
             color="bg-green-50"
             iconColor="text-green-500"

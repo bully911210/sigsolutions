@@ -17,7 +17,7 @@ const Marketing = () => {
         
         <Hero 
           title="Click to Collection Solutions"
-          subtitle="Our end-to-end approach generates leads, drives sales, and secures premium collection while building lasting customer relationships."
+          subtitle="Our end-to-end approach generates leads, drives sales, and secures subscription revenue while building lasting customer relationships."
           backgroundClass="bg-gradient-to-br from-white via-blue-50 to-white"
         />
         
@@ -100,7 +100,7 @@ const Marketing = () => {
                 </span>
                 <h2 className="mb-6">We Sell YOUR Products to OUR Leads</h2>
                 <p className="text-lg text-sig-dark/70">
-                  Our expert sales teams are trained to represent your products effectively, converting our qualified leads into your loyal customers.
+                  Our expert sales teams are trained to represent your subscription-based products effectively, converting our qualified leads into your loyal customers.
                 </p>
               </div>
               
@@ -129,8 +129,8 @@ const Marketing = () => {
                 
                 <div className="glass p-1 rounded-2xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                    alt="Call center team in action" 
+                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                    alt="Sales team discussing subscription strategy" 
                     className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
@@ -147,15 +147,15 @@ const Marketing = () => {
                 </span>
                 <h2 className="mb-6">Secure Revenue and Build Lasting Relationships</h2>
                 <p className="text-lg text-sig-dark/70">
-                  We handle premium collection while implementing proactive customer care strategies that enhance loyalty and reduce attrition.
+                  We handle subscription payments while implementing proactive customer care strategies that enhance loyalty and minimize cancellations.
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <ServiceCard 
                   icon={<Shield size={40} />}
-                  title="Secure Payment Processing"
-                  description="Streamlined premium collection with multiple payment options and easy processing for maximum customer convenience."
+                  title="Subscription Management"
+                  description="Streamlined payment processing with multiple options and easy handling for maximum customer convenience."
                   delay={100}
                 />
                 <ServiceCard 
@@ -166,8 +166,8 @@ const Marketing = () => {
                 />
                 <ServiceCard 
                   icon={<BarChart3 size={40} />}
-                  title="Customer Retention Analytics"
-                  description="Advanced analytics that identify at-risk customers and provide actionable insights to improve retention rates."
+                  title="Retention Analytics"
+                  description="Advanced analytics that identify at-risk subscribers and provide actionable insights to improve retention rates."
                   delay={300}
                 />
               </div>
@@ -180,7 +180,7 @@ const Marketing = () => {
               <div className="glass p-12 rounded-2xl max-w-4xl mx-auto">
                 <h2 className="mb-6">Ready to Implement Our Click to Collection Solution?</h2>
                 <p className="text-lg text-sig-dark/70 mb-8 max-w-3xl mx-auto">
-                  Schedule a consultation with our team to learn how SIG Solutions can help you generate leads, close sales, and secure lasting customer relationships.
+                  Schedule a consultation with our team to learn how SIG Solutions can help you generate leads, close sales, and secure lasting customer relationships for your subscription-based business.
                 </p>
                 <a 
                   href="/contact" 

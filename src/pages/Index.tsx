@@ -20,7 +20,7 @@ const Index = () => {
         
         <Hero 
           title="Sustainable Income Generator for Your Business"
-          subtitle="SIG Solutions transforms call centers into revenue engines with our Click to Collection approach - generating leads, closing sales, and ensuring lasting customer relationships."
+          subtitle="SIG Solutions transforms subscription-based businesses with our Click to Collection approach - generating leads, closing sales, and ensuring lasting customer relationships."
           cta="Discover Our Solutions"
           ctaLink="/marketing"
           backgroundClass="bg-gradient-to-br from-white via-blue-50 to-white"
@@ -39,9 +39,9 @@ const Index = () => {
               }`}
             >
               <div className="max-w-3xl mx-auto text-center mb-16">
-                <h2 className="mb-6">Comprehensive Call Center Solutions</h2>
+                <h2 className="mb-6">Comprehensive Subscription Sales Solutions</h2>
                 <p className="text-lg text-sig-dark/70">
-                  Our integrated approach combines cutting-edge technology with expert human resources to deliver exceptional results for your business.
+                  Our integrated approach combines cutting-edge technology with expert human resources to deliver exceptional results for your subscription-based business.
                 </p>
               </div>
               
@@ -49,7 +49,7 @@ const Index = () => {
                 <ServiceCard 
                   icon={<PhoneCall size={40} />}
                   title="Lead Generation"
-                  description="Transform prospects into qualified leads with our data-driven call center solutions tailored to your target market."
+                  description="Transform prospects into qualified leads with our data-driven solutions tailored to your target market."
                   delay={100}
                 />
                 <ServiceCard 
@@ -60,8 +60,8 @@ const Index = () => {
                 />
                 <ServiceCard 
                   icon={<Shield size={40} />}
-                  title="Premium Collection"
-                  description="Secure your revenue stream with our effective premium collection and customer retention strategies."
+                  title="Subscription Management"
+                  description="Maximize customer lifetime value with our effective payment collection and retention strategies."
                   delay={300}
                 />
               </div>
@@ -75,14 +75,14 @@ const Index = () => {
                 <div>
                   <h2 className="mb-6">Why Choose SIG Solutions?</h2>
                   <p className="text-lg text-sig-dark/70 mb-8">
-                    With decades of combined experience in call center operations and business development, our team provides unmatched expertise to drive growth for your business.
+                    With decades of combined experience in subscription sales and business development, our team provides unmatched expertise to drive growth for your business.
                   </p>
                   
                   <div className="space-y-6">
                     <FeatureItem 
                       icon={<Award className="text-sig-blue" size={24} />}
                       title="Industry Expertise"
-                      description="Our directors bring decades of experience in call center management and operations."
+                      description="Our team brings decades of experience in subscription business management and operations."
                     />
                     <FeatureItem 
                       icon={<Award className="text-sig-blue" size={24} />}
@@ -99,8 +99,8 @@ const Index = () => {
                 
                 <div className="glass p-1 rounded-2xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1566694271453-390536dd1f0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                    alt="Modern call center operations" 
+                    src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                    alt="Modern sales team in action" 
                     className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
@@ -121,22 +121,22 @@ const Index = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <LeaderCard 
                   name="Franz Badenhorst"
-                  role="Managing Director"
+                  role="Shareholder"
                   delay={100}
                 />
                 <LeaderCard 
                   name="Johannes Stoker"
-                  role="Operations Director"
+                  role="Shareholder"
                   delay={200}
                 />
                 <LeaderCard 
                   name="Charles Castle"
-                  role="Technology Director"
+                  role="Shareholder"
                   delay={300}
                 />
                 <LeaderCard 
                   name="Ivan Taljard"
-                  role="Business Development Director"
+                  role="Shareholder"
                   delay={400}
                 />
               </div>
@@ -151,9 +151,9 @@ const Index = () => {
             }`}
           >
             <div className="container mx-auto text-center">
-              <h2 className="text-white mb-6">Ready to Transform Your Call Center Operations?</h2>
+              <h2 className="text-white mb-6">Ready to Transform Your Subscription Business?</h2>
               <p className="text-white/80 text-lg mb-10 max-w-3xl mx-auto">
-                Whether you need to generate more leads, boost sales performance, or improve customer retention, SIG Solutions has the expertise to help your business thrive.
+                Whether you need to generate more leads, boost sales performance, or improve customer retention, SIG Solutions has the expertise to help your subscription-based business thrive.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link 
