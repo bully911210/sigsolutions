@@ -1,5 +1,4 @@
-
-import { PhoneCall, BarChart3, Users, Award, ArrowRight, Shield, TrendingUp } from "lucide-react";
+import { BarChart3, Users, Award, ArrowRight, Shield, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import Transition from "../components/Transition";
 import Hero from "../components/Hero";
@@ -47,7 +46,7 @@ const Index = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <ServiceCard 
-                  icon={<PhoneCall size={40} />}
+                  icon={<TrendingUp size={40} />}
                   title="Lead Generation"
                   description="Transform prospects into qualified leads with our data-driven solutions tailored to your target market."
                   delay={100}
@@ -114,8 +113,31 @@ const Index = () => {
               <div className="max-w-3xl mx-auto text-center mb-16">
                 <h2 className="mb-6">Our Leadership</h2>
                 <p className="text-lg text-sig-dark/70">
-                  Meet the experienced team guiding SIG Solutions to deliver outstanding results for our clients.
+                  At SIG Solutions, our leadership team stands apart through proven experience and measurable success.
                 </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <FeatureItem 
+                  icon={<Award className="text-sig-blue" size={24} />}
+                  title="30 Years in Subscription Sales"
+                  description="We have a deep track record in transforming subscription sales into reliable revenue."
+                />
+                <FeatureItem 
+                  icon={<Award className="text-sig-blue" size={24} />}
+                  title="Millions Raised in Nonprofit Fundraising"
+                  description="Our strategies consistently deliver significant funding outcomes."
+                />
+                <FeatureItem 
+                  icon={<Award className="text-sig-blue" size={24} />}
+                  title="Expertise in Niche Insurance Sales"
+                  description="We convert market challenges into clear, strategic advantages."
+                />
+                <FeatureItem 
+                  icon={<Award className="text-sig-blue" size={24} />}
+                  title="Innovative Lead Generation Technology"
+                  description="Our systems ensure every lead is engaged promptly, driving efficient growth."
+                />
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

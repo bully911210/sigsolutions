@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
@@ -11,11 +10,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <Link to="/" className="mb-4 inline-block">
-              <img 
-                src="/lovable-uploads/sig-solutions-logo.png" 
-                alt="SIG Solutions Logo" 
-                className="h-12 mb-2"
-              />
+              <div className="text-2xl mb-2">
+                <span className="font-bold">SIG</span>
+                <span className="font-light">solutions</span>
+              </div>
               <p className="text-sm text-sig-dark/70">SUSTAINABLE INCOME GENERATOR</p>
             </Link>
             <p className="text-sig-dark/70 mb-6">

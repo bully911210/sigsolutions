@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -34,11 +33,10 @@ const Navbar = () => {
           to="/"
           className="flex items-center"
         >
-          <img 
-            src="/lovable-uploads/sig-solutions-logo.png" 
-            alt="SIG Solutions Logo" 
-            className="h-12"
-          />
+          <div className="text-xl">
+            <span className="font-bold">SIG</span>
+            <span className="font-light">solutions</span>
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">

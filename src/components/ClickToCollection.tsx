@@ -1,4 +1,3 @@
-
 import { ArrowRight, PhoneCall, CheckCircle2, TrendingUp, Shield } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
@@ -32,7 +31,6 @@ const ClickToCollection = () => {
             delay={100}
             color="bg-blue-50"
             iconColor="text-blue-500"
-            showArrow
           />
           
           <ProcessCard 
