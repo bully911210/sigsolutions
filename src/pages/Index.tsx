@@ -19,7 +19,7 @@ const Index = () => {
         <Navbar />
         
         <Hero 
-          title="Sustainable Income Generator for Your Business"
+          title="Reliable Revenue Streams"
           subtitle="SIG Solutions transforms subscription-based businesses with our Click to Collection approach - generating leads, closing sales, and ensuring lasting customer relationships."
           cta="Discover Our Solutions"
           ctaLink="/marketing"

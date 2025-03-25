@@ -25,24 +25,24 @@ const ClickToCollection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           <ProcessCard 
-            icon={<PhoneCall size={40} />}
+            icon={<CheckCircle2 size={40} />}
             title="Click"
             description="Generate high-quality leads through our advanced targeting and outreach process."
             details="We identify and engage potential clients through data-driven lead generation strategies tailored to your subscription-based product."
             delay={100}
             color="bg-blue-50"
             iconColor="text-blue-500"
+            showArrow
           />
           
           <ProcessCard 
-            icon={<TrendingUp size={40} />}
+            icon={<PhoneCall size={40} />}
             title="Sell"
             description="We sell YOUR products to OUR qualified leads, maximizing conversion rates."
             details="Our expert sales teams are trained in your subscription-based products, ensuring persuasive and accurate representation to our qualified leads."
             delay={300}
             color="bg-purple-50"
             iconColor="text-purple-500"
-            showArrow
           />
           
           <ProcessCard 
