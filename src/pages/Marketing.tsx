@@ -1,5 +1,5 @@
 
-import { PhoneCall, BarChart3, BookOpen, Target, Zap, TrendingUp, CheckCircle2 } from "lucide-react";
+import { PhoneCall, BarChart3, BookOpen, Target, TrendingUp, Shield, CheckCircle2 } from "lucide-react";
 import Transition from "../components/Transition";
 import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
@@ -16,8 +16,8 @@ const Marketing = () => {
         <Navbar />
         
         <Hero 
-          title="Innovative Call Center Solutions"
-          subtitle="High-conversion marketing platform for lead generation, sales acceleration, and professional training."
+          title="Click to Collection Solutions"
+          subtitle="Our end-to-end approach generates leads, drives sales, and secures premium collection while building lasting customer relationships."
           backgroundClass="bg-gradient-to-br from-white via-blue-50 to-white"
         />
         
@@ -27,7 +27,7 @@ const Marketing = () => {
             <div className="container mx-auto">
               <div className="max-w-3xl mx-auto text-center mb-16">
                 <span className="bg-sig-blue/10 text-sig-blue text-sm px-4 py-1 rounded-full mb-4 inline-block">
-                  Lead Generation
+                  Click - Lead Generation
                 </span>
                 <h2 className="mb-6">Transform Prospects Into Qualified Leads</h2>
                 <p className="text-lg text-sig-dark/70">
@@ -96,11 +96,11 @@ const Marketing = () => {
             <div className="container mx-auto">
               <div className="max-w-3xl mx-auto text-center mb-16">
                 <span className="bg-sig-blue/10 text-sig-blue text-sm px-4 py-1 rounded-full mb-4 inline-block">
-                  Sales Solutions
+                  Sell - Conversion Solutions
                 </span>
-                <h2 className="mb-6">Accelerate Your Sales Process</h2>
+                <h2 className="mb-6">We Sell YOUR Products to OUR Leads</h2>
                 <p className="text-lg text-sig-dark/70">
-                  Our comprehensive sales solutions help you convert more leads and close deals faster with proven methodologies.
+                  Our expert sales teams are trained to represent your products effectively, converting our qualified leads into your loyal customers.
                 </p>
               </div>
               
@@ -110,12 +110,12 @@ const Marketing = () => {
                   
                   <div className="space-y-6">
                     <FeatureItem 
-                      icon={<Zap className="text-sig-blue" size={24} />}
+                      icon={<TrendingUp className="text-sig-blue" size={24} />}
                       title="Sales Scripting & Optimization"
                       description="Data-tested scripts and approaches that maximize conversion at every touchpoint."
                     />
                     <FeatureItem 
-                      icon={<TrendingUp className="text-sig-blue" size={24} />}
+                      icon={<BarChart3 className="text-sig-blue" size={24} />}
                       title="Performance Coaching"
                       description="Real-time feedback and personalized coaching to improve individual and team performance."
                     />
@@ -129,8 +129,8 @@ const Marketing = () => {
                 
                 <div className="glass p-1 rounded-2xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" 
-                    alt="Sales team in action" 
+                    src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                    alt="Call center team in action" 
                     className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
@@ -138,36 +138,36 @@ const Marketing = () => {
             </div>
           </section>
           
-          {/* Training Section */}
-          <section id="training" className="section-padding bg-gray-50">
+          {/* Collection Section */}
+          <section id="collection" className="section-padding bg-gray-50">
             <div className="container mx-auto">
               <div className="max-w-3xl mx-auto text-center mb-16">
                 <span className="bg-sig-blue/10 text-sig-blue text-sm px-4 py-1 rounded-full mb-4 inline-block">
-                  Professional Training
+                  Collection - Customer Retention
                 </span>
-                <h2 className="mb-6">Develop High-Performing Teams</h2>
+                <h2 className="mb-6">Secure Revenue and Build Lasting Relationships</h2>
                 <p className="text-lg text-sig-dark/70">
-                  Our comprehensive training programs equip your teams with the skills they need to excel in today's competitive marketplace.
+                  We handle premium collection while implementing proactive customer care strategies that enhance loyalty and reduce attrition.
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <ServiceCard 
-                  icon={<BookOpen size={40} />}
-                  title="Sales Methodology"
-                  description="Proven frameworks and techniques to guide prospects through the buyer's journey with confidence."
+                  icon={<Shield size={40} />}
+                  title="Secure Payment Processing"
+                  description="Streamlined premium collection with multiple payment options and easy processing for maximum customer convenience."
                   delay={100}
                 />
                 <ServiceCard 
-                  icon={<PhoneCall size={40} />}
-                  title="Call Handling Excellence"
-                  description="Master the art of effective communication, objection handling, and building rapport over the phone."
+                  icon={<CheckCircle2 size={40} />}
+                  title="Relationship Management"
+                  description="Proactive client support that addresses concerns before they become issues, building trust and loyalty."
                   delay={200}
                 />
                 <ServiceCard 
                   icon={<BarChart3 size={40} />}
-                  title="Leadership Development"
-                  description="Empower your managers with the tools to coach, motivate, and drive team performance to new heights."
+                  title="Customer Retention Analytics"
+                  description="Advanced analytics that identify at-risk customers and provide actionable insights to improve retention rates."
                   delay={300}
                 />
               </div>
@@ -178,9 +178,9 @@ const Marketing = () => {
           <section className="section-padding bg-white">
             <div className="container mx-auto text-center">
               <div className="glass p-12 rounded-2xl max-w-4xl mx-auto">
-                <h2 className="mb-6">Ready to Transform Your Call Center Performance?</h2>
+                <h2 className="mb-6">Ready to Implement Our Click to Collection Solution?</h2>
                 <p className="text-lg text-sig-dark/70 mb-8 max-w-3xl mx-auto">
-                  Schedule a consultation with our team to learn how SIG Solutions can help you achieve your business goals.
+                  Schedule a consultation with our team to learn how SIG Solutions can help you generate leads, close sales, and secure lasting customer relationships.
                 </p>
                 <a 
                   href="/contact" 

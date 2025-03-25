@@ -1,5 +1,5 @@
 
-import { PhoneCall, BarChart3, Users, Award, ArrowRight } from "lucide-react";
+import { PhoneCall, BarChart3, Users, Award, ArrowRight, Shield, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import Transition from "../components/Transition";
 import Hero from "../components/Hero";
@@ -7,6 +7,7 @@ import ServiceCard from "../components/ServiceCard";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ClickToCollection from "../components/ClickToCollection";
 
 const Index = () => {
   const [sectionRef, sectionVisible] = useScrollAnimation<HTMLDivElement>();
@@ -18,16 +19,19 @@ const Index = () => {
         <Navbar />
         
         <Hero 
-          title="Transforming Call Centers Into Growth Engines"
-          subtitle="SIG Solutions offers cutting-edge call center operations, lead generation, and staffing solutions to help businesses scale efficiently."
+          title="Sustainable Income Generator for Your Business"
+          subtitle="SIG Solutions transforms call centers into revenue engines with our Click to Collection approach - generating leads, closing sales, and ensuring lasting customer relationships."
           cta="Discover Our Solutions"
           ctaLink="/marketing"
           backgroundClass="bg-gradient-to-br from-white via-blue-50 to-white"
         />
         
         <main id="content">
+          {/* Click to Collection Section */}
+          <ClickToCollection />
+          
           {/* Services Section */}
-          <section className="section-padding bg-white">
+          <section className="section-padding bg-gray-50">
             <div 
               ref={sectionRef}
               className={`container mx-auto transition-all duration-1000 ${
@@ -49,15 +53,15 @@ const Index = () => {
                   delay={100}
                 />
                 <ServiceCard 
-                  icon={<BarChart3 size={40} />}
+                  icon={<TrendingUp size={40} />}
                   title="Sales Acceleration"
                   description="Boost conversion rates with our performance-focused sales strategies and real-time analytics dashboard."
                   delay={200}
                 />
                 <ServiceCard 
-                  icon={<Users size={40} />}
-                  title="Expert Staffing"
-                  description="Access top call center talent through our recruitment, training, and staffing services focused on quality and retention."
+                  icon={<Shield size={40} />}
+                  title="Premium Collection"
+                  description="Secure your revenue stream with our effective premium collection and customer retention strategies."
                   delay={300}
                 />
               </div>
@@ -65,7 +69,7 @@ const Index = () => {
           </section>
           
           {/* Why Choose Us */}
-          <section className="section-padding bg-gray-50">
+          <section className="section-padding bg-white">
             <div className="container mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -95,7 +99,7 @@ const Index = () => {
                 
                 <div className="glass p-1 rounded-2xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80" 
+                    src="https://images.unsplash.com/photo-1566694271453-390536dd1f0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
                     alt="Modern call center operations" 
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -105,7 +109,7 @@ const Index = () => {
           </section>
           
           {/* Leadership Section */}
-          <section className="section-padding bg-white">
+          <section className="section-padding bg-gray-50">
             <div className="container mx-auto">
               <div className="max-w-3xl mx-auto text-center mb-16">
                 <h2 className="mb-6">Our Leadership</h2>
@@ -149,7 +153,7 @@ const Index = () => {
             <div className="container mx-auto text-center">
               <h2 className="text-white mb-6">Ready to Transform Your Call Center Operations?</h2>
               <p className="text-white/80 text-lg mb-10 max-w-3xl mx-auto">
-                Whether you need to generate more leads, boost sales performance, or find top talent, SIG Solutions has the expertise to help your business thrive.
+                Whether you need to generate more leads, boost sales performance, or improve customer retention, SIG Solutions has the expertise to help your business thrive.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link 

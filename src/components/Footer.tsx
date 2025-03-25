@@ -10,11 +10,16 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="text-2xl font-display font-bold text-sig-dark mb-4 inline-block">
-              SIG<span className="text-sig-blue">Solutions</span>
+            <Link to="/" className="mb-4 inline-block">
+              <img 
+                src="/lovable-uploads/sig-solutions-logo.png" 
+                alt="SIG Solutions Logo" 
+                className="h-12 mb-2"
+              />
+              <p className="text-sm text-sig-dark/70">SUSTAINABLE INCOME GENERATOR</p>
             </Link>
             <p className="text-sig-dark/70 mb-6">
-              Transforming call centers with innovative solutions for lead generation, sales, and staffing.
+              Transforming call centers with our innovative Click to Collection solution for lead generation, sales, and premium collection.
             </p>
             <div className="flex space-x-4">
               <SocialLink icon={<Facebook size={18} />} href="#" />
@@ -37,9 +42,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-4">Services</h4>
             <ul className="space-y-3">
-              <FooterLink href="/marketing#lead-generation" label="Lead Generation" />
-              <FooterLink href="/marketing#sales-solutions" label="Sales Solutions" />
-              <FooterLink href="/marketing#training" label="Training Programs" />
+              <FooterLink href="/marketing#lead-generation" label="Click - Lead Generation" />
+              <FooterLink href="/marketing#sales-solutions" label="Sell - Conversion Solutions" />
+              <FooterLink href="/marketing#collection" label="Collection - Customer Retention" />
               <FooterLink href="/careers" label="Join Our Team" />
             </ul>
           </div>

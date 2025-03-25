@@ -32,9 +32,13 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link 
           to="/"
-          className="text-xl md:text-2xl font-display font-bold text-sig-dark"
+          className="flex items-center"
         >
-          SIG<span className="text-sig-blue">Solutions</span>
+          <img 
+            src="/lovable-uploads/sig-solutions-logo.png" 
+            alt="SIG Solutions Logo" 
+            className="h-12"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
