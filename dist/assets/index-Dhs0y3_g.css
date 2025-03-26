@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Pastel Theme Colors */
+    --background: 210 40% 98%;
+    --foreground: 222 25% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 25% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 25% 20%;
+    --primary: 221 70% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 25% 20%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 25% 20%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 70% 60%;
+    --radius: 0.5rem;
+
+    /* Custom Colors */
+    --pastel-blue: 220 70% 85%;
+    --pastel-gray: 220 20% 92%;
+    --pastel-navy: 220 35% 40%;
+    --text-dark: 222 25% 20%;
+    --text-light: 210 40% 98%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: auto; /* Remove smooth scrolling */
+  }
+
+  section {
+    min-height: auto;
+    width: 100%;
+    overflow-wrap: break-word;
+    padding: 6rem 0; /* Keep original padding */
+    border: none;
+    margin: 0; /* Added this */
+    scroll-snap-align: none; /* Remove scroll snapping */
+    background: transparent; /* Add this */
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    height: 100%;
+    overflow-x: hidden;
+    scroll-snap-type: none; /* Remove scroll snapping */
+    background-color: white; /* Add this to ensure consistent background */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-lg bg-white/80 dark:bg-black/40 border border-white/20 shadow-lg;
+  }
+  
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-24; /* Horizontal padding only */
+  }
+
+  .btn-hover {
+    @apply transition-all duration-300 ease-in-out transform hover:scale-105;
+  }
+
+  .logo-grey {
+    filter: brightness(0) saturate(100%) invert(15%) sepia(23%) saturate(857%) hue-rotate(203deg) brightness(95%) contrast(92%);
+  }
+
+  .link-hover {
+    @apply relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-sig-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }s
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes gentle-pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.95;
+      transform: scale(1.015);
+      filter: brightness(1.1);
+    }
+  }
+
+  @keyframes subtle-pulse {
+    0%, 100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-pulse {
+    animation: gentle-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-subtle-pulse {
+    animation: subtle-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .animate-scroll > div {
+      width: 25% !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .animate-scroll > div {
+      width: 33.333% !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .animate-scroll > div {
+      width: 50% !important;
+    }
+  }
+}
+
+@layer utilities {
+  .scroll-button-container {
+    @apply fixed bottom-8 right-8 z-40;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-floating {
+    animation: floating 2s ease-in-out infinite;
+  }
+}
