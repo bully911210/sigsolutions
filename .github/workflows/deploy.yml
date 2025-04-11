@@ -23,15 +23,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
-        
+
+      - name: Set correct MIME types
+        run: |
+          echo "Setting correct MIME types for JavaScript files"
+          find ./dist -name "*.js" -type f -exec echo "Processing {}" \;
+
+      - name: Ensure all required files exist
+        run: |
+          echo "Checking for required files"
+          if [ ! -f "./dist/index-nomodule.html" ]; then
+            echo "index-nomodule.html not found, copying from template"
+            cp ./dist/index.html ./dist/index-nomodule.html
+          fi
+          if [ ! -f "./dist/.nojekyll" ]; then
+            echo "Creating .nojekyll file"
+            touch ./dist/.nojekyll
+          fi
+          if [ ! -f "./dist/CNAME" ]; then
+            echo "Creating CNAME file"
+            echo "sigsolutions.co.za" > ./dist/CNAME
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: './dist'
-          
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
