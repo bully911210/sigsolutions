@@ -2,17 +2,55 @@
 AddType application/javascript .js
 AddType application/javascript .mjs
 
-# Enable CORS
+# Enable CORS and set correct MIME types
 <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
+    Header set Content-Type "application/javascript" "expr=%{REQUEST_URI} =~ /\.js$/"
+    Header set X-Content-Type-Options "nosniff"
 </IfModule>
 
 # Handle SPA routing
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-    RewriteRule ^index\.html$ - [L]
+
+    # If the request is for an actual file or directory, serve it directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # If the request is for a JavaScript file but the file doesn't exist,
+    # serve a JavaScript file with the correct MIME type
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.html [L]
+    RewriteCond %{REQUEST_URI} \.js$
+    RewriteRule ^ /empty.js [L]
+
+    # For all other requests, serve the index.html file
+    RewriteRule ^ /index.html [L]
+</IfModule>
+
+# Error handling
+ErrorDocument 404 /fallback.html
+
+# Set default charset
+AddDefaultCharset UTF-8
+
+# Disable directory browsing
+Options -Indexes
+
+# Compress text files
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+# Set caching headers
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
 </IfModule>

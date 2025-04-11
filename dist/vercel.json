@@ -1,4 +1,29 @@
 {
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*).js",
+      "headers": { "content-type": "application/javascript" },
+      "continue": true
+    },
+    {
+      "src": "/assets/(.*).js",
+      "headers": { "content-type": "application/javascript" },
+      "continue": true
+    },
+    {
+      "src": "/sigsolutions/assets/(.*).js",
+      "headers": { "content-type": "application/javascript" },
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*).js",
@@ -24,6 +49,19 @@
         {
           "key": "Content-Type",
           "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
         }
       ]
     }
