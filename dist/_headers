@@ -1,0 +1,12 @@
+/*
+  Access-Control-Allow-Origin: *
+
+# Set the correct MIME type for JavaScript modules
+/*.js
+  Content-Type: application/javascript
+  
+/assets/*.js
+  Content-Type: application/javascript
+  
+/sigsolutions/assets/*.js
+  Content-Type: application/javascript
