@@ -81,23 +81,23 @@ img {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: #001F54; /* Navy Blue */
   color: var(--white);
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
+  background-color: #001845; /* Darker Navy Blue */
   color: var(--white);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  color: #001F54; /* Navy Blue */
+  border: 2px solid #001F54; /* Navy Blue */
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary-color);
+  background-color: #001F54; /* Navy Blue */
   color: var(--white);
 }
 
@@ -141,7 +141,7 @@ img {
 }
 
 .logo span {
-  color: var(--primary-color);
+  color: #001F54; /* Navy Blue */
   margin-right: 2px;
 }
 
@@ -160,7 +160,7 @@ img {
 }
 
 .nav-list a:hover {
-  color: var(--primary-color);
+  color: #001F54; /* Navy Blue */
 }
 
 .mobile-menu-btn {
@@ -239,7 +239,7 @@ img {
 
 .carousel-content i {
   font-size: 3rem;
-  color: var(--primary-color);
+  color: #001F54; /* Navy Blue */
   margin-bottom: 20px;
 }
 
@@ -263,7 +263,7 @@ img {
 
 .carousel-prev,
 .carousel-next {
-  background-color: var(--primary-color);
+  background-color: #001F54; /* Navy Blue */
   color: var(--white);
   border: none;
   width: 40px;
@@ -278,7 +278,7 @@ img {
 
 .carousel-prev:hover,
 .carousel-next:hover {
-  background-color: var(--primary-dark);
+  background-color: #001845; /* Darker Navy Blue */
 }
 
 .carousel-dots {
@@ -297,7 +297,7 @@ img {
 }
 
 .dot.active {
-  background-color: var(--primary-color);
+  background-color: #001F54; /* Navy Blue */
   transform: scale(1.2);
 }
 
@@ -329,7 +329,7 @@ img {
 .service-icon {
   width: 70px;
   height: 70px;
-  background-color: var(--primary-color);
+  background-color: #001F54; /* Navy Blue */
   color: var(--white);
   border-radius: 50%;
   display: flex;
@@ -372,7 +372,7 @@ img {
   margin: 30px 0;
   padding: 20px;
   background-color: var(--gray-100);
-  border-left: 4px solid var(--primary-color);
+  border-left: 4px solid #001F54; /* Navy Blue */
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
@@ -381,7 +381,7 @@ img {
   font-size: 1.2rem;
   font-weight: 500;
   font-style: italic;
-  color: var(--primary-color);
+  color: #001F54; /* Navy Blue */
 }
 
 .about-image {
@@ -503,7 +503,7 @@ img {
 .info-item i {
   width: 40px;
   height: 40px;
-  background-color: var(--primary-color);
+  background-color: #001F54; /* Navy Blue */
   color: var(--white);
   border-radius: 50%;
   display: flex;
@@ -521,7 +521,7 @@ img {
 .social-links a {
   width: 40px;
   height: 40px;
-  background-color: var(--primary-color);
+  background-color: #001F54; /* Navy Blue */
   color: var(--white);
   border-radius: 50%;
   display: flex;
@@ -531,13 +531,13 @@ img {
 }
 
 .social-links a:hover {
-  background-color: var(--primary-dark);
+  background-color: #001845; /* Darker Navy Blue */
   transform: translateY(-3px);
 }
 
 /* Footer Section */
 .footer {
-  background-color: var(--primary-color);
+  background-color: #001F54; /* Navy Blue */
   color: var(--white);
   padding: 60px 0 20px;
 }
@@ -558,7 +558,7 @@ img {
 }
 
 .footer-logo span {
-  color: var(--primary-color);
+  color: #3498db; /* Light Blue for contrast on dark background */
 }
 
 .footer-logo p {
@@ -591,7 +591,7 @@ img {
 }
 
 .footer-links-column a:hover {
-  color: var(--primary-color);
+  color: #3498db; /* Light Blue for contrast on dark background */
 }
 
 .footer-bottom {
