@@ -1,8 +1,8 @@
 /* Base Styles */
 :root {
-  --primary-color: #3498db;
-  --primary-dark: #2980b9;
-  --secondary-color: #2c3e50;
+  --primary-color: #1a4b84; /* Navy blue */
+  --primary-dark: #0d3b6f;
+  --secondary-color: #2e8b57; /* Green */
   --text-color: #333333;
   --text-light: #777777;
   --background-color: #f8f9fa;
@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -185,7 +185,7 @@ img {
 
 .hero-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   text-align: center;
 }
 
@@ -204,6 +204,101 @@ img {
   display: flex;
   justify-content: center;
   gap: 15px;
+}
+
+/* Hero Carousel */
+.hero-carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease;
+  display: none;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-content {
+  padding: 40px;
+  text-align: center;
+}
+
+.carousel-content i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.carousel-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.carousel-content p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.carousel-prev,
+.carousel-next {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: var(--primary-dark);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 10px;
+  margin: 0 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--gray-300);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dot.active {
+  background-color: var(--primary-color);
+  transform: scale(1.2);
 }
 
 /* Services Section */
@@ -510,13 +605,13 @@ img {
   .about-content {
     grid-template-columns: 1fr;
   }
-  
+
   .about-image {
     order: -1;
     max-width: 600px;
     margin: 0 auto;
   }
-  
+
   .contact-content {
     grid-template-columns: 1fr;
   }
@@ -526,33 +621,33 @@ img {
   .nav-list {
     display: none;
   }
-  
+
   .mobile-menu-btn {
     display: flex;
   }
-  
+
   .hero h1 {
     font-size: 2.5rem;
   }
-  
+
   .section-header h2 {
     font-size: 2rem;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .footer-links {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .footer-bottom-links {
     margin-top: 15px;
   }
@@ -562,20 +657,20 @@ img {
   section {
     padding: 60px 0;
   }
-  
+
   .hero {
     padding: 120px 0 60px;
   }
-  
+
   .hero h1 {
     font-size: 2rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .btn {
     width: 100%;
   }
