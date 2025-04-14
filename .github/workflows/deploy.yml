@@ -60,6 +60,15 @@ jobs:
             echo "sigsolutions.co.za" > ./dist/CNAME
           fi
 
+          # Copy JavaScript files to the correct location
+          echo "Copying JavaScript files to the correct location"
+          mkdir -p ./dist/js
+          cp ./dist/js/*.js ./dist/js/ || true
+
+          # Copy index-redirect.html to the root
+          echo "Copying index-redirect.html to index.html"
+          cp ./index-redirect.html ./dist/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
