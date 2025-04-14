@@ -1,8 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    // Set loaded state after component mounts
+    setIsLoaded(true)
+    console.log('App component mounted successfully')
+  }, [])
 
   return (
     <div className="app-container">
@@ -13,7 +20,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          {isLoaded ? 'Website loaded successfully!' : 'Loading...'}
         </p>
       </div>
     </div>
