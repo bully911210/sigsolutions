@@ -3,99 +3,261 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIG Solutions</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-      background-color: #f0f2f5;
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      color: #2c3e50;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.1em;
-      line-height: 1.5;
-      color: #555;
-    }
-    .card {
-      margin: 20px 0;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background-color: #f9f9f9;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      margin-top: 10px;
-    }
-    .button:hover {
-      background-color: #2980b9;
-    }
-    footer {
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #777;
-      font-size: 0.9em;
-    }
-  </style>
+  <title>Minimal Revenue Flow - SIG Solutions</title>
+  <meta name="description" content="Optimize your revenue flow with SIG Solutions' minimal approach to business efficiency.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1>SIG Solutions</h1>
-    <p>Welcome to our website!</p>
-
-    <div class="card">
-      <h2>Our Services</h2>
-      <p>We provide innovative solutions for your business needs.</p>
-      <button type="button" class="button" onclick="alert('Thank you for your interest in our services!')">Learn More</button>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="/">
+            <span>SIG</span>Solutions
+          </a>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
     </div>
+  </header>
 
-    <div class="card">
-      <h2>About Us</h2>
-      <p>SIG Solutions is a leading provider of technology solutions.</p>
-      <button type="button" class="button" onclick="alert('We have been in business for over 10 years!')">Our Story</button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Optimize Your Revenue Flow</h1>
+        <p>Streamline your business processes and maximize profitability with our minimal approach to revenue optimization.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+          <a href="#services" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h2>Contact Us</h2>
-      <p>Get in touch with our team to discuss your project.</p>
-      <button type="button" class="button" onclick="alert('Please email us at franz@sigsolutions.co.za')">Contact</button>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>We provide comprehensive solutions to optimize your revenue flow</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Revenue Analysis</h3>
+          <p>Detailed analysis of your current revenue streams to identify optimization opportunities.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Process Optimization</h3>
+          <p>Streamline your business processes to eliminate inefficiencies and reduce costs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Strategic Planning</h3>
+          <p>Develop comprehensive strategies to maximize revenue and achieve business goals.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Customer Retention</h3>
+          <p>Implement effective strategies to increase customer loyalty and lifetime value.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <footer>
-      <p>&copy; 2025 SIG Solutions. All rights reserved.</p>
-      <p>Last updated: <span id="last-updated"></span></p>
-    </footer>
-  </div>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <div class="section-header">
+            <h2>About Us</h2>
+            <p>Your partner in business optimization</p>
+          </div>
+          <p>At SIG Solutions, we specialize in helping businesses optimize their revenue flow through minimal, efficient approaches. With years of experience in the industry, our team of experts works closely with clients to understand their unique challenges and develop tailored solutions.</p>
+          <p>Our mission is to empower businesses to achieve sustainable growth by implementing streamlined processes that maximize profitability while minimizing complexity.</p>
+          <a href="#contact" class="btn btn-primary">Work With Us</a>
+        </div>
+        <div class="about-image">
+          <img src="about-image.jpg" alt="SIG Solutions Team">
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // Display the current time to show that JavaScript is working
-    document.getElementById('last-updated').textContent = new Date().toLocaleString();
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Clients Say</h2>
+        <p>Success stories from businesses we've helped</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"SIG Solutions transformed our revenue management approach. Their minimal yet effective strategies helped us increase profitability by 35% within six months."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="testimonial-1.jpg" alt="John Smith">
+            <div class="author-info">
+              <h4>John Smith</h4>
+              <p>CEO, TechInnovate</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Working with SIG Solutions has been a game-changer for our business. Their process optimization expertise helped us streamline operations and boost our bottom line."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="testimonial-2.jpg" alt="Sarah Johnson">
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>COO, GrowthPartners</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"The team at SIG Solutions provided us with actionable insights that completely transformed our approach to revenue management. Highly recommended!"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="testimonial-3.jpg" alt="Michael Brown">
+            <div class="author-info">
+              <h4>Michael Brown</h4>
+              <p>Founder, Elevate Inc.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    // Log a message to the console
-    console.log('SIG Solutions website loaded successfully!');
-  </script>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Ready to optimize your revenue flow? Contact us today.</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>123 Business Avenue, Pretoria, South Africa</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>franz@sigsolutions.co.za</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <p>+27 12 345 6789</p>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="/">
+            <span>SIG</span>Solutions
+          </a>
+          <p>Optimizing revenue flow with minimal complexity</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Revenue Analysis</a></li>
+              <li><a href="#services">Process Optimization</a></li>
+              <li><a href="#services">Strategic Planning</a></li>
+              <li><a href="#services">Customer Retention</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SIG Solutions. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>

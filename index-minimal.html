@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIG Solutions - Minimal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>SIG Solutions</h1>
+  <p>This is a minimal test page.</p>
+  <p>If you can see this, the website is working!</p>
+  <p>Current time: <span id="current-time"></span></p>
+  
+  <script>
+    // Display the current time to show that JavaScript is working
+    document.getElementById('current-time').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
