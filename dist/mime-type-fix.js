@@ -23,18 +23,18 @@ function createScriptWithCorrectMimeType(src) {
 async function loadModulesWithCorrectMimeType() {
   try {
     // Load the vendor script first
-    await createScriptWithCorrectMimeType('./assets/vendor-C3d4I53_.js');
-    
+    await createScriptWithCorrectMimeType('./assets/vendor-C3d4I53_.mjs');
+
     // Then load the UI script
-    await createScriptWithCorrectMimeType('./assets/ui-CxNYyYHo.js');
-    
+    await createScriptWithCorrectMimeType('./assets/ui-CxNYyYHo.mjs');
+
     // Finally load the main script
-    await createScriptWithCorrectMimeType('./assets/index-DBJEwBw0.js');
-    
+    await createScriptWithCorrectMimeType('./assets/index-DBJEwBw0.mjs');
+
     console.log('All scripts loaded successfully');
   } catch (error) {
     console.error('Failed to load scripts:', error);
-    
+
     // If loading fails, redirect to the fallback page
     window.location.href = './fallback.html';
   }
