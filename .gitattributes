@@ -1,0 +1,41 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.html text
+*.css text
+*.json text
+*.md text
+
+# Declare files that will always have specific MIME types
+*.js linguist-language=JavaScript
+*.mjs linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+
+# Set the correct MIME type for JavaScript modules
+*.js text/javascript
+*.mjs application/javascript
+*.jsx text/javascript
+*.ts text/javascript
+*.tsx text/javascript
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.ttf binary
+*.otf binary
+*.svg binary
+*.pdf binary
