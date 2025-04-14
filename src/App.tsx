@@ -16,7 +16,7 @@ function App() {
       <h1>SIG Solutions</h1>
       <p>Welcome to our website!</p>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button type="button" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
