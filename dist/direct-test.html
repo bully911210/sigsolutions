@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direct JavaScript Test</title>
+</head>
+<body>
+  <h1>Direct JavaScript Test</h1>
+  <p>This page tests if JavaScript is loading correctly.</p>
+  <div id="root"></div>
+
+  <script>
+    // Simple React-like component
+    const App = () => {
+      const element = document.createElement('div');
+      element.className = 'app-container';
+      
+      const heading = document.createElement('h2');
+      heading.textContent = 'SIG Solutions';
+      element.appendChild(heading);
+      
+      const paragraph = document.createElement('p');
+      paragraph.textContent = 'Welcome to our website!';
+      element.appendChild(paragraph);
+      
+      const button = document.createElement('button');
+      button.textContent = 'Click me';
+      button.onclick = () => {
+        alert('Button clicked!');
+      };
+      element.appendChild(button);
+      
+      return element;
+    };
+    
+    // Render the App
+    document.getElementById('root').appendChild(App());
+  </script>
+</body>
+</html>
