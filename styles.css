@@ -1140,37 +1140,127 @@ img {
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .about-content {
+    gap: 30px;
+  }
+
+  .about-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
   .about-content {
     grid-template-columns: 1fr;
   }
 
-  .about-image {
-    order: -1;
-    max-width: 600px;
-    margin: 0 auto;
+  .about-timeline {
+    margin-top: 40px;
   }
 
   .contact-content {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .modal-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .header-content {
+    padding: 15px 0;
+  }
+
   .nav-list {
     display: none;
   }
 
   .mobile-menu-btn {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+  }
+
+  .hero {
+    padding: 120px 0 60px;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
-  .section-header h2 {
-    font-size: 2rem;
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .counter-grid,
+  .services-grid,
+  .case-studies-grid,
+  .why-sig-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .why-sig-quote blockquote {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-prev,
+  .testimonial-next {
+    display: none;
   }
 
   .footer-content {
@@ -1189,6 +1279,7 @@ img {
 
   .footer-bottom-links {
     margin-top: 15px;
+    justify-content: center;
   }
 }
 
@@ -1202,7 +1293,7 @@ img {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero-buttons {
@@ -1212,5 +1303,35 @@ img {
 
   .btn {
     width: 100%;
+  }
+
+  .counter {
+    font-size: 2rem;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  .modal-image {
+    height: 180px;
+  }
+
+  .testimonial-author {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .author-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  #backToTop {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
   }
 }
