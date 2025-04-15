@@ -1,0 +1,16 @@
+/* Update logo size and header padding */
+.logo img {
+  height: 67px; /* Increased by 33% from 50px */
+  width: auto;
+}
+
+.header {
+  padding: 20px 0;
+}
+
+.footer-logo img {
+  height: 67px; /* Increased by 33% from 50px */
+  width: auto;
+  filter: brightness(0) invert(1);
+  margin-bottom: 10px;
+}
