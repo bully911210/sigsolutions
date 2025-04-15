@@ -21,7 +21,7 @@ function App() {
       anchor.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = anchor.getAttribute('href');
-        if (targetId === '#') return;
+        if (!targetId || targetId === '#') return;
 
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
