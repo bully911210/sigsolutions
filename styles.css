@@ -312,13 +312,27 @@ img {
   color: var(--primary-color);
   line-height: var(--line-height-tight);
   font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
 }
 
 .section-header p {
   color: var(--text-light);
   font-size: var(--font-size-lg);
   line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-sm);
+  margin: 25px 0 0;
 }
 
 @media (max-width: 768px) {
@@ -330,8 +344,15 @@ img {
     font-size: var(--font-size-2xl);
   }
 
+  .section-header h2::after {
+    bottom: -12px;
+    width: 60px;
+    height: 2px;
+  }
+
   .section-header p {
     font-size: var(--font-size-md);
+    margin-top: 20px;
   }
 }
 
