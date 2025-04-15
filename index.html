@@ -23,7 +23,7 @@
       <div class="header-content">
         <div class="logo">
           <a href="/">
-            <img src="https://i.ibb.co/Ngp0pYh/sig-logo.png" alt="SIG Solutions Logo">
+            <img src="https://i.ibb.co/hRCxX3D/sig-logo.png" alt="SIG Solutions Logo">
           </a>
         </div>
         <nav class="nav">
@@ -361,6 +361,32 @@
   <script>
     // Initialize CountUp.js for counters
     document.addEventListener('DOMContentLoaded', function() {
+      // Header scroll effect
+      const header = document.querySelector('.header');
+
+      function handleHeaderScroll() {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+
+      // Initial check
+      handleHeaderScroll();
+
+      // Add scroll event listener
+      window.addEventListener('scroll', handleHeaderScroll);
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const body = document.body;
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+          body.classList.toggle('mobile-menu-open');
+        });
+      }
       // Animated Counters
       const counters = document.querySelectorAll('.counter span[data-count]');
 

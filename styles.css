@@ -1200,12 +1200,15 @@ img {
 
 .btn-light {
   background-color: var(--white);
-  color: #001F54; /* Navy Blue */
+  color: var(--primary-color);
+  box-shadow: var(--shadow);
 }
 
 .btn-light:hover {
   background-color: var(--gray-100);
-  color: #001F54; /* Navy Blue */
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 /* Leadership Section */
