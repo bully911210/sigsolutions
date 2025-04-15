@@ -527,12 +527,12 @@
         }
       }, 5000);
 
-      // Case Study Modal
-      const caseStudyBtns = document.querySelectorAll('.case-study-btn');
-      const caseStudyModal = document.getElementById('caseStudyModal');
-      const modalClose = document.querySelector('.modal-close');
+      // Contact Form Modal
+      const contactForm = document.getElementById('contactForm');
+      const contactModal = document.getElementById('contactModal');
+      const contactModalClose = document.querySelectorAll('.modal-close, .modal-close-btn');
 
-      const caseStudies = [
+      /*const caseStudies = [
         {
           id: 1,
           title: 'National Fundraising Campaign',
@@ -572,9 +572,9 @@
           position: 'Membership Director, Lifestyle Fitness',
           report: 'Lifestyle Fitness was experiencing a high rate of membership cancellations, particularly after the first three months. We implemented a proactive retention program that identified at-risk members through usage patterns and engagement metrics. Our retention specialists conducted personalized outreach to 2,800+ members, addressing specific concerns and highlighting underutilized benefits. The campaign resulted in a 45% reduction in cancellations, with 62.5% of contacted members renewing their memberships. Additionally, we generated 420+ upsells to premium membership tiers, delivering a 420% ROI on the campaign investment.'
         }
-      ];
+      ];*/
 
-      caseStudyBtns.forEach(btn => {
+      /*caseStudyBtns.forEach(btn => {
         btn.addEventListener('click', () => {
           const caseId = parseInt(btn.getAttribute('data-id'));
           const caseStudy = caseStudies.find(cs => cs.id === caseId);
@@ -602,12 +602,7 @@
           caseStudyModal.classList.remove('show');
           document.body.style.overflow = 'auto';
         });
-      }
-
-      // Contact Form Modal
-      const contactForm = document.getElementById('contactForm');
-      const contactModal = document.getElementById('contactModal');
-      const contactModalClose = document.querySelectorAll('.modal-close, .modal-close-btn');
+      }*/
 
       if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
