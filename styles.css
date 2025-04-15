@@ -1624,13 +1624,6 @@ img {
   }
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #001F54; /* Navy Blue */
-  box-shadow: 0 0 0 2px rgba(0, 31, 84, 0.2);
-}
-
 .error-message {
   color: #e74c3c; /* Red */
   font-size: 0.9rem;
