@@ -2041,16 +2041,16 @@ img {
 }
 /* Update logo size and header padding */
 .logo img {
-  height: 67px; /* Increased by 33% from 50px */
+  height: 89px; /* Increased by 33% from 67px */
   width: auto;
 }
 
 .header {
-  padding: 20px 0;
+  padding: calc(20px * 0.67) 0; /* Decreased by 33% */
 }
 
 .footer-logo img {
-  height: 67px; /* Increased by 33% from 50px */
+  height: 89px; /* Increased by 33% from 67px */
   width: auto;
   filter: brightness(0) invert(1);
   margin-bottom: 10px;
