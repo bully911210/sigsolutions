@@ -1,4 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Client Logo Carousel Animation
+  const logoSlider = document.querySelector('.logo-slider');
+  if (logoSlider) {
+    // Clone the slides for infinite scrolling effect
+    const slides = document.querySelectorAll('.logo-slide');
+    slides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      logoSlider.appendChild(clone);
+    });
+
+    // Animate the carousel
+    let position = 0;
+    const speed = 0.5; // pixels per frame
+
+    function animateLogos() {
+      if (window.innerWidth > 768) { // Only animate on desktop
+        position -= speed;
+        const firstSlideWidth = slides[0].offsetWidth;
+
+        // Reset position when first slide is out of view
+        if (position <= -firstSlideWidth) {
+          position = 0;
+          logoSlider.appendChild(logoSlider.firstElementChild);
+        }
+
+        logoSlider.style.transform = `translateX(${position}px)`;
+      } else {
+        logoSlider.style.transform = 'translateX(0)';
+      }
+
+      requestAnimationFrame(animateLogos);
+    }
+
+    animateLogos();
+  }
   // Mobile Menu Toggle
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navList = document.querySelector('.nav-list');
@@ -341,7 +376,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Header scroll effect
   const header = document.querySelector('.header');
-  let lastScrollTop = 0;
 
   window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -351,7 +385,5 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       header.classList.remove('scrolled');
     }
-
-    lastScrollTop = scrollTop;
   });
 });
