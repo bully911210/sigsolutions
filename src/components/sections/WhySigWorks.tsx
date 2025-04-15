@@ -1,10 +1,9 @@
 import { useInView } from 'react-intersection-observer';
-import { 
-  FaUserTie, 
-  FaFileAlt, 
-  FaLaptopCode, 
-  FaRobot, 
-  FaUsers 
+import {
+  FaUserTie,
+  FaFileAlt,
+  FaLaptopCode,
+  FaUsers
 } from 'react-icons/fa';
 
 const WhySigWorks = () => {
@@ -29,11 +28,7 @@ const WhySigWorks = () => {
       title: 'Custom CRM Integrations',
       description: 'Seamlessly connect with your existing systems for real-time data flow and reporting.',
     },
-    {
-      icon: <FaRobot className="text-3xl" />,
-      title: 'AI-Assisted Quality Control',
-      description: 'Advanced monitoring tools ensure consistent quality across all conversations.',
-    },
+
     {
       icon: <FaUsers className="text-3xl" />,
       title: 'Dedicated Agent Management',
@@ -51,15 +46,15 @@ const WhySigWorks = () => {
           </p>
         </div>
 
-        <div 
+        <div
           ref={ref}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {reasons.map((reason, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-lg p-6 transition-all duration-500"
-              style={{ 
+              style={{
                 transitionDelay: `${index * 100}ms`,
                 opacity: inView ? 1 : 0,
                 transform: inView ? 'translateY(0)' : 'translateY(20px)'
