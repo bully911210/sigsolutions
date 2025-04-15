@@ -549,6 +549,7 @@ img {
 
 .why-sig-card {
   background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border-radius: var(--border-radius);
   padding: 25px;
@@ -1021,7 +1022,7 @@ img {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr 2fr;
   gap: 50px;
   margin-bottom: 40px;
 }
@@ -1035,20 +1036,25 @@ img {
 }
 
 .footer-logo span {
-  color: #3498db; /* Light Blue for contrast on dark background */
+  color: var(--white);
+  background-color: var(--white);
+  color: #001F54; /* Navy Blue */
+  padding: 0 3px;
 }
 
 .footer-logo p {
   color: var(--gray-300);
+  margin-bottom: 20px;
 }
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.footer-links-column h4 {
+.footer-links-column h4,
+.footer-contact h4 {
   color: var(--white);
   margin-bottom: 20px;
   font-size: 1.2rem;
@@ -1062,13 +1068,48 @@ img {
   margin-bottom: 10px;
 }
 
-.footer-links-column a {
+.footer-links-column a,
+.footer-contact a {
   color: var(--gray-300);
   transition: var(--transition);
 }
 
-.footer-links-column a:hover {
-  color: #3498db; /* Light Blue for contrast on dark background */
+.footer-links-column a:hover,
+.footer-contact a:hover {
+  color: var(--white);
+}
+
+.footer-contact address {
+  font-style: normal;
+  color: var(--gray-300);
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background-color: var(--white);
+  color: #001F54; /* Navy Blue */
+  transform: translateY(-3px);
 }
 
 .footer-bottom {
@@ -1091,6 +1132,11 @@ img {
 
 .footer-bottom-links a {
   color: var(--gray-300);
+  transition: var(--transition);
+}
+
+.footer-bottom-links a:hover {
+  color: var(--white);
 }
 
 /* Responsive Styles */
