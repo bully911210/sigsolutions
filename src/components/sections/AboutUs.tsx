@@ -49,7 +49,7 @@ const AboutUs = () => {
     {
       year: '2022',
       title: 'Technology Integration',
-      description: 'Implemented AI-assisted quality control systems.',
+      description: 'Enhanced our technology stack with advanced CRM integrations.',
     },
     {
       year: '2023',
@@ -74,10 +74,10 @@ const AboutUs = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div 
+          <div
             className="order-2 lg:order-1"
             ref={ref}
-            style={{ 
+            style={{
               opacity: inView ? 1 : 0,
               transform: inView ? 'translateX(0)' : 'translateX(-20px)',
               transition: 'all 0.6s ease-out'
@@ -95,10 +95,10 @@ const AboutUs = () => {
             </blockquote>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {metrics.map((metric, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="text-center"
-                  style={{ 
+                  style={{
                     opacity: inView ? 1 : 0,
                     transform: inView ? 'translateY(0)' : 'translateY(20px)',
                     transition: 'all 0.6s ease-out',
@@ -114,9 +114,9 @@ const AboutUs = () => {
               ))}
             </div>
           </div>
-          <div 
+          <div
             className="order-1 lg:order-2"
-            style={{ 
+            style={{
               opacity: inView ? 1 : 0,
               transform: inView ? 'translateX(0)' : 'translateX(20px)',
               transition: 'all 0.6s ease-out'
@@ -126,14 +126,14 @@ const AboutUs = () => {
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200"></div>
-              
+
               {/* Timeline events */}
               <div className="space-y-8">
                 {timelineEvents.map((event, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="relative pl-12"
-                    style={{ 
+                    style={{
                       opacity: inView ? 1 : 0,
                       transform: inView ? 'translateY(0)' : 'translateY(20px)',
                       transition: 'all 0.6s ease-out',
