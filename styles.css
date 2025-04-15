@@ -507,6 +507,18 @@ img {
   background-position: center;
 }
 
+.case-study-image-1 {
+  background-image: url('https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+}
+
+.case-study-image-2 {
+  background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+}
+
+.case-study-image-3 {
+  background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+}
+
 .case-study-content {
   padding: 25px;
 }
