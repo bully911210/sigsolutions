@@ -147,9 +147,15 @@ img {
   align-items: center;
 }
 
-.logo img {
-  height: 40px;
-  width: auto;
+.logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.logo span {
+  color: #001F54; /* Navy Blue */
+  margin-right: 2px;
 }
 
 .nav-list {
@@ -203,8 +209,7 @@ img {
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
-  color: var(--white);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: #001F54; /* Navy Blue */
   font-weight: 800;
 }
 
@@ -1222,10 +1227,20 @@ img {
   margin-bottom: 15px;
 }
 
-.footer-logo img {
-  height: 40px;
-  width: auto;
-  filter: brightness(0) invert(1);
+.footer-logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.footer-logo span {
+  color: var(--white);
+  background-color: #001F54; /* Navy Blue */
+  padding: 0 3px;
+  border-radius: 3px;
+  margin-right: 2px;
 }
 
 .footer-logo p {
