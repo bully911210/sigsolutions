@@ -10,9 +10,11 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CountUp.js for animated counters -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
 </head>
 <body>
   <!-- Header Section -->
@@ -27,8 +29,9 @@
         <nav class="nav">
           <ul class="nav-list">
             <li><a href="#services">Services</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#why-sig">Why SIG</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="mobile-menu-btn">
@@ -45,55 +48,52 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Professional Call Center Solutions to Drive Your Growth</h1>
-        <p>Expert lead generation, sales support, and fundraising campaigns — tailored to your needs.</p>
+        <h1>Commanding Conversations. Measurable Results.</h1>
+        <p>From national fundraising to commercial conquest — SIG Solutions is the engine behind South Africa's most successful outreach campaigns.</p>
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get Started</a>
-          <a href="#services" class="btn btn-secondary">Learn More</a>
+          <a href="#contact" class="btn btn-primary">Start a Campaign</a>
+          <a href="#case-studies" class="btn btn-secondary">See Case Studies</a>
         </div>
       </div>
 
-      <!-- Hero Carousel -->
-      <div class="hero-carousel">
-        <div class="carousel-container">
-          <div class="carousel-slide active">
-            <div class="carousel-content">
-              <i class="fas fa-headset"></i>
-              <h3>Lead Generation</h3>
-              <p>Connecting you to your next customer.</p>
-            </div>
+      <!-- Animated Background -->
+      <div class="hero-animation">
+        <canvas id="waveCanvas" class="wave-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparency Counter Section -->
+  <section id="transparency" class="transparency">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Growth in Real-Time</h2>
+        <p>Transparency is at the core of our business. Here's a snapshot of our performance metrics.</p>
+      </div>
+      <div class="counter-grid">
+        <div class="counter-card">
+          <div class="counter-icon">
+            <i class="fas fa-money-bill-wave"></i>
           </div>
-          <div class="carousel-slide">
-            <div class="carousel-content">
-              <i class="fas fa-chart-line"></i>
-              <h3>Sales Support</h3>
-              <p>Boost your revenue with expert assistance.</p>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <div class="carousel-content">
-              <i class="fas fa-hand-holding-heart"></i>
-              <h3>Non-Profit Fundraising</h3>
-              <p>Expand your impact with our specialized campaigns.</p>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <div class="carousel-content">
-              <i class="fas fa-users"></i>
-              <h3>Customer Retention</h3>
-              <p>Strengthen loyalty and keep clients engaged.</p>
-            </div>
-          </div>
+          <h3>Invested in Growth</h3>
+          <div class="counter" id="adSpendCounter">R<span data-count="1250000">0</span></div>
+          <p>Spent on Ads</p>
         </div>
-        <div class="carousel-controls">
-          <button type="button" class="carousel-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
-          <div class="carousel-dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-            <span class="dot" data-slide="3"></span>
+        <div class="counter-card">
+          <div class="counter-icon">
+            <i class="fas fa-chart-line"></i>
           </div>
-          <button type="button" class="carousel-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+          <h3>Leads Received</h3>
+          <div class="counter" id="leadsCounter"><span data-count="25000">0</span>+</div>
+          <p>And Growing</p>
+        </div>
+        <div class="counter-card">
+          <div class="counter-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Members Joined</h3>
+          <div class="counter" id="membersCounter"><span data-count="8500">0</span>+</div>
+          <p>Through Our Campaigns</p>
         </div>
       </div>
     </div>
@@ -103,7 +103,7 @@
   <section id="services" class="services">
     <div class="container">
       <div class="section-header">
-        <h2>Our Services</h2>
+        <h2>What We Do Best</h2>
         <p>Helping organizations grow their revenue and impact through expert call campaigns</p>
       </div>
       <div class="services-grid">
@@ -112,21 +112,21 @@
             <i class="fas fa-headset"></i>
           </div>
           <h3>Lead Generation</h3>
-          <p>Connecting you to your next customer through targeted outreach.</p>
+          <p>Connecting you to your next customer through targeted outreach and qualification.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <i class="fas fa-chart-line"></i>
           </div>
           <h3>Sales Support</h3>
-          <p>Boost your revenue with expert assistance and professional solutions.</p>
+          <p>Boost your revenue with expert assistance and professional closing techniques.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <i class="fas fa-hand-holding-heart"></i>
           </div>
           <h3>Non-Profit Fundraising</h3>
-          <p>Expand your impact with our specialized fundraising campaigns.</p>
+          <p>Expand your impact with our specialized fundraising campaigns for NGOs.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
@@ -135,6 +135,170 @@
           <h3>Customer Retention</h3>
           <p>Strengthen loyalty and keep your clients engaged with professional outreach.</p>
         </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3>Compliance Auditing</h3>
+          <p>Ensure your campaigns meet regulatory standards with our thorough auditing.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Campaign Automation</h3>
+          <p>Leverage technology to scale your outreach with intelligent automation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="case-studies" class="case-studies">
+    <div class="container">
+      <div class="section-header">
+        <h2>Proven Results</h2>
+        <p>Real campaigns, real outcomes. See how we've helped organizations like yours achieve measurable growth.</p>
+      </div>
+      <div class="case-studies-grid">
+        <div class="case-study-card">
+          <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="case-study-content">
+            <div class="case-study-category">Non-Profit</div>
+            <h3>National Fundraising Campaign</h3>
+            <p>Increased monthly donors by 215% through targeted calling campaign.</p>
+            <div class="case-study-meta">
+              <div><span>Client:</span> Hope Foundation</div>
+              <div><span>ROI:</span> 310%</div>
+            </div>
+            <button type="button" class="btn btn-secondary case-study-btn" data-id="1">Read Full Report</button>
+          </div>
+        </div>
+        <div class="case-study-card">
+          <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="case-study-content">
+            <div class="case-study-category">Technology</div>
+            <h3>B2B Sales Acceleration</h3>
+            <p>Generated 120+ qualified sales appointments for enterprise software.</p>
+            <div class="case-study-meta">
+              <div><span>Client:</span> TechGrowth Solutions</div>
+              <div><span>ROI:</span> 275%</div>
+            </div>
+            <button type="button" class="btn btn-secondary case-study-btn" data-id="2">Read Full Report</button>
+          </div>
+        </div>
+        <div class="case-study-card">
+          <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="case-study-content">
+            <div class="case-study-category">Health & Fitness</div>
+            <h3>Customer Retention Program</h3>
+            <p>Reduced membership cancellations by 45% through proactive outreach.</p>
+            <div class="case-study-meta">
+              <div><span>Client:</span> Lifestyle Fitness</div>
+              <div><span>ROI:</span> 420%</div>
+            </div>
+            <button type="button" class="btn btn-secondary case-study-btn" data-id="3">Read Full Report</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study Modal -->
+    <div id="caseStudyModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle"></h3>
+          <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div id="modalImage" class="modal-image"></div>
+          <div class="modal-stats">
+            <div class="modal-stat">
+              <div class="stat-label">Leads Generated</div>
+              <div id="modalLeads" class="stat-value"></div>
+            </div>
+            <div class="modal-stat">
+              <div class="stat-label">Conversion Rate</div>
+              <div id="modalConversion" class="stat-value"></div>
+            </div>
+            <div class="modal-stat">
+              <div class="stat-label">Return on Investment</div>
+              <div id="modalROI" class="stat-value"></div>
+            </div>
+          </div>
+          <div class="modal-details">
+            <h4>Client</h4>
+            <p id="modalClient"></p>
+            <h4>Campaign Details</h4>
+            <p id="modalReport"></p>
+          </div>
+          <div class="modal-testimonial">
+            <blockquote id="modalQuote"></blockquote>
+            <div id="modalAuthor" class="testimonial-author"></div>
+            <div id="modalPosition" class="testimonial-position"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why SIG Works Section -->
+  <section id="why-sig" class="why-sig">
+    <div class="container">
+      <div class="section-header light">
+        <h2>Why SIG Works</h2>
+        <p>Our approach combines industry expertise, cutting-edge technology, and a relentless focus on results.</p>
+      </div>
+      <div class="why-sig-grid">
+        <div class="why-sig-card">
+          <div class="why-sig-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="why-sig-content">
+            <h3>Veteran-Run Operations</h3>
+            <p>Our leadership team brings decades of call center and sales experience to every campaign.</p>
+          </div>
+        </div>
+        <div class="why-sig-card">
+          <div class="why-sig-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="why-sig-content">
+            <h3>Data-Backed Scripts</h3>
+            <p>We continuously refine our conversation scripts based on performance analytics.</p>
+          </div>
+        </div>
+        <div class="why-sig-card">
+          <div class="why-sig-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="why-sig-content">
+            <h3>Custom CRM Integrations</h3>
+            <p>Seamlessly connect with your existing systems for real-time data flow and reporting.</p>
+          </div>
+        </div>
+        <div class="why-sig-card">
+          <div class="why-sig-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="why-sig-content">
+            <h3>AI-Assisted Quality Control</h3>
+            <p>Advanced monitoring tools ensure consistent quality across all conversations.</p>
+          </div>
+        </div>
+        <div class="why-sig-card">
+          <div class="why-sig-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="why-sig-content">
+            <h3>Dedicated Agent Management</h3>
+            <p>Specialized team leaders provide ongoing coaching and performance optimization.</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-sig-quote">
+        <blockquote>"Other call centers burn leads. We close them."</blockquote>
+        <a href="#contact" class="btn btn-light">Start Your Campaign</a>
       </div>
     </div>
   </section>
@@ -142,21 +306,91 @@
   <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
+      <div class="section-header">
+        <h2>About Us</h2>
+        <p>SIG Solutions is a mission-driven, data-centric call center focused on delivering measurable results for our clients.</p>
+      </div>
       <div class="about-content">
         <div class="about-text">
-          <div class="section-header">
-            <h2>About Us</h2>
-            <p>Your Trusted Call Center Partner</p>
-          </div>
+          <h3>Our Mission</h3>
           <p>At SIG Solutions, we combine experience, passion, and strategy to help organizations expand their reach and revenue through expert call center solutions. Our team is committed to delivering measurable results that drive growth and success for our clients.</p>
+          <p>We believe in transparency, continuous improvement, and building long-term partnerships with our clients. Our approach is data-driven, allowing us to optimize campaigns in real-time and deliver the highest possible return on investment.</p>
           <div class="mission-statement">
-            <blockquote>Empower businesses and non-profits with sales expertise, trust, and results to fuel long-term growth.</blockquote>
+            <blockquote>"Empower businesses and non-profits with sales expertise, trust, and results to fuel long-term growth."</blockquote>
           </div>
-          <a href="#contact" class="btn btn-primary">Work With Us</a>
+          <div class="about-metrics">
+            <div class="metric">
+              <div class="metric-icon"><i class="fas fa-users"></i></div>
+              <div class="metric-value">30+</div>
+              <div class="metric-label">Clients Across South Africa</div>
+            </div>
+            <div class="metric">
+              <div class="metric-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="metric-value">1M+</div>
+              <div class="metric-label">Calls Annually</div>
+            </div>
+            <div class="metric">
+              <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="metric-value">25%</div>
+              <div class="metric-label">Avg. Conversion Improvement</div>
+            </div>
+            <div class="metric">
+              <div class="metric-icon"><i class="fas fa-globe"></i></div>
+              <div class="metric-value">5+</div>
+              <div class="metric-label">Industries Served</div>
+            </div>
+          </div>
         </div>
-        <div class="about-image">
-          <img src="about-image.jpg" alt="SIG Solutions Team">
+        <div class="about-timeline">
+          <h3>Our Journey</h3>
+          <div class="timeline">
+            <div class="timeline-event">
+              <div class="timeline-year">2018</div>
+              <div class="timeline-content">
+                <h4>Founded</h4>
+                <p>SIG Solutions was established with a focus on quality lead generation.</p>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-year">2019</div>
+              <div class="timeline-content">
+                <h4>First Major Client</h4>
+                <p>Secured partnership with a leading insurance provider.</p>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-year">2020</div>
+              <div class="timeline-content">
+                <h4>Expanded Services</h4>
+                <p>Added non-profit fundraising to our service offerings.</p>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-year">2022</div>
+              <div class="timeline-content">
+                <h4>Technology Integration</h4>
+                <p>Implemented AI-assisted quality control systems.</p>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-year">2023</div>
+              <div class="timeline-content">
+                <h4>Team Growth</h4>
+                <p>Expanded to 50+ specialized agents across multiple campaigns.</p>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-year">2025</div>
+              <div class="timeline-content">
+                <h4>Today</h4>
+                <p>Serving 30+ clients with industry-leading results.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="about-cta">
+        <a href="#contact" class="btn btn-primary">Work With Us</a>
       </div>
     </div>
   </section>
@@ -166,44 +400,96 @@
     <div class="container">
       <div class="section-header">
         <h2>What Our Clients Say</h2>
-        <p>Success stories from businesses we've helped</p>
+        <p>Don't just take our word for it. Here's what our partners have to say about working with SIG Solutions.</p>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>"SIG Solutions helped us double our donor base within a year! Their fundraising campaigns were professional and highly effective."</p>
+      <div class="testimonials-slider">
+        <div class="testimonial-slides">
+          <div class="testimonial-slide active" id="testimonial-1">
+            <div class="testimonial-card">
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <div class="testimonial-content">
+                <p>"SIG Solutions transformed our fundraising approach. Their team's dedication and strategic calling methods helped us reach our annual target in just 4 months."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="Sarah Johnson">
+                </div>
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>Director of Development, Hope Foundation</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="testimonial-author">
-            <img src="testimonial-1.jpg" alt="John Smith">
-            <div class="author-info">
-              <h4>John Smith</h4>
-              <p>Director, Hope Foundation</p>
+          <div class="testimonial-slide" id="testimonial-2">
+            <div class="testimonial-card">
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <div class="testimonial-content">
+                <p>"The quality of leads delivered by SIG Solutions exceeded our expectations. Their team's ability to understand our complex product offering and communicate it effectively to prospects was impressive."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="Michael Chen">
+                </div>
+                <div class="author-info">
+                  <h4>Michael Chen</h4>
+                  <p>Sales Director, TechGrowth Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide" id="testimonial-3">
+            <div class="testimonial-card">
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <div class="testimonial-content">
+                <p>"SIG Solutions helped us identify at-risk members and reconnect with them before they cancelled. Their retention specialists truly understand how to communicate value and address concerns."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="Lisa Ndlovu">
+                </div>
+                <div class="author-info">
+                  <h4>Lisa Ndlovu</h4>
+                  <p>Membership Director, Lifestyle Fitness</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide" id="testimonial-4">
+            <div class="testimonial-card">
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <div class="testimonial-content">
+                <p>"Working with SIG Solutions has been a game-changer for our business. Their lead generation campaigns consistently deliver high-quality prospects that convert at nearly twice the rate of our previous provider."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="David Mokoena">
+                </div>
+                <div class="author-info">
+                  <h4>David Mokoena</h4>
+                  <p>CEO, Innovate Insurance</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>"Our sales grew by 40% after partnering with SIG Solutions. Their lead generation and sales support teams are professional and results-driven."</p>
+        <div class="testimonial-controls">
+          <button type="button" class="testimonial-prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+          <div class="testimonial-dots">
+            <span class="dot active" data-slide="testimonial-1"></span>
+            <span class="dot" data-slide="testimonial-2"></span>
+            <span class="dot" data-slide="testimonial-3"></span>
+            <span class="dot" data-slide="testimonial-4"></span>
           </div>
-          <div class="testimonial-author">
-            <img src="testimonial-2.jpg" alt="Sarah Johnson">
-            <div class="author-info">
-              <h4>Sarah Johnson</h4>
-              <p>CEO, Retail Solutions Inc.</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>"Professional, results-driven, and an extension of our internal team. SIG Solutions has been instrumental in helping us maintain strong relationships with our customers."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="testimonial-3.jpg" alt="Michael Brown">
-            <div class="author-info">
-              <h4>Michael Brown</h4>
-              <p>Founder, Global Brands</p>
-            </div>
-          </div>
+          <button type="button" class="testimonial-next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </div>
@@ -213,50 +499,83 @@
   <section id="contact" class="contact">
     <div class="container">
       <div class="section-header">
-        <h2>Get In Touch</h2>
-        <p>Ready to grow your business? Let's talk.</p>
+        <h2>Ready to grow your revenue and reach?</h2>
+        <p>Get in touch with our team to discuss how SIG Solutions can help you achieve your goals.</p>
       </div>
       <div class="contact-content">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-text">
+              <h4>Email</h4>
+              <a href="mailto:franz@sigsolutions.co.za">franz@sigsolutions.co.za</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info-text">
+              <h4>Phone</h4>
+              <a href="tel:+27123456789">+27 12 345 6789</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-text">
+              <h4>Office</h4>
+              <address>Pretoria, South Africa</address>
+            </div>
+          </div>
+          <div class="business-hours">
+            <h4>Business Hours</h4>
+            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+            <p>Saturday - Sunday: Closed</p>
+          </div>
+        </div>
         <div class="contact-form">
+          <h3>Send Us a Message</h3>
           <form id="contactForm">
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name">Name <span class="required">*</span></label>
               <input type="text" id="name" name="name" required>
+              <div class="error-message" id="name-error"></div>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email">Email <span class="required">*</span></label>
               <input type="email" id="email" name="email" required>
+              <div class="error-message" id="email-error"></div>
             </div>
             <div class="form-group">
-              <label for="phone">Phone (optional)</label>
-              <input type="tel" id="phone" name="phone">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company">
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
+              <label for="message">Message <span class="required">*</span></label>
               <textarea id="message" name="message" rows="5" required></textarea>
+              <div class="error-message" id="message-error"></div>
             </div>
             <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
         </div>
-        <div class="contact-info">
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>123 Business Avenue, Pretoria, South Africa</p>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <p>franz@sigsolutions.co.za</p>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-phone"></i>
-            <p>+27 12 345 6789</p>
-          </div>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
+      </div>
+    </div>
+
+    <!-- Contact Form Success Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Thank You!</h3>
+          <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Your message has been sent successfully. Our team will get back to you within 24 hours.</p>
+          <button type="button" class="btn btn-primary modal-close-btn">Close</button>
         </div>
       </div>
     </div>
@@ -270,14 +589,21 @@
           <a href="/">
             <span>SIG</span>Solutions
           </a>
-          <p>Helping you grow with every call</p>
+          <p>Optimizing Revenue Flow with Minimal Complexity</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:franz@sigsolutions.co.za" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
         </div>
         <div class="footer-links">
           <div class="footer-links-column">
             <h4>Quick Links</h4>
             <ul>
               <li><a href="#services">Services</a></li>
-              <li><a href="#about">About Us</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#case-studies">Case Studies</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -289,12 +615,21 @@
               <li><a href="#services">Sales Support</a></li>
               <li><a href="#services">Non-Profit Fundraising</a></li>
               <li><a href="#services">Customer Retention</a></li>
+              <li><a href="#services">Compliance Auditing</a></li>
             </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <address>
+              <p>Pretoria, South Africa</p>
+              <p><a href="mailto:franz@sigsolutions.co.za">franz@sigsolutions.co.za</a></p>
+              <p><a href="tel:+27123456789">+27 12 345 6789</a></p>
+            </address>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 SIG Solutions. All rights reserved.</p>
+        <p>&copy; 2025 SIG Solutions – Optimizing Revenue Flow with Minimal Complexity</p>
         <div class="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
@@ -303,7 +638,309 @@
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <!-- JavaScript -->
   <script src="script.js"></script>
+  <script>
+    // Initialize CountUp.js for counters
+    document.addEventListener('DOMContentLoaded', function() {
+      // Animated Counters
+      const counters = document.querySelectorAll('.counter span[data-count]');
+
+      const options = {
+        threshold: 0.5
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = entry.target;
+            const countTo = parseInt(target.getAttribute('data-count'));
+            let count = 0;
+            const speed = Math.floor(2000 / countTo);
+
+            const updateCount = () => {
+              if (count < countTo) {
+                count += Math.ceil(countTo / 100);
+                if (count > countTo) count = countTo;
+                target.innerText = count.toLocaleString();
+                setTimeout(updateCount, speed);
+              }
+            };
+
+            updateCount();
+            observer.unobserve(target);
+          }
+        });
+      }, options);
+
+      counters.forEach(counter => {
+        observer.observe(counter);
+      });
+
+      // Testimonial Slider
+      const slides = document.querySelectorAll('.testimonial-slide');
+      const dots = document.querySelectorAll('.testimonial-dots .dot');
+      const prevBtn = document.querySelector('.testimonial-prev');
+      const nextBtn = document.querySelector('.testimonial-next');
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+      }
+
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        });
+
+        nextBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        });
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+        });
+      });
+
+      // Auto-advance slides every 5 seconds
+      setInterval(() => {
+        if (document.visibilityState === 'visible') {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+      }, 5000);
+
+      // Case Study Modal
+      const caseStudyBtns = document.querySelectorAll('.case-study-btn');
+      const caseStudyModal = document.getElementById('caseStudyModal');
+      const modalClose = document.querySelector('.modal-close');
+
+      const caseStudies = [
+        {
+          id: 1,
+          title: 'National Fundraising Campaign',
+          client: 'Hope Foundation - Non-Profit',
+          image: 'https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+          leads: '5,000+',
+          conversion: '18.5%',
+          roi: '310%',
+          quote: 'SIG Solutions transformed our fundraising approach. Their team\'s dedication and strategic calling methods helped us reach our annual target in just 4 months.',
+          author: 'Sarah Johnson',
+          position: 'Director of Development, Hope Foundation',
+          report: 'Our comprehensive campaign for Hope Foundation focused on reconnecting with lapsed donors and finding new supporters. Using a data-driven approach, we segmented the audience based on previous giving patterns and interest areas. Our specialized fundraising team conducted over 15,000 calls, resulting in 5,000+ qualified leads and an 18.5% conversion rate to monthly donors. The campaign achieved a 310% ROI within the first year, with an average donation value increase of 28% compared to previous campaigns.'
+        },
+        {
+          id: 2,
+          title: 'B2B Sales Acceleration',
+          client: 'TechGrowth Solutions - Technology',
+          image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+          leads: '350+',
+          conversion: '34.2%',
+          roi: '275%',
+          quote: 'The quality of leads delivered by SIG Solutions exceeded our expectations. Their team\'s ability to understand our complex product offering and communicate it effectively to prospects was impressive.',
+          author: 'Michael Chen',
+          position: 'Sales Director, TechGrowth Solutions',
+          report: 'For TechGrowth Solutions, we developed a targeted B2B outreach campaign focused on mid to large enterprises in the financial and healthcare sectors. Our team conducted extensive research to identify decision-makers and created customized scripts addressing specific pain points in their operations. Through 1,200+ calls, we generated 350+ qualified leads and secured 120 sales appointments. The campaign achieved a 34.2% conversion rate from lead to appointment, resulting in 28 new client acquisitions and a 275% ROI within 6 months.'
+        },
+        {
+          id: 3,
+          title: 'Customer Retention Program',
+          client: 'Lifestyle Fitness - Health & Fitness',
+          image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+          leads: '2,800+',
+          conversion: '62.5%',
+          roi: '420%',
+          quote: 'SIG Solutions helped us identify at-risk members and reconnect with them before they cancelled. Their retention specialists truly understand how to communicate value and address concerns.',
+          author: 'Lisa Ndlovu',
+          position: 'Membership Director, Lifestyle Fitness',
+          report: 'Lifestyle Fitness was experiencing a high rate of membership cancellations, particularly after the first three months. We implemented a proactive retention program that identified at-risk members through usage patterns and engagement metrics. Our retention specialists conducted personalized outreach to 2,800+ members, addressing specific concerns and highlighting underutilized benefits. The campaign resulted in a 45% reduction in cancellations, with 62.5% of contacted members renewing their memberships. Additionally, we generated 420+ upsells to premium membership tiers, delivering a 420% ROI on the campaign investment.'
+        }
+      ];
+
+      caseStudyBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const caseId = parseInt(btn.getAttribute('data-id'));
+          const caseStudy = caseStudies.find(cs => cs.id === caseId);
+
+          if (caseStudy && caseStudyModal) {
+            document.getElementById('modalTitle').textContent = caseStudy.title;
+            document.getElementById('modalImage').style.backgroundImage = `url(${caseStudy.image})`;
+            document.getElementById('modalLeads').textContent = caseStudy.leads;
+            document.getElementById('modalConversion').textContent = caseStudy.conversion;
+            document.getElementById('modalROI').textContent = caseStudy.roi;
+            document.getElementById('modalClient').textContent = caseStudy.client;
+            document.getElementById('modalReport').textContent = caseStudy.report;
+            document.getElementById('modalQuote').textContent = `"${caseStudy.quote}"`;
+            document.getElementById('modalAuthor').textContent = caseStudy.author;
+            document.getElementById('modalPosition').textContent = caseStudy.position;
+
+            caseStudyModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      if (modalClose) {
+        modalClose.addEventListener('click', () => {
+          caseStudyModal.classList.remove('show');
+          document.body.style.overflow = 'auto';
+        });
+      }
+
+      // Contact Form Modal
+      const contactForm = document.getElementById('contactForm');
+      const contactModal = document.getElementById('contactModal');
+      const contactModalClose = document.querySelectorAll('.modal-close, .modal-close-btn');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          // Form validation
+          let isValid = true;
+          const nameInput = document.getElementById('name');
+          const emailInput = document.getElementById('email');
+          const messageInput = document.getElementById('message');
+
+          // Reset error messages
+          document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+          if (!nameInput.value.trim()) {
+            document.getElementById('name-error').textContent = 'Name is required';
+            isValid = false;
+          }
+
+          if (!emailInput.value.trim()) {
+            document.getElementById('email-error').textContent = 'Email is required';
+            isValid = false;
+          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+            document.getElementById('email-error').textContent = 'Please enter a valid email address';
+            isValid = false;
+          }
+
+          if (!messageInput.value.trim()) {
+            document.getElementById('message-error').textContent = 'Message is required';
+            isValid = false;
+          }
+
+          if (isValid) {
+            // Show success modal
+            contactModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+
+            // Reset form
+            contactForm.reset();
+          }
+        });
+      }
+
+      contactModalClose.forEach(btn => {
+        btn.addEventListener('click', () => {
+          contactModal.classList.remove('show');
+          document.body.style.overflow = 'auto';
+        });
+      });
+
+      // Back to Top Button
+      const backToTopBtn = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Animated Wave Canvas
+      const canvas = document.getElementById('waveCanvas');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas dimensions
+        function setCanvasDimensions() {
+          canvas.width = canvas.offsetWidth;
+          canvas.height = canvas.offsetHeight;
+        }
+
+        setCanvasDimensions();
+        window.addEventListener('resize', setCanvasDimensions);
+
+        // Animation variables
+        const wavePoints = [];
+        const waveCount = Math.floor(canvas.width / 50);
+
+        // Initialize wave points
+        for (let i = 0; i < waveCount; i++) {
+          wavePoints.push({
+            x: i * (canvas.width / waveCount),
+            y: canvas.height / 2,
+            originalY: canvas.height / 2,
+            speed: 0.05 + Math.random() * 0.05
+          });
+        }
+
+        // Animation function
+        function animate() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          // Draw waves
+          ctx.beginPath();
+          ctx.moveTo(0, canvas.height);
+
+          for (let i = 0; i < wavePoints.length; i++) {
+            const point = wavePoints[i];
+            point.y = point.originalY + Math.sin(Date.now() * 0.001 * point.speed) * 15;
+
+            if (i === 0) {
+              ctx.lineTo(point.x, point.y);
+            } else {
+              const prevPoint = wavePoints[i - 1];
+              const xc = (prevPoint.x + point.x) / 2;
+              const yc = (prevPoint.y + point.y) / 2;
+              ctx.quadraticCurveTo(prevPoint.x, prevPoint.y, xc, yc);
+            }
+          }
+
+          ctx.lineTo(canvas.width, canvas.height);
+          ctx.lineTo(0, canvas.height);
+          ctx.closePath();
+
+          // Create gradient
+          const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+          gradient.addColorStop(0, 'rgba(0, 31, 84, 0.1)');
+          gradient.addColorStop(1, 'rgba(0, 31, 84, 0.02)');
+
+          ctx.fillStyle = gradient;
+          ctx.fill();
+
+          requestAnimationFrame(animate);
+        }
+
+        animate();
+      }
+    });
+  </script>
 </body>
 </html>
