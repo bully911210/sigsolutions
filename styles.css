@@ -1575,23 +1575,26 @@ img {
 
 .contact-form {
   background-color: var(--white);
-  padding: 40px;
+  padding: var(--spacing-lg);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
+  height: 100%;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-md);
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: var(--spacing-xs);
   font-weight: 500;
+  color: var(--text-dark);
 }
 
 .form-group .required {
   color: #e74c3c; /* Red */
+  margin-left: 3px;
 }
 
 .form-group input,
@@ -1599,10 +1602,26 @@ img {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid var(--gray-300);
-  border-radius: var(--border-radius);
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
   transition: var(--transition);
+  background-color: var(--white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 31, 84, 0.1);
+}
+
+@media (max-width: 576px) {
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: var(--font-size-sm);
+  }
 }
 
 .form-group input:focus,
