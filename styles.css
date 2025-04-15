@@ -344,12 +344,12 @@ img {
   background-color: var(--white);
   box-shadow: var(--shadow-md);
   z-index: 1000;
-  padding: calc(var(--spacing-md) * 0.67) 0; /* Decreased by 33% */
+  padding: 10px 0; /* Explicitly set to 10px (decreased from 15px) */
   transition: var(--transition);
 }
 
 .header.scrolled {
-  padding: calc(var(--spacing-sm) * 0.67) 0; /* Decreased by 33% */
+  padding: 7px 0; /* Explicitly set to 7px (decreased from 10px) */
   box-shadow: var(--shadow-lg);
 }
 
@@ -2046,7 +2046,7 @@ img {
 }
 
 .header {
-  padding: calc(20px * 0.67) 0; /* Decreased by 33% */
+  padding: 10px 0; /* Explicitly set to 10px (decreased from 15px) */
 }
 
 .footer-logo img {
