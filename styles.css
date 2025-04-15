@@ -376,7 +376,7 @@ img {
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
@@ -385,8 +385,9 @@ img {
   border-radius: var(--border-radius);
   padding: 30px;
   box-shadow: var(--shadow);
-  transition: var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  height: 100%;
 }
 
 .process-card:hover {
@@ -445,8 +446,9 @@ img {
   border-radius: var(--border-radius);
   padding: 30px;
   box-shadow: var(--shadow);
-  transition: var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  height: 100%;
 }
 
 .service-card:hover {
@@ -501,6 +503,7 @@ img {
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .case-study-card:hover {
