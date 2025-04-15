@@ -874,6 +874,7 @@ img {
   background-color: var(--white);
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .leader-card:hover {
