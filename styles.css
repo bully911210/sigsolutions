@@ -344,7 +344,7 @@ img {
   background-color: var(--white);
   box-shadow: var(--shadow-md);
   z-index: 1000;
-  padding: var(--spacing-md) 0;
+  padding: calc(var(--spacing-md) * 0.67) 0; /* Decreased by 33% */
   transition: var(--transition);
 }
 
