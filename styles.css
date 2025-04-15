@@ -482,10 +482,17 @@ img {
   margin-top: 40px;
 }
 
-.case-studies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.case-studies-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.case-studies-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: var(--text-color);
 }
 
 .case-study-card {
