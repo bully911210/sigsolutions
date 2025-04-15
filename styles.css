@@ -147,15 +147,9 @@ img {
   align-items: center;
 }
 
-.logo a {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--secondary-color);
-}
-
-.logo span {
-  color: #001F54; /* Navy Blue */
-  margin-right: 2px;
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
 .nav-list {
@@ -1294,20 +1288,11 @@ img {
   margin-bottom: 15px;
 }
 
-.footer-logo a {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--white);
+.footer-logo img {
+  height: 50px;
+  width: auto;
+  filter: brightness(0) invert(1);
   margin-bottom: 10px;
-  display: inline-block;
-}
-
-.footer-logo span {
-  color: var(--white);
-  background-color: #001F54; /* Navy Blue */
-  padding: 0 3px;
-  border-radius: 3px;
-  margin-right: 2px;
 }
 
 .footer-logo p {
