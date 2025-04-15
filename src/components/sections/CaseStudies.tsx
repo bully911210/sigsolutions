@@ -81,7 +81,7 @@ const CaseStudies = () => {
         roi: '420%',
       },
       testimonial: {
-        quote: 'SIG Solutions helped us identify at-risk members and reconnect with them before they cancelled. Their retention specialists truly understand how to communicate value and address concerns.',
+        quote: "SIG Solutions helped us identify at-risk members and reconnect with them before they cancelled. Their retention specialists truly understand how to communicate value and address concerns.",
         author: 'Lisa Ndlovu',
         position: 'Membership Director, Lifestyle Fitness',
       },
@@ -140,6 +140,7 @@ const CaseStudies = () => {
                   </div>
                 </div>
                 <button
+                  type="button"
                   onClick={() => openModal(caseStudy)}
                   className="btn btn-secondary w-full"
                 >
@@ -161,6 +162,7 @@ const CaseStudies = () => {
             <div className="sticky top-0 bg-white p-6 border-b flex justify-between items-center">
               <h3 className="text-2xl font-bold">{selectedCase.title}</h3>
               <button
+                type="button"
                 onClick={closeModal}
                 className="text-gray-500 hover:text-gray-700 focus:outline-none"
                 aria-label="Close modal"
@@ -205,6 +207,7 @@ const CaseStudies = () => {
 
               <div className="flex justify-end">
                 <button
+                  type="button"
                   onClick={closeModal}
                   className="btn btn-primary"
                 >
