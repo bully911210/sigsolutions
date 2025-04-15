@@ -482,7 +482,7 @@ img {
 /* Hero Section */
 .hero {
   padding: 160px 0 var(--spacing-xxl);
-  background-color: var(--gray-100);
+  background-color: var(--white);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -497,15 +497,11 @@ img {
   text-align: center;
   position: relative;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: var(--spacing-xl);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-md);
 }
 
 .hero h1 {
   font-size: var(--font-size-4xl);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   color: var(--primary-color);
   font-weight: 700;
   line-height: 1.2;
@@ -525,7 +521,7 @@ img {
 .impact-heading {
   font-size: var(--font-size-xl);
   color: var(--text-dark);
-  margin: var(--spacing-lg) 0 var(--spacing-md);
+  margin: var(--spacing-md) 0 var(--spacing-xl);
   font-weight: 600;
   position: relative;
   display: inline-block;
@@ -534,7 +530,7 @@ img {
 .impact-heading::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
@@ -550,7 +546,7 @@ img {
   }
 
   .hero-content {
-    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
   }
 
   .hero h1 {
@@ -2030,7 +2026,7 @@ img {
   }
 
   .hero-content {
-    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
   }
 
   .hero h1 {
