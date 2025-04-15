@@ -1,1 +1,0 @@
-import{r as s}from"./vendor-C3d4I53_.js";function a(i={}){const{threshold:t=.1,rootMargin:n="0px"}=i,o=s.useRef(null),[u,c]=s.useState(!1);return s.useEffect(()=>{const e=o.current;if(!e)return;const r=new IntersectionObserver(([f])=>{f.isIntersecting&&(c(!0),r.unobserve(e))},{threshold:t,rootMargin:n});return r.observe(e),()=>{r.unobserve(e)}},[t,n]),[o,u]}export{a as u};
