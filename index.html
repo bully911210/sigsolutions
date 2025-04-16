@@ -18,6 +18,7 @@
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
       :root {
@@ -134,7 +135,7 @@
       }
 
       .header.scrolled {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(12px);
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         padding: 0.75rem 0;
@@ -216,7 +217,7 @@
 
       /* Hero Section */
       .hero {
-        min-height: 100vh;
+        min-height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -253,7 +254,7 @@
       .scroll-indicator {
         display: flex;
         justify-content: center;
-        margin-top: 4rem;
+        margin-top: 2rem;
         animation: bounce 2s infinite;
       }
 
@@ -266,6 +267,54 @@
         border-radius: 50%;
         border: 1px solid rgba(59, 130, 246, 0.2);
         color: var(--sig-blue);
+      }
+      
+      /* Client Carousel */
+      .client-carousel {
+        padding: 3rem 0;
+        background-color: #f8fafc;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      
+      .client-carousel .container {
+        max-width: 1000px;
+      }
+      
+      .carousel-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        color: var(--sig-dark);
+        opacity: 0.8;
+      }
+      
+      .carousel-track {
+        display: flex;
+        overflow-x: hidden;
+        padding: 1rem 0;
+      }
+      
+      .carousel-slide {
+        flex: 0 0 25%;
+        min-width: 160px;
+        padding: 1rem;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      
+      .carousel-slide img {
+        height: 80px;
+        width: auto;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+      
+      .carousel-slide:hover img {
+        filter: grayscale(0);
+        opacity: 1;
+        transform: scale(1.05);
       }
 
       /* Click to Collection Section */
@@ -307,8 +356,12 @@
       }
 
       .process-icon {
-        color: #3b82f6;
         margin-bottom: 1.25rem;
+        font-size: 2.5rem;
+      }
+
+      .process-icon.blue {
+        color: #3b82f6;
       }
 
       .process-icon.purple {
@@ -369,6 +422,7 @@
       .service-icon {
         color: var(--sig-blue);
         margin-bottom: 1.25rem;
+        font-size: 2.5rem;
       }
 
       /* Why Choose Us Section */
@@ -394,6 +448,7 @@
         flex-shrink: 0;
         margin-right: 1rem;
         color: var(--sig-blue);
+        font-size: 1.5rem;
       }
 
       .feature-content h4 {
@@ -432,34 +487,34 @@
 
       @media (min-width: 1024px) {
         .leader-grid {
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(2, 1fr);
         }
       }
 
-      .leader-card {
+      .leadership-item {
         background-color: white;
         border-radius: 1rem;
-        padding: 1.5rem;
-        text-align: center;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
       }
-
-      .leader-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      }
-
-      .leader-avatar {
-        width: 6rem;
-        height: 6rem;
-        border-radius: 50%;
-        background-color: rgba(59, 130, 246, 0.1);
+      
+      .leadership-item h3 {
         display: flex;
         align-items: center;
-        justify-content: center;
-        margin: 0 auto 1rem auto;
+        font-size: 1.125rem;
+        color: var(--sig-dark);
+        margin-bottom: 0.75rem;
+      }
+      
+      .leadership-item h3 i {
         color: var(--sig-blue);
+        margin-right: 0.75rem;
+      }
+      
+      .leadership-item p {
+        color: rgba(15, 23, 42, 0.7);
+        font-size: 0.95rem;
+        padding-left: 2rem;
       }
 
       /* CTA Section */
@@ -588,6 +643,7 @@
         margin-right: 0.75rem;
         color: var(--sig-blue);
         flex-shrink: 0;
+        font-size: 1rem;
       }
 
       .footer-bottom {
@@ -649,6 +705,11 @@
           transform: translateY(-5px);
         }
       }
+      
+      @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
 
       /* Responsive Styles */
       @media (min-width: 640px) {
@@ -679,6 +740,9 @@
       .mobile-menu-toggle {
         display: block;
         cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
       }
 
       @media (min-width: 768px) {
@@ -700,6 +764,7 @@
         background: white;
         padding: 1rem;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 40;
       }
 
       .mobile-nav-link {
@@ -718,12 +783,38 @@
           display: flex;
         }
       }
+      
+      /* Technical expertise styling */
+      .tech-card {
+        background: linear-gradient(145deg, #ffffff, #f0f4f8);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+        border-radius: 1rem;
+        border: 1px solid rgba(59, 130, 246, 0.1);
+      }
+      
+      .tech-icon {
+        color: var(--sig-blue);
+        background: rgba(59, 130, 246, 0.08);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      
+      code {
+        font-family: monospace;
+        background: rgba(59, 130, 246, 0.08);
+        padding: 0.125rem 0.25rem;
+        border-radius: 0.25rem;
+        font-size: 0.9em;
+        color: var(--sig-blue);
+      }
     </style>
   </head>
   <body>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    
     <header class="header" id="header">
       <div class="container header-container">
         <a href="#" class="logo">
@@ -731,11 +822,7 @@
         </a>
         
         <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+          <i class="fa-solid fa-bars"></i>
         </button>
         
         <nav class="desktop-nav">
@@ -767,12 +854,36 @@
           </div>
         </div>
         <div class="scroll-indicator">
-          <a href="#content">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <polyline points="19 12 12 19 5 12"></polyline>
-            </svg>
+          <a href="#clients">
+            <i class="fa-solid fa-chevron-down"></i>
           </a>
+        </div>
+      </section>
+      
+      <!-- Client Carousel Section -->
+      <section class="client-carousel" id="clients">
+        <div class="container">
+          <h3 class="carousel-title">Trusted By Industry Leaders</h3>
+          <div class="carousel-track" id="carousel-track">
+            <div class="carousel-slide">
+              <img src="https://placehold.co/200x80/f8fafc/3b82f6?text=Client+1" alt="Client 1">
+            </div>
+            <div class="carousel-slide">
+              <img src="https://placehold.co/200x80/f8fafc/3b82f6?text=Client+2" alt="Client 2">
+            </div>
+            <div class="carousel-slide">
+              <img src="https://placehold.co/200x80/f8fafc/3b82f6?text=Client+3" alt="Client 3">
+            </div>
+            <div class="carousel-slide">
+              <img src="https://placehold.co/200x80/f8fafc/3b82f6?text=Client+4" alt="Client 4">
+            </div>
+            <div class="carousel-slide">
+              <img src="https://placehold.co/200x80/f8fafc/3b82f6?text=Client+5" alt="Client 5">
+            </div>
+            <div class="carousel-slide">
+              <img src="https://placehold.co/200x80/f8fafc/3b82f6?text=Client+6" alt="Client 6">
+            </div>
+          </div>
         </div>
       </section>
       
@@ -788,11 +899,8 @@
             
             <div class="process-container">
               <div class="process-card blue">
-                <div class="process-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 12c0-3.5 2.5-6 6.5-6H20"></path>
-                    <path d="M14 6l6 6-6 6"></path>
-                  </svg>
+                <div class="process-icon blue">
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
                 <h3>Click</h3>
                 <p style="font-weight: 500; margin-bottom: 1rem;">Generate high-quality leads through our advanced targeting and outreach process.</p>
@@ -801,9 +909,7 @@
               
               <div class="process-card purple">
                 <div class="process-icon purple">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
+                  <i class="fa-solid fa-phone"></i>
                 </div>
                 <h3>Sell</h3>
                 <p style="font-weight: 500; margin-bottom: 1rem;">We sell YOUR products to OUR qualified leads, maximizing conversion rates.</p>
@@ -812,9 +918,7 @@
               
               <div class="process-card green">
                 <div class="process-icon green">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
+                  <i class="fa-solid fa-shield"></i>
                 </div>
                 <h3>Collection</h3>
                 <p style="font-weight: 500; margin-bottom: 1rem;">We manage subscription payments and build lasting customer loyalty.</p>
@@ -835,10 +939,7 @@
             <div class="services-grid">
               <div class="service-card">
                 <div class="service-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                    <polyline points="17 6 23 6 23 12"></polyline>
-                  </svg>
+                  <i class="fa-solid fa-chart-line"></i>
                 </div>
                 <h3>Lead Generation</h3>
                 <p>Transform prospects into qualified leads with our data-driven solutions tailored to your target market.</p>
@@ -846,10 +947,7 @@
               
               <div class="service-card">
                 <div class="service-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                    <polyline points="17 6 23 6 23 12"></polyline>
-                  </svg>
+                  <i class="fa-solid fa-gauge-high"></i>
                 </div>
                 <h3>Sales Acceleration</h3>
                 <p>Boost conversion rates with our performance-focused sales strategies and real-time analytics dashboard.</p>
@@ -857,9 +955,7 @@
               
               <div class="service-card">
                 <div class="service-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
+                  <i class="fa-solid fa-shield-halved"></i>
                 </div>
                 <h3>Subscription Management</h3>
                 <p>Maximize customer lifetime value with our effective payment collection and retention strategies.</p>
@@ -879,12 +975,7 @@
                 <div class="feature-list">
                   <div class="feature-item">
                     <div class="feature-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 7h-9"></path>
-                        <path d="M14 17H5"></path>
-                        <circle cx="17" cy="17" r="3"></circle>
-                        <circle cx="7" cy="7" r="3"></circle>
-                      </svg>
+                      <i class="fa-solid fa-award"></i>
                     </div>
                     <div class="feature-content">
                       <h4>Industry Expertise</h4>
@@ -894,12 +985,7 @@
                   
                   <div class="feature-item">
                     <div class="feature-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 7h-9"></path>
-                        <path d="M14 17H5"></path>
-                        <circle cx="17" cy="17" r="3"></circle>
-                        <circle cx="7" cy="7" r="3"></circle>
-                      </svg>
+                      <i class="fa-solid fa-chart-bar"></i>
                     </div>
                     <div class="feature-content">
                       <h4>Data-Driven Approach</h4>
@@ -909,12 +995,7 @@
                   
                   <div class="feature-item">
                     <div class="feature-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 7h-9"></path>
-                        <path d="M14 17H5"></path>
-                        <circle cx="17" cy="17" r="3"></circle>
-                        <circle cx="7" cy="7" r="3"></circle>
-                      </svg>
+                      <i class="fa-solid fa-tools"></i>
                     </div>
                     <div class="feature-content">
                       <h4>Customized Solutions</h4>
@@ -924,8 +1005,18 @@
                 </div>
               </div>
               
-              <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern sales team in action">
+              <div class="tech-card glass p-6">
+                <div class="tech-icon">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Advanced Technical Integration</h3>
+                <p>Our platform seamlessly integrates with your existing systems through secure API connections, ensuring minimal disruption to your workflow.</p>
+                
+                <div style="background: rgba(0,0,0,0.04); border-radius: 8px; padding: 1rem; margin-top: 1rem; font-size: 0.9rem;">
+                  <p style="font-family: monospace; margin-bottom: 0.5rem;"><i class="fa-solid fa-check text-green-500 mr-2"></i> <code>RESTful API</code> with 99.9% uptime</p>
+                  <p style="font-family: monospace; margin-bottom: 0.5rem;"><i class="fa-solid fa-check text-green-500 mr-2"></i> <code>OAuth 2.0</code> secure authentication</p>
+                  <p style="font-family: monospace; margin-bottom: 0"><i class="fa-solid fa-check text-green-500 mr-2"></i> <code>WebSocket</code> real-time data streaming</p>
+                </div>
               </div>
             </div>
           </div>
@@ -939,119 +1030,25 @@
               <p>At SIG Solutions, our leadership team stands apart through proven experience and measurable success.</p>
             </div>
             
-            <div class="services-grid" style="margin-bottom: 3rem;">
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 7h-9"></path>
-                    <path d="M14 17H5"></path>
-                    <circle cx="17" cy="17" r="3"></circle>
-                    <circle cx="7" cy="7" r="3"></circle>
-                  </svg>
-                </div>
-                <div class="feature-content">
-                  <h4>30 Years in Subscription Sales</h4>
-                  <p>We have a deep track record in transforming subscription sales into reliable revenue.</p>
-                </div>
-              </div>
-              
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 7h-9"></path>
-                    <path d="M14 17H5"></path>
-                    <circle cx="17" cy="17" r="3"></circle>
-                    <circle cx="7" cy="7" r="3"></circle>
-                  </svg>
-                </div>
-                <div class="feature-content">
-                  <h4>Millions Raised in Nonprofit Fundraising</h4>
-                  <p>Our strategies consistently deliver significant funding outcomes.</p>
-                </div>
-              </div>
-              
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 7h-9"></path>
-                    <path d="M14 17H5"></path>
-                    <circle cx="17" cy="17" r="3"></circle>
-                    <circle cx="7" cy="7" r="3"></circle>
-                  </svg>
-                </div>
-                <div class="feature-content">
-                  <h4>Expertise in Niche Insurance Sales</h4>
-                  <p>We convert market challenges into clear, strategic advantages.</p>
-                </div>
-              </div>
-              
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 7h-9"></path>
-                    <path d="M14 17H5"></path>
-                    <circle cx="17" cy="17" r="3"></circle>
-                    <circle cx="7" cy="7" r="3"></circle>
-                  </svg>
-                </div>
-                <div class="feature-content">
-                  <h4>Innovative Lead Generation Technology</h4>
-                  <p>Our systems ensure every lead is engaged promptly, driving efficient growth.</p>
-                </div>
-              </div>
-            </div>
-            
             <div class="leader-grid">
-              <div class="leader-card">
-                <div class="leader-avatar">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <h3>Franz Badenhorst</h3>
-                <p style="color: rgba(15, 23, 42, 0.7);">Shareholder</p>
+              <div class="leadership-item">
+                <h3><i class="fa-solid fa-chart-line"></i> 30 Years in Subscription Sales</h3>
+                <p>We have a deep track record in transforming subscription sales into reliable revenue.</p>
               </div>
               
-              <div class="leader-card">
-                <div class="leader-avatar">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <h3>Johannes Stoker</h3>
-                <p style="color: rgba(15, 23, 42, 0.7);">Shareholder</p>
+              <div class="leadership-item">
+                <h3><i class="fa-solid fa-hand-holding-dollar"></i> Millions Raised in Nonprofit Fundraising</h3>
+                <p>Our strategies consistently deliver significant funding outcomes.</p>
               </div>
               
-              <div class="leader-card">
-                <div class="leader-avatar">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <h3>Charles Castle</h3>
-                <p style="color: rgba(15, 23, 42, 0.7);">Shareholder</p>
+              <div class="leadership-item">
+                <h3><i class="fa-solid fa-shield-halved"></i> Expertise in Niche Insurance Sales</h3>
+                <p>We convert market challenges into clear, strategic advantages.</p>
               </div>
               
-              <div class="leader-card">
-                <div class="leader-avatar">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <h3>Ivan Taljard</h3>
-                <p style="color: rgba(15, 23, 42, 0.7);">Shareholder</p>
+              <div class="leadership-item">
+                <h3><i class="fa-solid fa-bolt"></i> Innovative Lead Generation Technology</h3>
+                <p>Our systems ensure every lead is engaged promptly, driving efficient growth.</p>
               </div>
             </div>
           </div>
@@ -1083,28 +1080,16 @@
             <p>Transforming businesses with our innovative Click to Collection solution for subscription-based products.</p>
             <div class="social-links">
               <a href="#" class="social-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
+                <i class="fa-brands fa-facebook-f"></i>
               </a>
               <a href="#" class="social-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                </svg>
+                <i class="fa-brands fa-twitter"></i>
               </a>
               <a href="#" class="social-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
+                <i class="fa-brands fa-linkedin-in"></i>
               </a>
               <a href="#" class="social-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
+                <i class="fa-brands fa-instagram"></i>
               </a>
             </div>
           </div>
@@ -1133,30 +1118,19 @@
             <ul class="footer-links">
               <li class="contact-item">
                 <div class="contact-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                    <line x1="6" y1="1" x2="6" y2="4"></line>
-                    <line x1="10" y1="1" x2="10" y2="4"></line>
-                    <line x1="14" y1="1" x2="14" y2="4"></line>
-                  </svg>
+                  <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <span>Soutpansberg Road, Riviera, Pretoria, 0186</span>
               </li>
               <li class="contact-item">
                 <div class="contact-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
+                  <i class="fa-solid fa-phone"></i>
                 </div>
                 <a href="tel:+27621779799">+27 62 177 9799</a>
               </li>
               <li class="contact-item">
                 <div class="contact-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
+                  <i class="fa-solid fa-envelope"></i>
                 </div>
                 <a href="mailto:sales@sigsolutions.co.za">sales@sigsolutions.co.za</a>
               </li>
@@ -1232,7 +1206,7 @@
       
       // Animation on scroll
       function animateOnScroll() {
-        const elements = document.querySelectorAll('.process-card, .service-card, .leader-card');
+        const elements = document.querySelectorAll('.process-card, .service-card, .leadership-item, .tech-card');
         
         elements.forEach((element, index) => {
           const elementTop = element.getBoundingClientRect().top;
@@ -1249,15 +1223,30 @@
       }
       
       // Set initial state for animation
-      const animatedElements = document.querySelectorAll('.process-card, .service-card, .leader-card');
+      const animatedElements = document.querySelectorAll('.process-card, .service-card, .leadership-item, .tech-card');
       animatedElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
       });
       
-      // Run animation on page load and scroll
-      window.addEventListener('load', animateOnScroll);
+      // Client carousel animation
+      function setupCarousel() {
+        const track = document.getElementById('carousel-track');
+        const slides = track.querySelectorAll('.carousel-slide');
+        
+        // Clone slides for infinite effect
+        slides.forEach(slide => {
+          const clone = slide.cloneNode(true);
+          track.appendChild(clone);
+        });
+      }
+      
+      // Run animations on page load and scroll
+      window.addEventListener('load', function() {
+        animateOnScroll();
+        setupCarousel();
+      });
       window.addEventListener('scroll', animateOnScroll);
     </script>
   </body>
