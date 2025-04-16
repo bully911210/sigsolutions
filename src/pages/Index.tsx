@@ -1,252 +1,384 @@
-import { BarChart3, Users, Award, ArrowRight, Shield, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
-import Transition from "../components/Transition";
-import Hero from "../components/Hero";
-import ServiceCard from "../components/ServiceCard";
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import ClickToCollection from "../components/ClickToCollection";
+
+import React, { useEffect } from 'react';
 
 const Index = () => {
-  const [sectionRef, sectionVisible] = useScrollAnimation<HTMLDivElement>();
-  const [ctaRef, ctaVisible] = useScrollAnimation<HTMLDivElement>();
+  useEffect(() => {
+    document.title = "SIG Solutions";
+  }, []);
 
   return (
-    <Transition>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        
-        <Hero 
-          title="Reliable Revenue Streams"
-          subtitle="SIG Solutions transforms subscription-based businesses with our Click to Collection approach - generating leads, closing sales, and ensuring lasting customer relationships."
-          cta="Discover Our Solutions"
-          ctaLink="/marketing"
-          backgroundClass="bg-gradient-to-br from-white via-blue-50 to-white"
-        />
-        
-        <main id="content">
-          {/* Click to Collection Section */}
-          <ClickToCollection />
-          
-          {/* Services Section */}
-          <section className="section-padding bg-gray-50">
-            <div 
-              ref={sectionRef}
-              className={`container mx-auto transition-all duration-1000 ${
-                sectionVisible ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <div className="max-w-3xl mx-auto text-center mb-16">
-                <h2 className="mb-6">Comprehensive Subscription Sales Solutions</h2>
-                <p className="text-lg text-sig-dark/70">
-                  Our integrated approach combines cutting-edge technology with expert human resources to deliver exceptional results for your subscription-based business.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <ServiceCard 
-                  icon={<TrendingUp size={40} />}
-                  title="Lead Generation"
-                  description="Transform prospects into qualified leads with our data-driven solutions tailored to your target market."
-                  delay={100}
-                />
-                <ServiceCard 
-                  icon={<TrendingUp size={40} />}
-                  title="Sales Acceleration"
-                  description="Boost conversion rates with our performance-focused sales strategies and real-time analytics dashboard."
-                  delay={200}
-                />
-                <ServiceCard 
-                  icon={<Shield size={40} />}
-                  title="Subscription Management"
-                  description="Maximize customer lifetime value with our effective payment collection and retention strategies."
-                  delay={300}
-                />
+    <div className="app-container">
+      <header className="header">
+        <div className="container">
+          <div className="logo">
+            <img src="/lovable-uploads/sig-solutions-logo.png" alt="SIG Solutions Logo" />
+          </div>
+          <nav className="desktop-nav">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#solutions">Solutions</a></li>
+              <li><a href="#leadership">Leadership</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div className="mobile-nav-trigger">
+            <i className="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </header>
+
+      <div className="mobile-menu">
+        <div className="mobile-menu-close">
+          <i className="fa-solid fa-times"></i>
+        </div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <main>
+        <section className="hero">
+          <div className="container">
+            <div className="hero-content">
+              <h1 className="animate-fade-in">Supercharge Your Business with Digital Innovation</h1>
+              <p className="animate-fade-in delay-200">We deliver strategic solutions that drive growth and maximize efficiency in your organization.</p>
+              <div className="hero-cta animate-fade-in delay-400">
+                <a href="#contact" className="btn btn-primary">Get Started</a>
+                <a href="#solutions" className="btn btn-outline">Explore Solutions</a>
               </div>
             </div>
-          </section>
-          
-          {/* Why Choose Us */}
-          <section className="section-padding bg-white">
-            <div className="container mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                  <h2 className="mb-6">Why Choose SIG Solutions?</h2>
-                  <p className="text-lg text-sig-dark/70 mb-8">
-                    With decades of combined experience in subscription sales and business development, our team provides unmatched expertise to drive growth for your business.
-                  </p>
-                  
-                  <div className="space-y-6">
-                    <FeatureItem 
-                      icon={<Award className="text-sig-blue" size={24} />}
-                      title="Industry Expertise"
-                      description="Our team brings decades of experience in subscription business management and operations."
-                    />
-                    <FeatureItem 
-                      icon={<Award className="text-sig-blue" size={24} />}
-                      title="Data-Driven Approach"
-                      description="We leverage analytics to continuously improve performance and results."
-                    />
-                    <FeatureItem 
-                      icon={<Award className="text-sig-blue" size={24} />}
-                      title="Customized Solutions"
-                      description="Every business is unique. We tailor our services to your specific goals and challenges."
-                    />
+          </div>
+        </section>
+
+        <div className="client-carousel">
+          <div className="container">
+            <h3 className="carousel-title">Trusted By Industry Leaders</h3>
+            <div className="carousel-track" id="carousel-track">
+              <div className="carousel-slide">
+                <img src="client1.png" alt="Client 1" />
+              </div>
+              <div className="carousel-slide">
+                <img src="client2.png" alt="Client 2" />
+              </div>
+              <div className="carousel-slide">
+                <img src="client3.png" alt="Client 3" />
+              </div>
+              <div className="carousel-slide">
+                <img src="client4.png" alt="Client 4" />
+              </div>
+              <div className="carousel-slide">
+                <img src="client5.png" alt="Client 5" />
+              </div>
+              <div className="carousel-slide">
+                <img src="client6.png" alt="Client 6" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="about" className="about-section">
+          <div className="container">
+            <div className="section-heading">
+              <h2>About SIG Solutions</h2>
+              <p>Innovative Solutions for Modern Businesses</p>
+            </div>
+            <div className="about-content">
+              <div className="about-text">
+                <p>SIG Solutions is a leading provider of innovative digital solutions designed to streamline operations, enhance customer experiences, and drive business growth. With our expertise in technology and strategic planning, we help businesses navigate the complexities of the digital landscape and achieve their objectives.</p>
+                <p>Our team of experts brings together years of industry experience and technical know-how to deliver tailored solutions that address your specific needs and challenges. We are committed to excellence, innovation, and client satisfaction in everything we do.</p>
+              </div>
+              <div className="about-stats">
+                <div className="stat-item">
+                  <h3>10+</h3>
+                  <p>Years of Experience</p>
+                </div>
+                <div className="stat-item">
+                  <h3>200+</h3>
+                  <p>Satisfied Clients</p>
+                </div>
+                <div className="stat-item">
+                  <h3>95%</h3>
+                  <p>Client Retention</p>
+                </div>
+                <div className="stat-item">
+                  <h3>24/7</h3>
+                  <p>Expert Support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="solutions" className="solutions-section">
+          <div className="container">
+            <div className="section-heading">
+              <h2>Our Click-Close-Collect Solution</h2>
+              <p>Comprehensive Digital Transformation Services</p>
+            </div>
+            
+            <div className="process-flow">
+              <div className="process-item">
+                <div className="process-icon blue">
+                  <i className="fa-solid fa-mouse-pointer"></i>
+                </div>
+                <h3>Click</h3>
+                <p style="font-weight: 500; margin-bottom: 1rem;">We generate qualified leads to fuel your sales pipeline.</p>
+                <p style="color: rgba(15, 23, 42, 0.7); font-size: 0.875rem;">Our advanced lead generation strategies target high-value prospects tailored to your subscription-based products and services.</p>
+              </div>
+              
+              <div className="process-connector">
+                <i className="fa-solid fa-arrow-right"></i>
+              </div>
+              
+              <div className="process-item">
+                <div className="process-icon purple">
+                  <i className="fa-solid fa-phone"></i>
+                </div>
+                <h3>Close</h3>
+                <p style="font-weight: 500; margin-bottom: 1rem;">We close YOUR products to OUR qualified leads, maximizing conversion rates.</p>
+                <p style="color: rgba(15, 23, 42, 0.7); font-size: 0.875rem;">Our expert sales teams are trained in your subscription-based products, ensuring persuasive and accurate representation to our qualified leads.</p>
+              </div>
+              
+              <div className="process-connector">
+                <i className="fa-solid fa-arrow-right"></i>
+              </div>
+              
+              <div className="process-item">
+                <div className="process-icon green">
+                  <i className="fa-solid fa-money-bill-wave"></i>
+                </div>
+                <h3>Collect</h3>
+                <p style="font-weight: 500; margin-bottom: 1rem;">We manage recurring billing, minimizing churn and maximizing cash flow.</p>
+                <p style="color: rgba(15, 23, 42, 0.7); font-size: 0.875rem;">Our specialized recovery strategies and customer retention techniques ensure consistent revenue stream maintenance for your subscription services.</p>
+              </div>
+            </div>
+            
+            <div className="solutions-grid">
+              <div className="solution-card">
+                <div className="solution-icon">
+                  <i className="fa-solid fa-chart-line"></i>
+                </div>
+                <h3>Strategic Growth</h3>
+                <p>Data-driven approaches to scale your business effectively and sustainably.</p>
+              </div>
+              <div className="solution-card">
+                <div className="solution-icon">
+                  <i className="fa-solid fa-users"></i>
+                </div>
+                <h3>Customer Acquisition</h3>
+                <p>Targeted strategies to attract and convert high-value customers.</p>
+              </div>
+              <div className="solution-card">
+                <div className="solution-icon">
+                  <i className="fa-solid fa-robot"></i>
+                </div>
+                <h3>Process Automation</h3>
+                <p>Streamline operations with intelligent automation solutions.</p>
+              </div>
+              <div className="solution-card">
+                <div className="solution-icon">
+                  <i className="fa-solid fa-headset"></i>
+                </div>
+                <h3>Customer Success</h3>
+                <p>Proactive approaches to maximize customer satisfaction and retention.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section id="leadership" className="leadership-section">
+          <div className="container">
+            <div className="section-heading">
+              <h2>Our Leadership</h2>
+              <p>Meet the Team Behind Our Success</p>
+            </div>
+            
+            <div className="leadership-grid">
+              <div className="leadership-card">
+                <div className="leadership-icon">
+                  <i className="fa-solid fa-bullseye"></i>
+                </div>
+                <h3>Strategic Vision</h3>
+                <p>Our leadership team brings clarity and foresight to navigate complex business landscapes.</p>
+              </div>
+              <div className="leadership-card">
+                <div className="leadership-icon">
+                  <i className="fa-solid fa-lightbulb"></i>
+                </div>
+                <h3>Innovation Focus</h3>
+                <p>We drive continuous improvement and embrace cutting-edge solutions.</p>
+              </div>
+              <div className="leadership-card">
+                <div className="leadership-icon">
+                  <i className="fa-solid fa-handshake"></i>
+                </div>
+                <h3>Client Partnership</h3>
+                <p>We build lasting relationships based on trust, transparency, and mutual success.</p>
+              </div>
+              <div className="leadership-card">
+                <div className="leadership-icon">
+                  <i className="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Execution Excellence</h3>
+                <p>Our systems ensure every lead is engaged promptly, driving efficient growth.</p>
+              </div>
+            </div>
+            
+            {/* Directors Section */}
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center glass p-6 rounded-xl">
+                <div className="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <i className="fa-solid fa-user text-blue-500 text-xl"></i>
+                </div>
+                <h4 className="text-lg font-semibold mb-1">Franz Badenhorst</h4>
+                <p className="text-gray-600 mb-0">Shareholder</p>
+              </div>
+              
+              <div className="text-center glass p-6 rounded-xl">
+                <div className="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <i className="fa-solid fa-user text-blue-500 text-xl"></i>
+                </div>
+                <h4 className="text-lg font-semibold mb-1">Johannes Stoker</h4>
+                <p className="text-gray-600 mb-0">Shareholder</p>
+              </div>
+              
+              <div className="text-center glass p-6 rounded-xl">
+                <div className="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <i className="fa-solid fa-user text-blue-500 text-xl"></i>
+                </div>
+                <h4 className="text-lg font-semibold mb-1">Charles Castle</h4>
+                <p className="text-gray-600 mb-0">Shareholder</p>
+              </div>
+              
+              <div className="text-center glass p-6 rounded-xl">
+                <div className="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <i className="fa-solid fa-user text-blue-500 text-xl"></i>
+                </div>
+                <h4 className="text-lg font-semibold mb-1">Ivan Taljard</h4>
+                <p className="text-gray-600 mb-0">Shareholder</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section id="contact" className="contact-section">
+          <div className="container">
+            <div className="section-heading">
+              <h2>Contact Us</h2>
+              <p>Get in Touch to Discuss Your Business Needs</p>
+            </div>
+            
+            <div className="contact-container">
+              <div className="contact-info">
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <i className="fa-solid fa-map-marker-alt"></i>
+                  </div>
+                  <div className="contact-text">
+                    <h4>Location</h4>
+                    <p>123 Business Avenue, Suite 500<br />Cape Town, South Africa</p>
                   </div>
                 </div>
                 
-                <div className="glass p-1 rounded-2xl overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                    alt="Modern sales team in action" 
-                    className="w-full h-full object-cover rounded-xl"
-                  />
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <i className="fa-solid fa-envelope"></i>
+                  </div>
+                  <div className="contact-text">
+                    <h4>Email</h4>
+                    <p>info@sigsolutions.co.za</p>
+                  </div>
+                </div>
+                
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <i className="fa-solid fa-phone"></i>
+                  </div>
+                  <div className="contact-text">
+                    <h4>Phone</h4>
+                    <p>+27 21 123 4567</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-          
-          {/* Leadership Section */}
-          <section className="section-padding bg-gray-50">
-            <div className="container mx-auto">
-              <div className="max-w-3xl mx-auto text-center mb-16">
-                <h2 className="mb-6">Our Leadership</h2>
-                <p className="text-lg text-sig-dark/70">
-                  At SIG Solutions, our leadership team stands apart through proven experience and measurable success.
-                </p>
-              </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <FeatureItem 
-                  icon={<Award className="text-sig-blue" size={24} />}
-                  title="30 Years in Subscription Sales"
-                  description="We have a deep track record in transforming subscription sales into reliable revenue."
-                />
-                <FeatureItem 
-                  icon={<Award className="text-sig-blue" size={24} />}
-                  title="Millions Raised in Nonprofit Fundraising"
-                  description="Our strategies consistently deliver significant funding outcomes."
-                />
-                <FeatureItem 
-                  icon={<Award className="text-sig-blue" size={24} />}
-                  title="Expertise in Niche Insurance Sales"
-                  description="We convert market challenges into clear, strategic advantages."
-                />
-                <FeatureItem 
-                  icon={<Award className="text-sig-blue" size={24} />}
-                  title="Innovative Lead Generation Technology"
-                  description="Our systems ensure every lead is engaged promptly, driving efficient growth."
-                />
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <LeaderCard 
-                  name="Franz Badenhorst"
-                  role="Shareholder"
-                  delay={100}
-                />
-                <LeaderCard 
-                  name="Johannes Stoker"
-                  role="Shareholder"
-                  delay={200}
-                />
-                <LeaderCard 
-                  name="Charles Castle"
-                  role="Shareholder"
-                  delay={300}
-                />
-                <LeaderCard 
-                  name="Ivan Taljard"
-                  role="Shareholder"
-                  delay={400}
-                />
+              <form className="contact-form">
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="Subject" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message">Message</label>
+                  <textarea id="message" name="message" rows={5} placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" className="btn btn-primary">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-grid">
+            <div className="footer-about">
+              <img src="/lovable-uploads/sig-solutions-logo.png" alt="SIG Solutions Logo" className="footer-logo" />
+              <p>SIG Solutions helps businesses thrive in the digital era with innovative strategies and technologies.</p>
+              <div className="social-links">
+                <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i className="fa-brands fa-twitter"></i></a>
+                <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i className="fa-brands fa-instagram"></i></a>
               </div>
             </div>
-          </section>
+            
+            <div className="footer-links-group">
+              <h4>Services</h4>
+              <ul className="footer-links">
+                <li><a href="#solutions">Click - Lead Generation</a></li>
+                <li><a href="#solutions">Close - Conversion Solutions</a></li>
+                <li><a href="#solutions">Collection - Customer Retention</a></li>
+              </ul>
+            </div>
+            
+            <div className="footer-links-group">
+              <h4>Company</h4>
+              <ul className="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#leadership">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            
+            <div className="footer-links-group">
+              <h4>Support</h4>
+              <ul className="footer-links">
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
           
-          {/* CTA Section */}
-          <section 
-            ref={ctaRef}
-            className={`py-20 px-6 md:px-12 lg:px-24 bg-sig-blue transition-all duration-1000 ${
-              ctaVisible ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="container mx-auto text-center">
-              <h2 className="text-white mb-6">Ready to Transform Your Subscription Business?</h2>
-              <p className="text-white/80 text-lg mb-10 max-w-3xl mx-auto">
-                Whether you need to generate more leads, boost sales performance, or improve customer retention, SIG Solutions has the expertise to help your subscription-based business thrive.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link 
-                  to="/marketing" 
-                  className="bg-white text-sig-blue px-8 py-4 rounded-full font-medium text-lg hover:shadow-xl hover:shadow-black/10 transform transition-all duration-300 hover:scale-105"
-                >
-                  Explore Solutions
-                </Link>
-                <Link 
-                  to="/contact" 
-                  className="bg-transparent text-white border border-white px-8 py-4 rounded-full font-medium text-lg hover:bg-white/10 transform transition-all duration-300 hover:scale-105"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-          </section>
-        </main>
-        
-        <Footer />
-      </div>
-    </Transition>
-  );
-};
-
-const FeatureItem = ({ 
-  icon, 
-  title, 
-  description 
-}: { 
-  icon: React.ReactNode; 
-  title: string; 
-  description: string;
-}) => {
-  return (
-    <div className="flex">
-      <div className="flex-shrink-0 mr-4">{icon}</div>
-      <div>
-        <h3 className="text-lg font-semibold mb-2">{title}</h3>
-        <p className="text-sig-dark/70">{description}</p>
-      </div>
-    </div>
-  );
-};
-
-const LeaderCard = ({ 
-  name, 
-  role,
-  delay = 0 
-}: { 
-  name: string; 
-  role: string;
-  delay?: number;
-}) => {
-  const [cardRef, isVisible] = useScrollAnimation<HTMLDivElement>();
-  
-  return (
-    <div 
-      ref={cardRef}
-      className={`glass rounded-xl p-6 text-center transform transition-all duration-700 ${
-        isVisible 
-          ? "opacity-100 translate-y-0" 
-          : "opacity-0 translate-y-10"
-      }`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      <div className="w-24 h-24 bg-sig-blue/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-        <Users className="text-sig-blue" size={32} />
-      </div>
-      <h3 className="text-lg font-semibold mb-1">{name}</h3>
-      <p className="text-sig-dark/70 mb-4">{role}</p>
+          <div className="footer-bottom">
+            <p>&copy; 2025 SIG Solutions. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
