@@ -125,8 +125,8 @@ const Index = () => {
                   <i className="fa-solid fa-mouse-pointer"></i>
                 </div>
                 <h3>Click</h3>
-                <p style="font-weight: 500; margin-bottom: 1rem;">We generate qualified leads to fuel your sales pipeline.</p>
-                <p style="color: rgba(15, 23, 42, 0.7); font-size: 0.875rem;">Our advanced lead generation strategies target high-value prospects tailored to your subscription-based products and services.</p>
+                <p style={{ fontWeight: 500, marginBottom: '1rem' }}>We generate qualified leads to fuel your sales pipeline.</p>
+                <p style={{ color: 'rgba(15, 23, 42, 0.7)', fontSize: '0.875rem' }}>Our advanced lead generation strategies target high-value prospects tailored to your subscription-based products and services.</p>
               </div>
               
               <div className="process-connector">
@@ -138,8 +138,8 @@ const Index = () => {
                   <i className="fa-solid fa-phone"></i>
                 </div>
                 <h3>Close</h3>
-                <p style="font-weight: 500; margin-bottom: 1rem;">We close YOUR products to OUR qualified leads, maximizing conversion rates.</p>
-                <p style="color: rgba(15, 23, 42, 0.7); font-size: 0.875rem;">Our expert sales teams are trained in your subscription-based products, ensuring persuasive and accurate representation to our qualified leads.</p>
+                <p style={{ fontWeight: 500, marginBottom: '1rem' }}>We close YOUR products to OUR qualified leads, maximizing conversion rates.</p>
+                <p style={{ color: 'rgba(15, 23, 42, 0.7)', fontSize: '0.875rem' }}>Our expert sales teams are trained in your subscription-based products, ensuring persuasive and accurate representation to our qualified leads.</p>
               </div>
               
               <div className="process-connector">
@@ -151,8 +151,8 @@ const Index = () => {
                   <i className="fa-solid fa-money-bill-wave"></i>
                 </div>
                 <h3>Collect</h3>
-                <p style="font-weight: 500; margin-bottom: 1rem;">We manage recurring billing, minimizing churn and maximizing cash flow.</p>
-                <p style="color: rgba(15, 23, 42, 0.7); font-size: 0.875rem;">Our specialized recovery strategies and customer retention techniques ensure consistent revenue stream maintenance for your subscription services.</p>
+                <p style={{ fontWeight: 500, marginBottom: '1rem' }}>We manage recurring billing, minimizing churn and maximizing cash flow.</p>
+                <p style={{ color: 'rgba(15, 23, 42, 0.7)', fontSize: '0.875rem' }}>Our specialized recovery strategies and customer retention techniques ensure consistent revenue stream maintenance for your subscription services.</p>
               </div>
             </div>
             
