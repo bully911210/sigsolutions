@@ -364,6 +364,10 @@ img {
   border-radius: 2px;
 }
 
+.mt-60 {
+  margin-top: 60px !important;
+}
+
 @media (max-width: 768px) {
   .section-header {
     margin-bottom: var(--spacing-lg);
