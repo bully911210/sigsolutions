@@ -351,8 +351,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (let i = 0; i < wavePoints.length; i++) {
           const point = wavePoints[i];
-          // Smaller amplitude (8 instead of 15)
-          point.y = point.originalY + Math.sin(Date.now() * 0.0005 * point.speed) * 8;
+          // Enhanced gradient wave effect
+          point.y = point.originalY + Math.sin(Date.now() * 0.0005 * point.speed) * 10;
 
           if (i === 0) {
             ctx.lineTo(point.x, point.y);
@@ -368,10 +368,11 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.lineTo(0, canvas.height);
         ctx.closePath();
 
-        // Create gradient with more subtle colors
+        // Create enhanced gradient with more subtle colors
         const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-        gradient.addColorStop(0, 'rgba(0, 31, 84, 0.05)');
-        gradient.addColorStop(1, 'rgba(0, 31, 84, 0.01)');
+        gradient.addColorStop(0, 'rgba(42, 91, 215, 0.05)'); // Lighter blue
+        gradient.addColorStop(0.5, 'rgba(26, 53, 86, 0.03)'); // Mid-tone
+        gradient.addColorStop(1, 'rgba(0, 31, 84, 0.01)'); // Dark blue
 
         ctx.fillStyle = gradient;
         ctx.fill();
@@ -382,6 +383,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     animate();
   }
+
+  // Add hover effects for solution cards
+  const solutionCards = document.querySelectorAll('.solution-card, .solution-card-sm');
+  solutionCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-5px)';
+      this.style.boxShadow = '0 8px 16px rgba(0,0,0,0.1)';
+    });
+
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.05)';
+    });
+  });
+
+  // Add grayscale effect to client logos with hover
+  const clientLogos = document.querySelectorAll('.client-logo');
+  clientLogos.forEach(logo => {
+    logo.addEventListener('mouseenter', function() {
+      this.style.filter = 'grayscale(0)';
+      this.style.opacity = '1';
+    });
+
+    logo.addEventListener('mouseleave', function() {
+      this.style.filter = 'grayscale(100%)';
+      this.style.opacity = '0.7';
+    });
+  });
 
   // Smooth Scrolling for Anchor Links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

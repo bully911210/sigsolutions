@@ -9,11 +9,11 @@
   --text-gray: #6B7280; /* For labels */
   --text-dark-gray: #4B5563; /* For secondary text */
   --border-light: #E5E7EB; /* For card borders */
-  
+
   /* Enhanced Shadows */
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
-  
+
   /* Transitions */
   --transition-fast: all 0.2s ease;
   --transition-normal: all 0.3s ease-in-out;
@@ -138,14 +138,20 @@ section {
   transform: scale(1.05);
 }
 
-.leader-card::before {
-  content: '';
-  display: block;
+.leader-image {
   width: 80px;
   height: 80px;
   background-color: #E5E7EB;
   border-radius: 50%;
   margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leader-image i {
+  font-size: 2rem;
+  color: #9CA3AF;
 }
 
 .leader-card h3 {
@@ -328,16 +334,16 @@ section {
   .leadership-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-logo {
     text-align: center;
     margin-bottom: 2rem;
   }
-  
+
   .social-links {
     justify-content: center;
   }
@@ -347,16 +353,16 @@ section {
   .hero h1 {
     font-size: 2.5rem; /* 40px on mobile */
   }
-  
+
   .info-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-links {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .solution-card {
     padding: 1.5rem;
   }
@@ -366,11 +372,11 @@ section {
   section {
     padding: 3rem 0; /* 48px on small mobile */
   }
-  
+
   .hero h1 {
     font-size: 2rem; /* 32px on small mobile */
   }
-  
+
   .contact-form button {
     width: 100%;
     height: 3rem; /* 48px touch target */
