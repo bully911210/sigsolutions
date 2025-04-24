@@ -47,7 +47,7 @@
   height: auto !important;
   min-height: auto !important;
   max-height: none !important;
-  padding: 60px 0 40px !important; /* More space at the top */
+  padding: 80px 0 40px !important; /* More space at the top */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +56,7 @@
 }
 
 .hero h1 {
-  margin-top: 20px !important; /* Small space before title */
+  margin-top: 50px !important; /* Increased space before title */
   font-size: 3.5rem !important;
   margin-bottom: 1.5rem !important;
   color: #001F54 !important; /* Navy Blue */
@@ -159,12 +159,12 @@ section {
   }
 
   .hero-content {
-    padding: 40px 0 30px !important;
+    padding: 60px 0 30px !important;
   }
 
   .hero h1 {
     font-size: 2.5rem !important;
-    margin-top: 10px !important;
+    margin-top: 30px !important;
   }
 
   .hero-subtitle {
@@ -195,8 +195,13 @@ section {
     min-height: 50vh !important;
   }
 
+  .hero-content {
+    padding: 50px 0 25px !important;
+  }
+
   .hero h1 {
     font-size: 2rem !important;
+    margin-top: 20px !important;
   }
 
   .hero-subtitle {
