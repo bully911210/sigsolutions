@@ -351,8 +351,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (let i = 0; i < wavePoints.length; i++) {
           const point = wavePoints[i];
-          // Enhanced gradient wave effect
-          point.y = point.originalY + Math.sin(Date.now() * 0.0005 * point.speed) * 10;
+          // More subtle wave effect with reduced amplitude (6px)
+          point.y = point.originalY + Math.sin(Date.now() * 0.0005 * point.speed) * 6;
 
           if (i === 0) {
             ctx.lineTo(point.x, point.y);
@@ -370,9 +370,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Create enhanced gradient with more subtle colors
         const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-        gradient.addColorStop(0, 'rgba(42, 91, 215, 0.05)'); // Lighter blue
-        gradient.addColorStop(0.5, 'rgba(26, 53, 86, 0.03)'); // Mid-tone
-        gradient.addColorStop(1, 'rgba(0, 31, 84, 0.01)'); // Dark blue
+        gradient.addColorStop(0, 'rgba(42, 91, 215, 0.1)'); // Lighter blue
+        gradient.addColorStop(0.5, 'rgba(26, 53, 86, 0.05)'); // Mid-tone
+        gradient.addColorStop(1, 'rgba(42, 91, 215, 0.02)'); // Subtle blue
 
         ctx.fillStyle = gradient;
         ctx.fill();
