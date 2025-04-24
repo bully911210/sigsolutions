@@ -13,10 +13,11 @@
 
 /* Fix hero section spacing */
 .hero {
-  margin-top: 119px; /* Match header height */
+  margin-top: 0;
   min-height: auto;
   padding: 0;
   border-bottom: none;
+  padding-top: 119px; /* Match header height */
 }
 
 .hero-carousel,
@@ -30,18 +31,20 @@
   padding-bottom: 0;
 }
 
-/* Remove space between hero and client carousel */
-.client-carousel {
-  padding-top: 0;
-  margin-top: 0;
-  background-color: var(--white);
-  padding-bottom: 60px;
+/* Client carousel inside hero */
+.client-header {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
-/* Remove section header from client carousel */
-.client-carousel .section-header {
-  margin-top: 0;
-  padding-top: 0;
+.clients-slider {
+  margin-top: 20px;
+}
+
+/* Hide the separate client carousel section */
+section.client-carousel {
+  display: none;
 }
 
 /* Ensure consistent heading colors */
