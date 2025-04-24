@@ -442,7 +442,7 @@ img {
 }
 
 .logo img {
-  height: 50px; /* Reduced from 89px */
+  height: 89px; /* Restored to original value */
   width: auto;
 }
 
