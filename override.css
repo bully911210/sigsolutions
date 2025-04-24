@@ -1,7 +1,13 @@
-/* Override styles to fix issues */
+/* Direct fixes for SIG Solutions website */
 
 /* Fix header */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
   padding: 15px 0;
   height: auto;
 }
@@ -11,24 +17,29 @@
   width: auto;
 }
 
-/* Fix hero section spacing */
+/* Fix hero section */
 .hero {
-  margin-top: 0;
-  min-height: 100vh;
-  padding: 0;
+  margin-top: 119px !important; /* Match header height */
+  height: auto !important;
+  min-height: auto !important;
+  max-height: 600px !important;
+  padding: 0 !important;
   border-bottom: none;
-  padding-top: 119px; /* Match header height */
 }
 
 .hero-carousel,
 .carousel-slides,
 .carousel-slide {
-  min-height: 100vh;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: 600px !important;
 }
 
 .hero-content {
-  min-height: 100vh;
-  padding-bottom: 0;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: 600px !important;
+  padding: 40px 0 !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,15 +47,16 @@
 
 /* Client carousel inside hero */
 .client-header {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 1.8rem;
   color: #001F54; /* Navy Blue */
   font-weight: 700;
 }
 
 .clients-slider {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* Hide the separate client carousel section */
@@ -58,42 +70,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.section-header h2,
-.section-header h3,
-.leader-card h3,
-.solution-card h3,
-.solution-card-sm h4 {
-  color: #001F54; /* Navy Blue */
-}
-
-/* Make each section take up a full page */
+/* Fix section spacing */
 section {
   padding: 80px 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-section.hero {
-  min-height: 60vh;
-  padding: 0;
-}
-
-/* Fix section spacing */
-.about, .solutions, .contact {
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 /* Fix mobile styles */
 @media (max-width: 768px) {
   .hero {
-    margin-top: 80px;
+    margin-top: 80px !important;
+    max-height: 500px !important;
+  }
+
+  .hero-carousel,
+  .carousel-slides,
+  .carousel-slide,
+  .hero-content {
+    max-height: 500px !important;
   }
 
   section {
     padding: 60px 0;
-    min-height: 0;
   }
 }
