@@ -335,6 +335,35 @@ img {
   margin: 25px 0 0;
 }
 
+.section-subheader {
+  text-align: center;
+  margin: var(--spacing-xl) 0 var(--spacing-md);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-subheader p {
+  color: var(--text-light);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-loose);
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subheader p::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
 @media (max-width: 768px) {
   .section-header {
     margin-bottom: var(--spacing-lg);
