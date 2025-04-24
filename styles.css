@@ -2323,7 +2323,8 @@ img {
 .clients-track {
   display: flex;
   gap: var(--spacing-lg);
-  animation: scrollClients 30s linear infinite;
+  animation: scrollClients 20s linear infinite;
+  width: calc(200% + var(--spacing-lg));
 }
 
 @keyframes scrollClients {
@@ -2331,7 +2332,7 @@ img {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
