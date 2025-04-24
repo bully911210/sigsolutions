@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animation variables
     const wavePoints = [];
-    const waveCount = Math.floor(canvas.width / 50);
+    const waveCount = Math.floor(canvas.width / 100); // Fewer points for smoother waves
 
     // Initialize wave points
     for (let i = 0; i < waveCount; i++) {
@@ -326,43 +326,56 @@ document.addEventListener('DOMContentLoaded', function() {
         x: i * (canvas.width / waveCount),
         y: canvas.height / 2,
         originalY: canvas.height / 2,
-        speed: 0.05 + Math.random() * 0.05
+        speed: 0.02 + Math.random() * 0.01 // Slower, more subtle movement
       });
     }
 
-    // Animation function
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Animation function with requestAnimationFrame throttling for better performance
+    let lastTime = 0;
+    const fps = 30; // Limit to 30 frames per second
+    const fpsInterval = 1000 / fps;
 
-      // Draw waves
-      ctx.beginPath();
-      ctx.moveTo(0, canvas.height);
+    function animate(timestamp) {
+      // Throttle the frame rate
+      if (!timestamp) timestamp = 0;
+      const elapsed = timestamp - lastTime;
 
-      for (let i = 0; i < wavePoints.length; i++) {
-        const point = wavePoints[i];
-        point.y = point.originalY + Math.sin(Date.now() * 0.001 * point.speed) * 15;
+      if (elapsed > fpsInterval) {
+        lastTime = timestamp - (elapsed % fpsInterval);
 
-        if (i === 0) {
-          ctx.lineTo(point.x, point.y);
-        } else {
-          const prevPoint = wavePoints[i - 1];
-          const xc = (prevPoint.x + point.x) / 2;
-          const yc = (prevPoint.y + point.y) / 2;
-          ctx.quadraticCurveTo(prevPoint.x, prevPoint.y, xc, yc);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw waves
+        ctx.beginPath();
+        ctx.moveTo(0, canvas.height);
+
+        for (let i = 0; i < wavePoints.length; i++) {
+          const point = wavePoints[i];
+          // Smaller amplitude (8 instead of 15)
+          point.y = point.originalY + Math.sin(Date.now() * 0.0005 * point.speed) * 8;
+
+          if (i === 0) {
+            ctx.lineTo(point.x, point.y);
+          } else {
+            const prevPoint = wavePoints[i - 1];
+            const xc = (prevPoint.x + point.x) / 2;
+            const yc = (prevPoint.y + point.y) / 2;
+            ctx.quadraticCurveTo(prevPoint.x, prevPoint.y, xc, yc);
+          }
         }
+
+        ctx.lineTo(canvas.width, canvas.height);
+        ctx.lineTo(0, canvas.height);
+        ctx.closePath();
+
+        // Create gradient with more subtle colors
+        const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+        gradient.addColorStop(0, 'rgba(0, 31, 84, 0.05)');
+        gradient.addColorStop(1, 'rgba(0, 31, 84, 0.01)');
+
+        ctx.fillStyle = gradient;
+        ctx.fill();
       }
-
-      ctx.lineTo(canvas.width, canvas.height);
-      ctx.lineTo(0, canvas.height);
-      ctx.closePath();
-
-      // Create gradient
-      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, 'rgba(0, 31, 84, 0.1)');
-      gradient.addColorStop(1, 'rgba(0, 31, 84, 0.02)');
-
-      ctx.fillStyle = gradient;
-      ctx.fill();
 
       requestAnimationFrame(animate);
     }
