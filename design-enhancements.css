@@ -164,6 +164,12 @@ section {
   position: relative;
   overflow: hidden;
   background: linear-gradient(to bottom, #F5F7FA, #FFFFFF); /* Subtle gradient background */
+  margin-top: 100px;
+  height: auto;
+  min-height: 70vh;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
 }
 
 .wave-canvas {
@@ -175,28 +181,45 @@ section {
   z-index: -1;
 }
 
+.hero-content {
+  height: auto;
+  padding: 80px 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+
 .hero h1 {
   font-size: 56px;
   color: var(--primary-color);
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
   text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-subtitle {
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.6;
   text-align: center;
-  margin: 20px auto 40px;
+  margin: 0 auto 40px;
   max-width: 600px;
-  color: var(--text-gray);
+  color: var(--text-color);
 }
 
 /* Client Logos Improvements */
 .clients-slider {
   margin-top: 2rem;
   overflow: hidden;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .clients-track {
@@ -205,33 +228,65 @@ section {
 }
 
 .client-logo {
-  padding: 0 15px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease, opacity 0.3s ease;
-  opacity: 0.7;
-}
-
-.client-logo:hover {
-  filter: grayscale(0);
-  opacity: 1;
+  padding: 0 20px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  width: 160px;
 }
 
 .client-logo img {
-  width: 120px;
-  height: auto;
+  max-width: 120px;
+  max-height: 60px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.client-logo:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .client-header {
   font-size: 1.25rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: var(--text-gray);
+  color: var(--text-color);
   text-align: center;
+  font-weight: 600;
 }
 
 @keyframes slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 70px;
+    min-height: 60vh;
+  }
+
+  .hero-content {
+    padding: 60px 0 30px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .client-logo img {
+    max-height: 40px;
+  }
 }
 
 /* ===== WHO WE ARE SECTION ENHANCEMENTS ===== */
