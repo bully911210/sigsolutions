@@ -1,0 +1,378 @@
+/* Design Enhancements for SIG Solutions Website */
+
+/* ===== GENERAL IMPROVEMENTS ===== */
+:root {
+  /* Enhanced Color Palette */
+  --primary-dark: #1A3556;  /* Darker blue for headings */
+  --primary-accent: #2A5BD7; /* Lighter blue for buttons and links */
+  --background-light: #F5F7FA; /* Subtle light background */
+  --text-gray: #6B7280; /* For labels */
+  --text-dark-gray: #4B5563; /* For secondary text */
+  --border-light: #E5E7EB; /* For card borders */
+  
+  /* Enhanced Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+  
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+  --transition-normal: all 0.3s ease-in-out;
+}
+
+/* Improved Section Spacing */
+section {
+  padding: 5rem 0; /* Consistent 5rem (80px) spacing between sections */
+}
+
+/* ===== HERO SECTION ENHANCEMENTS ===== */
+.hero {
+  background: linear-gradient(to bottom, #F5F7FA, #FFFFFF); /* Subtle gradient background */
+}
+
+.hero h1 {
+  font-size: 3.5rem; /* Increased from 3rem (48px) to 3.5rem (56px) */
+  color: var(--primary-dark); /* Darker blue for better contrast */
+  margin-bottom: 1rem; /* Reduced spacing */
+}
+
+.hero-subtitle {
+  font-weight: 400; /* Lighter weight */
+  line-height: 1.2; /* Tighter line spacing */
+  margin-bottom: 1.25rem; /* 20px breathing space */
+  max-width: 700px; /* Control width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Client Logos Improvements */
+.clients-slider {
+  margin-top: 2rem;
+}
+
+.client-logo {
+  padding: 0 15px; /* Equal padding */
+  filter: grayscale(100%); /* Grayscale effect */
+  transition: var(--transition-normal);
+  opacity: 0.7;
+}
+
+.client-logo:hover {
+  filter: grayscale(0); /* Show original colors on hover */
+  opacity: 1;
+}
+
+.client-logo img {
+  max-height: 60px; /* Increased size by ~20% */
+  width: auto;
+}
+
+.client-header {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark-gray);
+}
+
+/* ===== WHO WE ARE SECTION ENHANCEMENTS ===== */
+.section-header h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-accent);
+}
+
+.about-text p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.6; /* Increased line spacing */
+  max-width: 600px;
+  margin: 0 auto 1rem;
+}
+
+/* Stats Boxes Improvements */
+.stat-card {
+  border-radius: 5px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  padding: 1.5rem;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-number {
+  font-weight: 700; /* Bolder font */
+  color: var(--primary-dark);
+}
+
+.stat-label {
+  color: var(--text-gray); /* Lighter gray */
+}
+
+/* ===== LEADERSHIP TEAM ENHANCEMENTS ===== */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; /* Increased gap */
+}
+
+.leader-card {
+  background-color: #F9FAFB;
+  border-radius: 5px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.leader-card:hover {
+  transform: scale(1.05);
+}
+
+.leader-card::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #E5E7EB;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.leader-card h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.leader-title {
+  font-weight: 400;
+  color: var(--text-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.leader-email {
+  color: var(--primary-accent);
+  transition: var(--transition-fast);
+}
+
+.leader-email:hover {
+  text-decoration: underline;
+}
+
+/* ===== CLICK-CLOSE-COLLECT FRAMEWORK ENHANCEMENTS ===== */
+.solutions {
+  background-color: #F5F5F5;
+  padding: 5.5rem 0; /* Extended padding */
+}
+
+.solution-card {
+  background-color: white;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  transition: var(--transition-normal);
+}
+
+.solution-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.solution-icon i {
+  color: var(--primary-accent);
+  font-size: 2.2rem; /* 10% larger */
+}
+
+.solution-card h3 {
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.solution-card p {
+  font-weight: 400;
+  color: var(--text-dark-gray);
+}
+
+/* Specific Focus Subsection */
+.section-subheader {
+  margin: 3rem 0 1.5rem;
+}
+
+.solutions-secondary {
+  gap: 20px; /* Increased gap */
+}
+
+.solution-card-sm {
+  background-color: #EDEFF2; /* Slightly darker background */
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.solution-icon-sm i {
+  font-size: 2.5rem; /* Larger icons (40px) */
+  color: var(--primary-accent);
+}
+
+/* ===== WORK WITH US SECTION ENHANCEMENTS ===== */
+.contact .section-header h2 {
+  font-size: 2.25rem; /* 36px, increased from 32px */
+}
+
+/* Two-column layout for contact details */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  margin-bottom: 1rem;
+}
+
+.info-icon i {
+  color: var(--primary-dark);
+}
+
+/* Form Design Improvements */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.contact-form button {
+  background-color: #2563EB;
+  border-radius: 5px;
+  transition: var(--transition-normal);
+}
+
+.contact-form button:hover {
+  background-color: #3B82F6;
+}
+
+/* ===== FOOTER ENHANCEMENTS ===== */
+.footer {
+  background-color: var(--primary-dark);
+  padding: 4rem 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+}
+
+.footer-logo img {
+  margin-bottom: 1rem;
+}
+
+.footer-logo p,
+.footer-links h4,
+.footer-links a,
+.footer-contact p,
+.footer-contact a {
+  color: #F3F4F6; /* Softer off-white */
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.social-links {
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  font-size: 1.75rem; /* 28px, increased from 24px */
+  margin-right: 1rem;
+  transition: var(--transition-normal);
+}
+
+.social-links a:hover {
+  color: #60A5FA; /* Lighter blue */
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  color: #B0B7C0; /* Lighter gray */
+  font-size: 0.75rem; /* 12px */
+  text-align: center;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 992px) {
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem; /* 40px on mobile */
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .solution-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 3rem 0; /* 48px on small mobile */
+  }
+  
+  .hero h1 {
+    font-size: 2rem; /* 32px on small mobile */
+  }
+  
+  .contact-form button {
+    width: 100%;
+    height: 3rem; /* 48px touch target */
+  }
+}
