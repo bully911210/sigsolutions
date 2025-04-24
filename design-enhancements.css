@@ -151,11 +151,15 @@ section {
 }
 
 /* ===== WHO WE ARE SECTION ENHANCEMENTS ===== */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 .section-header h2 {
   position: relative;
   display: inline-block;
-  margin-bottom: 2rem;
-  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .section-header h2::after {
@@ -373,8 +377,16 @@ section {
   padding: 80px 0;
 }
 
-.contact .section-header h2 {
+/* All section headers should be consistent */
+.section-header h2 {
   font-size: 36px;
+  color: var(--primary-color);
+}
+
+.section-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-gray);
 }
 
 .contact-content {
