@@ -10,6 +10,64 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Hero Carousel
+  const heroSlides = document.querySelectorAll('.carousel-slide');
+  const heroDots = document.querySelectorAll('.carousel-dots .dot');
+  const heroPrevBtn = document.querySelector('.carousel-prev');
+  const heroNextBtn = document.querySelector('.carousel-next');
+  let heroCurrentSlide = 0;
+
+  function showHeroSlide(index) {
+    heroSlides.forEach(slide => slide.classList.remove('active'));
+    heroDots.forEach(dot => dot.classList.remove('active'));
+
+    heroSlides[index].classList.add('active');
+    heroDots[index].classList.add('active');
+    heroCurrentSlide = index;
+  }
+
+  if (heroPrevBtn && heroNextBtn) {
+    heroPrevBtn.addEventListener('click', () => {
+      heroCurrentSlide = (heroCurrentSlide - 1 + heroSlides.length) % heroSlides.length;
+      showHeroSlide(heroCurrentSlide);
+    });
+
+    heroNextBtn.addEventListener('click', () => {
+      heroCurrentSlide = (heroCurrentSlide + 1) % heroSlides.length;
+      showHeroSlide(heroCurrentSlide);
+    });
+  }
+
+  heroDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showHeroSlide(index);
+    });
+  });
+
+  // Auto-advance hero slides every 5 seconds
+  setInterval(() => {
+    if (document.visibilityState === 'visible' && heroSlides.length > 0) {
+      heroCurrentSlide = (heroCurrentSlide + 1) % heroSlides.length;
+      showHeroSlide(heroCurrentSlide);
+    }
+  }, 5000);
+
+  // Sticky header with blur effect on scroll
+  const header = document.querySelector('.header');
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+
+    lastScrollTop = scrollTop;
+  });
+
   // Close mobile menu when clicking on a nav link
   const navLinks = document.querySelectorAll('.nav-list a');
   navLinks.forEach(link => {
