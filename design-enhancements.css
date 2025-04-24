@@ -2,45 +2,74 @@
 
 /* ===== GENERAL IMPROVEMENTS ===== */
 :root {
-  /* Enhanced Color Palette */
-  --primary-color: #1A3556;  /* Darker blue for headings */
-  --accent-color: #2A5BD7; /* Lighter blue for buttons and links */
-  --background-light: #F5F7FA; /* Subtle light background */
-  --text-gray: #4B5563; /* For body text */
-  --text-light-gray: #6B7280; /* For labels */
-  --border-light: #D1D5DB; /* For card borders */
+  /* Standardized Color Palette */
+  --primary-color: #1A3556;  /* Dark blue for headings, icons */
+  --accent-color: #2A5BD7; /* Lighter blue for buttons, links */
+  --accent-hover: #2563EB; /* Hover state for accent color */
+  --background-light: #F5F7FA; /* Light background for sections */
+  --background-medium: #EDEFF2; /* Medium background for cards */
+  --text-color: #4B5563; /* Standard body text */
+  --text-light: #6B7280; /* For labels, secondary text */
+  --border-color: #D1D5DB; /* For borders */
+  --card-background: #FFFFFF; /* For card backgrounds */
+  --placeholder-color: #E5E7EB; /* For placeholders */
+  --footer-text: #F3F4F6; /* Footer text color */
+  --footer-text-muted: #B0B7C0; /* Muted footer text */
 
-  /* Enhanced Shadows */
+  /* Standardized Shadows */
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.1);
 
-  /* Transitions */
+  /* Standardized Transitions */
   --transition-fast: all 0.2s ease;
-  --transition-normal: all 0.3s ease-in-out;
+  --transition-normal: all 0.3s ease;
+
+  /* Standardized Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+
+  /* Standardized Border Radius */
+  --border-radius: 5px;
 }
 
+/* Typography Standardization */
 body {
   font-family: 'Inter', sans-serif;
-  color: var(--text-gray);
+  color: var(--text-color);
   font-size: 16px;
   line-height: 1.6;
 }
 
-h1 { font-size: 56px; font-weight: 700; color: var(--primary-color); }
-h2 { font-size: 36px; font-weight: 700; color: var(--primary-color); }
-h3 { font-size: 24px; font-weight: 700; color: var(--primary-color); }
-h4 { font-size: 18px; font-weight: 700; color: var(--primary-color); }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
 
-/* Improved Section Spacing */
+h1 { font-size: 56px; }
+h2 { font-size: 36px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+p { margin-bottom: var(--spacing-md); }
+
+/* Consistent Section Spacing */
 section {
   padding: 60px 0;
 }
 
+/* Responsive Typography and Spacing */
 @media (max-width: 768px) {
   section { padding: 40px 0; }
   h1 { font-size: 40px; }
   h2 { font-size: 28px; }
   h3 { font-size: 20px; }
+  h4 { font-size: 16px; }
 }
 
 /* ===== HEADER SECTION ENHANCEMENTS ===== */
