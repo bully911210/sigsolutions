@@ -618,7 +618,7 @@ img {
   text-align: center;
   position: relative;
   z-index: 3;
-  padding: 160px 0 var(--spacing-xxl);
+  padding: 60px 0 var(--spacing-xxl);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -728,11 +728,11 @@ img {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 120px 0 var(--spacing-xl);
     min-height: 0;
   }
 
   .hero-content {
+    padding: 40px 0 var(--spacing-xl);
     margin-bottom: var(--spacing-md);
   }
 
