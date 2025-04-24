@@ -383,6 +383,20 @@ img {
     font-size: var(--font-size-md);
     margin-top: 20px;
   }
+
+  .section-subheader {
+    margin: var(--spacing-lg) 0 var(--spacing-sm);
+  }
+
+  .section-subheader p {
+    font-size: var(--font-size-md);
+  }
+
+  .section-subheader p::after {
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+  }
 }
 
 /* Header Styles */
