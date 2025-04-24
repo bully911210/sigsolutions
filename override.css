@@ -14,21 +14,34 @@
 /* Fix hero section spacing */
 .hero {
   margin-top: 119px; /* Match header height */
-  min-height: 60vh;
+  min-height: auto;
   padding: 0;
+  border-bottom: none;
 }
 
 .hero-carousel,
 .carousel-slides,
-.carousel-slide,
+.carousel-slide {
+  min-height: 40vh;
+}
+
 .hero-content {
-  min-height: 60vh;
+  min-height: 40vh;
+  padding-bottom: 0;
 }
 
 /* Remove space between hero and client carousel */
 .client-carousel {
   padding-top: 0;
-  margin-top: -20px;
+  margin-top: 0;
+  background-color: var(--white);
+  padding-bottom: 60px;
+}
+
+/* Remove section header from client carousel */
+.client-carousel .section-header {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Ensure consistent heading colors */
@@ -70,7 +83,7 @@ section.hero {
   .hero {
     margin-top: 80px;
   }
-  
+
   section {
     padding: 60px 0;
     min-height: auto;
