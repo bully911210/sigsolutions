@@ -632,17 +632,19 @@ img {
 
 .hero h1 {
   font-size: var(--font-size-4xl);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   color: var(--primary-color);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.5px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .hero-subtitle {
   font-size: var(--font-size-xl);
   color: var(--text-color);
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
