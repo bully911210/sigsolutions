@@ -117,10 +117,12 @@
 
 .client-logo img {
   max-width: 120px;
-  max-height: 60px;
+  height: auto;
+  min-height: 60px;
   filter: grayscale(100%);
   opacity: 0.7;
   transition: all 0.3s ease;
+  object-fit: contain;
 }
 
 .client-logo:hover img {
