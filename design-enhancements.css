@@ -88,13 +88,14 @@ p {
 
 /* Consistent Section Spacing */
 section {
-  padding: var(--section-padding) 0;
+  padding: calc(var(--section-padding) * 1.1) 0; /* Increased by 10% */
+  text-align: center;
 }
 
 /* Responsive Typography and Spacing */
 @media (max-width: 768px) {
   section {
-    padding: var(--section-padding-mobile) 0;
+    padding: calc(var(--section-padding-mobile) * 1.1) 0; /* Increased by 10% */
   }
 
   h1 {
@@ -452,7 +453,20 @@ section {
 
 .solution-icon i {
   font-size: 40px;
-  color: var(--primary-color);
+  color: white;
+  background-color: var(--primary-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.solution-icon i:hover {
+  transform: scale(1.1);
 }
 
 .solution-card h3 {
@@ -498,7 +512,20 @@ section {
 
 .solution-icon-sm i {
   font-size: 32px;
-  color: var(--primary-color);
+  color: white;
+  background-color: var(--primary-color);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.solution-icon-sm i:hover {
+  transform: scale(1.1);
 }
 
 .solution-card-sm h4 {
@@ -556,7 +583,19 @@ section {
 
 .info-icon i {
   font-size: 24px;
-  color: var(--primary-color);
+  color: white;
+  background-color: var(--primary-color);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.info-icon i:hover {
+  transform: scale(1.1);
 }
 
 .info-text h4 {
