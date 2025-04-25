@@ -496,8 +496,7 @@ section {
 .section-subheader {
   margin: 3.5rem 0 2rem;
   text-align: center;
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 .section-subheader p {
@@ -506,6 +505,8 @@ section {
   color: var(--primary-color);
   position: relative;
   padding-bottom: 10px;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .section-subheader p::after {

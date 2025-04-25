@@ -23,7 +23,7 @@
   height: auto !important;
   min-height: 70vh !important; /* Taller hero section */
   max-height: none !important; /* Remove max height restriction */
-  padding: 70px 0 !important;
+  padding: 100px 0 !important;
   border-bottom: none;
   position: relative;
   overflow: hidden;
@@ -47,7 +47,7 @@
   height: auto !important;
   min-height: auto !important;
   max-height: none !important;
-  padding: 100px 0 60px !important; /* More space at the top and bottom */
+  padding: 120px 0 80px !important; /* More space at the top and bottom */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,7 +162,7 @@ section {
   }
 
   .hero-content {
-    padding: 60px 0 30px !important;
+    padding: 80px 0 50px !important;
   }
 
   .hero h1 {
