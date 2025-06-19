@@ -959,3 +959,125 @@ section {
   height: 70px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
+/* --- UNIVERSAL ALIGNMENT & LAYOUT FIXES --- */
+
+/* Fix for box-sizing issues */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* General container and section header alignment */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Standardized max-width */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* --- HEADER ALIGNMENT --- */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically aligns logo and nav */
+  width: 100%;
+}
+
+/* --- CLIENT LOGO SLIDER --- */
+.clients-track {
+  display: flex;
+  align-items: center; /* Vertically centers logos */
+}
+
+/* --- FIX FOR UNEVEN CARD HEIGHTS & CONTENT ALIGNMENT --- */
+.leadership-grid, .solutions-primary, .solutions-secondary {
+  display: grid;
+  gap: 1.5rem; /* Consistent spacing */
+}
+
+/* Use Flexbox on cards to control internal alignment */
+.leader-card, .solution-card, .solution-card-sm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%; /* CRITICAL: Makes all cards in a grid row the same height */
+  padding: 2rem 1.5rem;
+}
+
+/* New wrapper to help push content down */
+.leader-card .leader-content,
+.solution-card .solution-content,
+.solution-card-sm .solution-content-sm {
+  flex-grow: 1; /* Allows this div to grow and push the footer/button down */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns content to the top */
+}
+
+.leader-card .leader-email {
+  margin-top: auto; /* Pushes the email link to the bottom of the card */
+  padding-top: 1rem;
+}
+
+.solution-icon, .solution-icon-sm {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- CONTACT SECTION ALIGNMENT --- */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start; /* Aligns the top of the form and info sections */
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+/* --- FOOTER ALIGNMENT --- */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    grid-template-columns: 1fr 1fr;
+  }
+}
