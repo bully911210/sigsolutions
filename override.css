@@ -1,60 +1,36 @@
-/* --- UNIVERSAL ALIGNMENT & LAYOUT FIXES v3.0 --- */
-/* This file provides targeted fixes for alignment and card height issues. */
+/* --- ALIGNMENT & LAYOUT FIXES --- */
+/* This file provides targeted fixes for card height and content alignment. */
 
-/* --- Main Grid Layouts for Cards (Solutions & Leadership) --- */
-.process-flow, .leadership-grid {
+/* 1. Grid containers for cards */
+.solutions-primary,
+.leadership-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  align-items: stretch; /* CRITICAL: Makes all cards in a grid row the same height */
+  align-items: stretch; /* Makes grid items in the same row have equal height */
 }
 
-/* --- Individual Card Styling --- */
-.process-item, .leadership-card {
-  display: flex;       /* CRITICAL: Enables flexbox layout for content alignment */
-  flex-direction: column; /* Stacks card content vertically */
-  text-align: center;
-  height: 100%;      /* Ensures card fills the stretched grid cell */
+/* 2. Individual card setup */
+.solution-card,
+.leader-card {
+  display: flex;          /* Enables flexbox for vertical alignment inside the card */
+  flex-direction: column;   /* Stacks card content top-to-bottom */
+  height: 100%;             /* Ensures card fills the stretched grid cell height */
 }
 
-/* --- Card Content Wrapper --- */
-/* This new class is added in the HTML to wrap the text content */
+/* 3. Main content area of the card */
+.solution-card .solution-icon,
+.leader-card .leader-image {
+  flex-shrink: 0; /* Prevents icons/images from shrinking if card is compressed */
+}
+
+/* This new class wraps the text content, allowing it to grow */
 .card-content {
-  flex-grow: 1; /* CRITICAL: Allows this content area to expand, pushing the button down */
+  flex-grow: 1; /* CRITICAL: This makes the text area expand, pushing content below it to the bottom */
 }
 
-/* --- Card Button/Link Alignment --- */
-/* This pushes the button to the very bottom of the card, ensuring vertical alignment */
-.leadership-card .btn {
-  margin-top: auto;
-}
-
-/* --- Leadership Image Fix --- */
-.leadership-card .leader-image {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 1.5rem auto;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #f1f5f9;
-}
-.leadership-card .leader-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* --- Hero Section Text Alignment --- */
-.hero-content {
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* --- Responsive Stacking --- */
-@media (max-width: 768px) {
-  .process-flow, .leadership-grid {
-    grid-template-columns: 1fr;
-  }
+/* 4. Email link alignment */
+.leader-card .leader-email {
+  margin-top: auto; /* Pushes the email link to the absolute bottom of the card */
+  padding-top: 1rem; /* Adds some space above the link for aesthetics */
 }
