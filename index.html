@@ -5,189 +5,219 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIG Solutions - Click, Close, Collect</title>
   
-  <!-- SEO and Verification -->
   <meta name="description" content="SIG Solutions - Professional call center with our proven Click, Close, Collect process for lead generation, sales support, and non-profit fundraising services.">
   <meta name="ahrefs-site-verification" content="f510f61092b7c31168e6fe0842c5dce74c343550d493e19905d99dc2397fd6db">
-  <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Stylesheets (ensure paths are correct) -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="override.css"> <!-- The new override styles will be applied from here -->
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/override.css">
+  <link rel="stylesheet" href="/design-enhancements.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
   <!-- Header Section -->
   <header class="header">
     <div class="container">
-      <a href="/">
-        <img src="https://i.ibb.co/hRCxX3Dt/sig-logo.png" alt="SIG Solutions Logo" class="logo-img" width="180" height="45">
-      </a>
-      <nav class="desktop-nav">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- You can add a button for mobile menu if needed by your script.js -->
-      <!-- <button class="mobile-nav-trigger" aria-label="Open menu"><i class="fas fa-bars"></i></button> -->
+      <div class="header-content">
+        <div class="logo">
+          <a href="/"><img src="https://i.ibb.co/hRCxX3Dt/sig-logo.png" alt="SIG Solutions Logo" class="logo-img"></a>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-animation"><canvas id="waveCanvas" class="wave-canvas"></canvas></div>
+    <div class="hero-carousel">
+      <div class="carousel-slides">
+        <div class="carousel-slide active slide-1"></div>
+        <div class="carousel-slide slide-2"></div>
+        <div class="carousel-slide slide-3"></div>
+      </div>
       <div class="container">
         <div class="hero-content">
-          <h1>Click. Close. Collect.</h1>
-          <p>We generate leads, sell your products, and manage collections for subscription-based businesses.</p>
+          <h1>All in One Solution</h1>
+          <p class="hero-subtitle">We generate leads, sell your products, and manage collections for subscription-based businesses.</p>
+          <h2 class="client-header">Trusted By Industry Leaders</h2>
+          <div class="clients-slider">
+            <div class="clients-track">
+              <div class="client-logo"><img src="https://i.ibb.co/pBH32q98/download-1.png" alt="Client 1"></div>
+              <div class="client-logo"><img src="https://i.ibb.co/MxBZV0RL/Firearms-Guardian-Logo.png" alt="Client 2"></div>
+              <div class="client-logo"><img src="https://i.ibb.co/spRGF3Ln/CL-Stacked-Logo.png" alt="Client 3"></div>
+              <div class="client-logo"><img src="https://i.ibb.co/1fHx0YVV/download-2.png" alt="Client 4"></div>
+              <div class="client-logo"><img src="https://i.ibb.co/67WrsrGC/Free-SA-Logo-Main.png" alt="Client 5"></div>
+              <div class="client-logo"><img src="https://i.ibb.co/pBH32q98/download-1.png" alt="Client 1"></div>
+              <div class="client-logo"><img src="https://i.ibb.co/MxBZV0RL/Firearms-Guardian-Logo.png" alt="Client 2"></div>
+              <div class="client-logo"><img src="https://i.ibb.co/spRGF3Ln/CL-Stacked-Logo.png" alt="Client 3"></div>
+              <div class="client-logo"><img src="https://i.ibb.co/1fHx0YVV/download-2.png" alt="Client 4"></div>
+              <div class="client-logo"><img src="https://i.ibb.co/67WrsrGC/Free-SA-Logo-Main.png" alt="Client 5"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- Client Carousel Section -->
-    <div class="client-carousel">
-        <div class="carousel-title">Trusted By Industry Leaders</div>
-        <div class="carousel-track">
-          <!-- Duplicated for smooth infinite scroll -->
-          <div class="carousel-slide"><img src="https://i.ibb.co/pBH32q98/download-1.png" alt="Client Logo 1" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/MxBZV0RL/Firearms-Guardian-Logo.png" alt="Client Logo 2" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/spRGF3Ln/CL-Stacked-Logo.png" alt="Client Logo 3" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/1fHx0YVV/download-2.png" alt="Client Logo 4" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/67WrsrGC/Free-SA-Logo-Main.png" alt="Client Logo 5" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/GcJY2s5/Sentinel-Logo.png" alt="Client Logo 6" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/pBH32q98/download-1.png" alt="Client Logo 1" loading="lazy" aria-hidden="true"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/MxBZV0RL/Firearms-Guardian-Logo.png" alt="Client Logo 2" loading="lazy" aria-hidden="true"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/spRGF3Ln/CL-Stacked-Logo.png" alt="Client Logo 3" loading="lazy" aria-hidden="true"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/1fHx0YVV/download-2.png" alt="Client Logo 4" loading="lazy" aria-hidden="true"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/67WrsrGC/Free-SA-Logo-Main.png" alt="Client Logo 5" loading="lazy" aria-hidden="true"></div>
-          <div class="carousel-slide"><img src="https://i.ibb.co/GcJY2s5/Sentinel-Logo.png" alt="Client Logo 6" loading="lazy" aria-hidden="true"></div>
-        </div>
     </div>
+  </section>
 
-    <!-- Solutions Section -->
-    <section id="solutions" class="solutions-section">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Our Click-Close-Collect Solution</h2>
-          <p>A comprehensive, three-step process designed to fuel your growth, from initial contact to recurring revenue.</p>
-        </div>
-        <div class="process-flow">
-          <div class="process-item">
-            <div class="process-icon blue"><i class="fas fa-mouse-pointer"></i></div>
-            <div class="card-content">
-              <h3>Click</h3>
-              <p>We generate qualified leads to fuel your sales pipeline. Our advanced lead generation strategies target high-value prospects tailored to your subscription-based products and services.</p>
-            </div>
-          </div>
-          <div class="process-item">
-            <div class="process-icon purple"><i class="fas fa-phone"></i></div>
-            <div class="card-content">
-              <h3>Close</h3>
-              <p>We close YOUR products to OUR qualified leads, maximizing conversion rates. Our expert sales teams are trained in your products to ensure persuasive and accurate representation.</p>
-            </div>
-          </div>
-          <div class="process-item">
-            <div class="process-icon green"><i class="fas fa-money-bill-wave"></i></div>
-            <div class="card-content">
-              <h3>Collect</h3>
-              <p>We manage recurring billing and collections, minimizing churn and maximizing cash flow. Our specialized recovery strategies ensure a consistent revenue stream.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Leadership Section -->
-    <section id="about" class="leadership-section">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Our Leadership</h2>
-                <p>Meet the experienced team driving our success and yours.</p>
-            </div>
-            <div class="leadership-grid">
-                <div class="leadership-card">
-                  <div class="leader-image"><img src="https://i.ibb.co/yQW2k8J/Johannes.png" alt="Johannes Stoker" loading="lazy"></div>
-                  <div class="card-content">
-                    <h3>Johannes Stoker</h3>
-                    <p class="leader-title">Shareholder</p>
-                  </div>
-                  <a href="mailto:johannes@sigsolutions.co.za" class="btn btn-primary">Contact</a>
-                </div>
-                <div class="leadership-card">
-                  <div class="leader-image"><img src="https://i.ibb.co/vBF7Bfc/Charles.png" alt="Charles Castle" loading="lazy"></div>
-                  <div class="card-content">
-                    <h3>Charles Castle</h3>
-                    <p class="leader-title">Shareholder</p>
-                  </div>
-                  <a href="mailto:charles@sigsolutions.co.za" class="btn btn-primary">Contact</a>
-                </div>
-                <div class="leadership-card">
-                  <div class="leader-image"><img src="https://i.ibb.co/N1XqP2w/Franz.png" alt="Franz Badenhorst" loading="lazy"></div>
-                  <div class="card-content">
-                    <h3>Franz Badenhorst</h3>
-                    <p class="leader-title">Shareholder</p>
-                  </div>
-                  <a href="mailto:franz@sigsolutions.co.za" class="btn btn-primary">Contact</a>
-                </div>
-                <div class="leadership-card">
-                  <div class="leader-image"><img src="https://i.ibb.co/bK6wY2M/Ivan.png" alt="Ivan Taljard" loading="lazy"></div>
-                  <div class="card-content">
-                    <h3>Ivan Taljard</h3>
-                    <p class="leader-title">Shareholder</p>
-                  </div>
-                  <a href="mailto:ivan@sigsolutions.co.za" class="btn btn-primary">Contact</a>
-                </div>
-            </div>
-        </div>
-    </section>
-  </main>
-  
-  <!-- Footer -->
-  <footer id="contact" class="footer">
+  <!-- About Section -->
+  <section id="about" class="about">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about">
-          <img src="https://i.ibb.co/hRCxX3Dt/sig-logo.png" alt="SIG Solutions Logo" class="logo-img" width="180" height="45" loading="lazy">
-          <p>SIG Solutions helps businesses thrive with innovative strategies and technologies.</p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <div class="section-header"><h2>Who We Are</h2></div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>At SIG Solutions, we understand the challenges of growing a subscription-based business. Our comprehensive approach combines cutting-edge technology with human expertise to deliver measurable results for our clients.</p>
+          <p>We take pride in our ability to seamlessly integrate with your existing processes, providing the support you need to focus on your core business while we handle the critical aspects of customer acquisition and revenue management.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Years of Experience</div></div>
+          <div class="stat-card"><div class="stat-number">200+</div><div class="stat-label">Satisfied Clients</div></div>
+          <div class="stat-card"><div class="stat-number">95%</div><div class="stat-label">Client Retention</div></div>
+          <div class="stat-card"><div class="stat-number">24/7</div><div class="stat-label">Expert Support</div></div>
+        </div>
+      </div>
+      <div class="section-header"><h3>Our Leadership Team</h3></div>
+      <div class="leadership-content">
+        <div class="leadership-grid">
+          <div class="leader-card">
+            <div class="leader-image"><i class="fas fa-user"></i></div>
+            <div class="card-content">
+              <h3>Johannes Stoker</h3>
+              <p class="leader-title">Chief Executive Officer</p>
+            </div>
+            <a href="mailto:johannes@sigsolutions.co.za" class="leader-email"><i class="fas fa-envelope"></i> Email</a>
+          </div>
+          <div class="leader-card">
+            <div class="leader-image"><i class="fas fa-user"></i></div>
+            <div class="card-content">
+              <h3>Charles Castle</h3>
+              <p class="leader-title">Chief Financial Officer</p>
+            </div>
+            <a href="mailto:charles@sigsolutions.co.za" class="leader-email"><i class="fas fa-envelope"></i> Email</a>
+          </div>
+          <div class="leader-card">
+            <div class="leader-image"><i class="fas fa-user"></i></div>
+            <div class="card-content">
+              <h3>Franz Badenhorst</h3>
+              <p class="leader-title">Chief Sales Officer</p>
+            </div>
+            <a href="mailto:franz@sigsolutions.co.za" class="leader-email"><i class="fas fa-envelope"></i> Email</a>
+          </div>
+          <div class="leader-card">
+            <div class="leader-image"><i class="fas fa-user"></i></div>
+            <div class="card-content">
+              <h3>Ivan Taljard</h3>
+              <p class="leader-title">Chief Operations Officer</p>
+            </div>
+            <a href="mailto:ivan@sigsolutions.co.za" class="leader-email"><i class="fas fa-envelope"></i> Email</a>
           </div>
         </div>
-        <div class="footer-links-group">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#solutions">Lead Generation</a></li>
-            <li><a href="#solutions">Conversion Solutions</a></li>
-            <li><a href="#solutions">Customer Retention</a></li>
-          </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions" class="solutions">
+    <div class="container">
+      <div class="section-header"><h2>Our All in One Solution</h2><p>Our comprehensive approach to managing your entire sales cycle</p></div>
+      <div class="solutions-primary">
+        <div class="solution-card">
+          <div class="solution-icon"><i class="fas fa-mouse-pointer"></i></div>
+          <div class="card-content">
+            <h3>Click – Lead Generation</h3>
+            <p>We use targeted advertising strategies to generate high-quality leads for your business, ensuring you're connecting with the right potential customers.</p>
+          </div>
         </div>
-        <div class="footer-links-group">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#about">Our Team</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
+        <div class="solution-card">
+          <div class="solution-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="card-content">
+            <h3>Close – Phone Sales for Subscriptions</h3>
+            <p>Our expert sales team contacts these leads and converts them into subscribers through professional phone sales techniques and proven scripts.</p>
+          </div>
         </div>
-        <div class="footer-links-group">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:info@sigsolutions.co.za">info@sigsolutions.co.za</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
+        <div class="solution-card">
+          <div class="solution-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <div class="card-content">
+            <h3>Collect – Fund Collection</h3>
+            <p>We ensure that all promised funds from subscriptions are collected efficiently and on time, maximizing your revenue and reducing churn.</p>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© <span id="currentYear">2024</span> SIG Solutions. All Rights Reserved.</p>
+      <div class="section-subheader"><p class="text-center">With specific focus on</p></div>
+      <div class="solutions-secondary">
+        <div class="solution-card-sm"><div class="solution-icon-sm"><i class="fas fa-chart-line"></i></div><h4>Strategic Growth</h4><p>Data-driven strategies to scale your business efficiently.</p></div>
+        <div class="solution-card-sm"><div class="solution-icon-sm"><i class="fas fa-users"></i></div><h4>Customer Acquisition</h4><p>Targeted approaches to find and convert ideal customers.</p></div>
+        <div class="solution-card-sm"><div class="solution-icon-sm"><i class="fas fa-cogs"></i></div><h4>Process Automation</h4><p>Streamlined workflows to increase efficiency and reduce costs.</p></div>
+        <div class="solution-card-sm"><div class="solution-icon-sm"><i class="fas fa-heart"></i></div><h4>Customer Success</h4><p>Retention strategies to maximize customer lifetime value.</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header"><h2>Work With Us</h2><p>Get in touch with our team to discuss how SIG Solutions can help you achieve your business goals.</p></div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Company Contact Details</h3>
+          <div class="info-grid">
+            <div class="info-item"><div class="info-icon"><i class="fas fa-envelope"></i></div><div class="info-text"><h4>Email</h4><a href="mailto:sales@sigsolutions.co.za">sales@sigsolutions.co.za</a></div></div>
+            <div class="info-item"><div class="info-icon"><i class="fas fa-map-marker-alt"></i></div><div class="info-text"><h4>Location</h4><address>Riviera, Pretoria, South Africa</address></div></div>
+            <div class="info-item"><div class="info-icon"><i class="fas fa-clock"></i></div><div class="info-text"><h4>Business Hours</h4><p>Monday - Friday: 8:00 AM - 5:00 PM</p></div></div>
+            <div class="info-item"><div class="info-icon"><i class="fas fa-phone-alt"></i></div><div class="info-text"><h4>Phone</h4><p>Available upon request</p></div></div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm">
+            <div class="form-group"><label for="name">Name <span class="required">*</span></label><input type="text" id="name" name="name" required><div class="error-message" id="name-error"></div></div>
+            <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="email" required><div class="error-message" id="email-error"></div></div>
+            <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company"></div>
+            <div class="form-group"><label for="message">Message <span class="required">*</span></label><textarea id="message" name="message" rows="5" required></textarea><div class="error-message" id="message-error"></div></div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="contactModal" class="modal"><div class="modal-content"><div class="modal-header"><h3>Thank You!</h3><button type="button" class="modal-close" aria-label="Close modal">×</button></div><div class="modal-body"><p>Your message has been sent successfully. Our team will get back to you within 24 hours.</p><button type="button" class="btn btn-primary modal-close-btn">Close</button></div></div></div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo"><a href="/"><img src="https://i.ibb.co/hRCxX3Dt/sig-logo.png" alt="SIG Solutions Logo" class="logo-img"></a><p>Optimizing Revenue Flow with Minimal Complexity</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="mailto:sales@sigsolutions.co.za" aria-label="Email"><i class="fas fa-envelope"></i></a></div></div>
+        <div class="footer-links"><div class="footer-links-column"><h4>Quick Links</h4><ul><li><a href="#about">About</a></li><li><a href="#solutions">Solutions</a></li><li><a href="#contact">Contact</a></li></ul></div><div class="footer-links-column"><h4>Our Solutions</h4><ul><li><a href="#solutions">Lead Generation</a></li><li><a href="#solutions">Sales Support</a></li><li><a href="#solutions">Fund Collection</a></li></ul></div><div class="footer-contact"><h4>Contact Us</h4><address><p>Riviera, Pretoria, South Africa</p><p><a href="mailto:sales@sigsolutions.co.za">sales@sigsolutions.co.za</a></p></address></div></div>
+      </div>
+      <div class="footer-bottom"><p>© <span id="copyrightYear">2025</span> SIG Solutions – Optimizing Revenue Flow with Minimal Complexity</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
     </div>
   </footer>
 
-  <!-- Scripts Deferred for Performance -->
-  <script src="script.js" defer></script>
+  <!-- Back to Top Button -->
+  <button id="backToTop" type="button" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js" defer></script>
+  <script src="/script.js" type="module"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const yearSpan = document.getElementById('copyrightYear');
+        if(yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+  </script>
+
 </body>
 </html>
