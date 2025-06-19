@@ -75,7 +75,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px; /* Account for fixed header height */
+  scroll-padding-top: 110px;
 }
 
 body {
@@ -87,7 +87,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Layout & Container */
 .container {
   width: 100%;
   max-width: var(--container-xl);
@@ -95,19 +94,15 @@ body {
   padding: 0 var(--spacing-md);
 }
 
-/* === FIX #2: STANDARDIZED SECTION SPACING === */
-/* This is now the ONLY rule that controls the space between sections */
 section {
-  padding: var(--spacing-xxl) 0; /* 80px top/bottom padding */
+  padding: var(--spacing-xxl) 0;
 }
 
-/* The hero section is special and has its own rules below */
 section.hero {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-primary);
   font-weight: 700;
@@ -122,27 +117,11 @@ h3 { font-size: var(--font-size-2xl); }
 h4 { font-size: var(--font-size-xl); }
 h5 { font-size: var(--font-size-lg); }
 h6 { font-size: var(--font-size-md); }
-
-p {
-  margin-bottom: var(--spacing-md);
-  line-height: var(--line-height-base);
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
+p { margin-bottom: var(--spacing-md); line-height: var(--line-height-base); }
+a { color: var(--primary-color); text-decoration: none; transition: var(--transition); }
 a:hover { color: var(--primary-light); }
+img { max-width: 100%; height: auto; display: block; }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Fixes potential bottom spacing on images */
-}
-
-/* Header Styles - CONSOLIDATED AND FIXED */
 .header {
   position: fixed;
   top: 0;
@@ -169,13 +148,13 @@ img {
 }
 
 .logo img {
-  height: 89px; /* This is very tall, but keeping it as per your file */
+  height: 89px;
   width: auto;
   transition: height 0.3s ease;
 }
 
 .header.scrolled .logo img {
-  height: 60px; /* Make logo smaller when header shrinks */
+  height: 60px;
 }
 
 .nav-list { display: flex; list-style: none; margin: 0; padding: 0; }
@@ -201,23 +180,18 @@ img {
 
 .nav-list a:hover { color: var(--primary-color); }
 .nav-list a:hover::after { width: 100%; }
-
-/* Mobile Menu - no changes needed */
 .mobile-menu-btn { display: none; }
 
-/* === FIX #1: THE HERO SECTION GAP === */
 .hero {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 50vh; /* Reduced from 60vh to be less overwhelming */
-  margin-top: 109px; /* REMOVED. Was 120px. Now handled by body padding-top. */
-  padding-top: 110px; /* ADDED: This pushes the CONTENT down, not the whole section */
-  padding-bottom: var(--spacing-xl); /* ADDED: Gives space below the content */
+  min-height: 50vh;
+  padding-top: 110px;
+  padding-bottom: var(--spacing-xl);
 }
 
-/* This is a fallback in case your JS for the background carousel doesn't run */
 .hero-carousel {
   background-color: var(--white);
 }
@@ -230,11 +204,7 @@ img {
   z-index: 3;
 }
 
-.hero h1 {
-  font-size: var(--font-size-4xl);
-  color: var(--primary-color);
-}
-
+.hero h1 { font-size: var(--font-size-4xl); color: var(--primary-color); }
 .hero-subtitle {
   font-size: var(--font-size-xl);
   color: var(--text-color);
@@ -249,7 +219,6 @@ img {
   font-weight: 600;
 }
 
-/* Client Logo Carousel */
 .clients-slider {
   position: relative;
   overflow: hidden;
@@ -259,6 +228,7 @@ img {
   display: flex;
   gap: var(--spacing-xl);
   animation: scrollClients 30s linear infinite;
+  align-items: center; /* THIS IS THE FIX FOR LOGO ALIGNMENT */
 }
 
 @keyframes scrollClients {
@@ -286,7 +256,6 @@ img {
   opacity: 1;
 }
 
-/* Section Headers */
 .section-header {
   text-align: center;
   margin-bottom: var(--spacing-xl);
@@ -315,17 +284,11 @@ img {
   border-radius: 3px;
 }
 
-/* Section-specific styles */
-/* The padding/margin overrides have been removed for consistency */
 .about { background-color: var(--white); }
 .solutions { background-color: var(--gray-100); }
 .leadership { background-color: var(--white); }
 .contact { background-color: var(--gray-100); }
-.proven-process, .transparency, .services, .case-studies, .why-sig, .testimonials {
-  /* These sections now inherit the standard section padding */
-}
 
-/* Card Layouts */
 .about-content, .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -339,7 +302,6 @@ img {
   gap: var(--spacing-lg);
 }
 
-/* Individual Card Fixes */
 .solution-card, .leader-card, .stat-card {
   background-color: var(--white);
   border-radius: var(--border-radius);
@@ -358,15 +320,9 @@ img {
   border-color: var(--gray-200);
 }
 
-.card-content {
-  flex-grow: 1; /* Pushes footer content down */
-}
+.card-content { flex-grow: 1; }
+.leader-card .leader-email { margin-top: auto; }
 
-.leader-card .leader-email {
-  margin-top: auto; /* Pushes button to bottom */
-}
-
-/* Footer */
 .footer {
   background-color: var(--primary-color);
   color: var(--white);
@@ -407,6 +363,7 @@ img {
 .footer-links-column a:hover, .footer-contact a:hover { color: var(--white); }
 .footer-contact address { font-style: normal; color: var(--gray-300); }
 .footer-contact p { margin-bottom: 10px; }
+
 .social-links { display: flex; gap: 15px; margin-top: 20px; }
 .social-links a {
   width: 40px;
@@ -434,8 +391,6 @@ img {
 .footer-bottom-links a { color: var(--gray-300); }
 .footer-bottom-links a:hover { color: var(--white); }
 
-
-/* Responsive Styles */
 @media (max-width: 992px) {
   .about-content, .contact-content, .footer-content { grid-template-columns: 1fr; }
 }
@@ -443,7 +398,7 @@ img {
 @media (max-width: 768px) {
   html { scroll-padding-top: 80px; }
   .mobile-menu-btn { display: flex; }
-  .nav-list { display: none; /* Handled by JS */ }
+  .nav-list { display: none; }
   .solutions-secondary, .values-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-links { grid-template-columns: repeat(2, 1fr); }
   .footer-bottom { flex-direction: column; text-align: center; }
