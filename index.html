@@ -1,1111 +1,844 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIG Solutions - Click, Close, Collect</title>
-
-  <!-- SEO and Verification -->
-  <meta name="description" content="SIG Solutions - Professional call center with our proven Click, Close, Collect process for lead generation, sales support, and non-profit fundraising services.">
-  <meta name="ahrefs-site-verification" content="f510f61092b7c31168e6fe0842c5dce74c343550d493e19905d99dc2397fd6db">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/favicon.png">
-
-  <!-- External Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root {
-      --primary-color: #1e40af;
-      --primary-dark: #1e3a8a;
-      --secondary-color: #3b82f6;
-      --accent-color: #06b6d4;
-      --text-primary: #1f2937;
-      --text-secondary: #6b7280;
-      --text-light: #9ca3af;
-      --bg-primary: #ffffff;
-      --bg-secondary: #f8fafc;
-      --bg-dark: #0f172a;
-      --border-color: #e5e7eb;
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-      --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-      --gradient-hero: linear-gradient(135deg, rgba(30, 64, 175, 0.9), rgba(59, 130, 246, 0.8));
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background-color: var(--bg-primary);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header Styles */
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      border-bottom: 1px solid var(--border-color);
-      transition: all 0.3s ease;
-    }
-
-    .header.scrolled {
-      background: rgba(255, 255, 255, 0.98);
-      box-shadow: var(--shadow-md);
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-
-    .logo-img {
-      height: 45px;
-      width: auto;
-    }
-
-    .nav-list {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .nav-list a {
-      text-decoration: none;
-      color: var(--text-primary);
-      font-weight: 500;
-      transition: color 0.3s ease;
-      position: relative;
-    }
-
-    .nav-list a:hover {
-      color: var(--primary-color);
-    }
-
-    .nav-list a::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--primary-color);
-      transition: width 0.3s ease;
-    }
-
-    .nav-list a:hover::after {
-      width: 100%;
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 4px;
-    }
-
-    .mobile-menu-btn span {
-      width: 25px;
-      height: 3px;
-      background: var(--text-primary);
-      transition: all 0.3s ease;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: var(--gradient-hero);
-      overflow: hidden;
-    }
-
-    .hero-animation {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.1;
-    }
-
-    .wave-canvas {
-      width: 100%;
-      height: 100%;
-    }
-
-    .hero-carousel {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    .carousel-slides {
-      width: 100%;
-      height: 100%;
-      position: relative;
-    }
-
-    .carousel-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .carousel-slide.active {
-      opacity: 0.3;
-    }
-
-    .slide-1 {
-      background: linear-gradient(45deg, rgba(30, 64, 175, 0.1), rgba(59, 130, 246, 0.1));
-    }
-
-    .slide-2 {
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(30, 64, 175, 0.1));
-    }
-
-    .slide-3 {
-      background: linear-gradient(225deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      color: white;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 3rem;
-      opacity: 0.9;
-      animation: fadeInUp 1s ease-out 0.2s both;
-    }
-
-    .client-header {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-      animation: fadeInUp 1s ease-out 0.4s both;
-    }
-
-    /* Clients Slider */
-    .clients-slider {
-      overflow: hidden;
-      margin: 2rem 0;
-    }
-
-    .clients-track {
-      display: flex;
-      gap: 3rem;
-      animation: slide 20s linear infinite;
-    }
-
-    .client-logo {
-      flex-shrink: 0;
-      height: 60px;
-      display: flex;
-      align-items: center;
-    }
-
-    .client-logo img {
-      height: 100%;
-      width: auto;
-      filter: brightness(0) invert(1);
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-    }
-
-    .client-logo:hover img {
-      opacity: 1;
-    }
-
-    /* Sections */
-    .section-heading {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .section-heading h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .section-heading p {
-      font-size: 1.125rem;
-      color: var(--text-secondary);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-header h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-    }
-
-    .section-header p {
-      font-size: 1.125rem;
-      color: var(--text-secondary);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Solutions Section */
-    .solutions-section {
-      padding: 6rem 0;
-      background: var(--bg-secondary);
-    }
-
-    /* About Section */
-    .about {
-      padding: 6rem 0;
-    }
-
-    .about-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .about-text p {
-      font-size: 1.125rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-      color: var(--text-secondary);
-    }
-
-    /* Leadership Section */
-    .leadership-section {
-      padding: 6rem 0;
-      background: var(--bg-secondary);
-    }
-
-    .leadership-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .leadership-card {
-      background: white;
-      border-radius: 16px;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: var(--shadow-md);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .leadership-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .leader-image {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 1.5rem;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 4px solid var(--primary-color);
-    }
-
-    .leader-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .card-content h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .leader-title {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-    }
-
-    /* Contact Section */
-    .contact {
-      padding: 6rem 0;
-    }
-
-    .contact-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      margin-top: 3rem;
-    }
-
-    .contact-info h3,
-    .contact-form h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-      color: var(--text-primary);
-    }
-
-    .info-grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .info-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .info-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--gradient-primary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      flex-shrink: 0;
-    }
-
-    .info-text h4 {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      color: var(--text-primary);
-    }
-
-    .info-text p,
-    .info-text address,
-    .info-text a {
-      color: var(--text-secondary);
-      text-decoration: none;
-    }
-
-    .info-text a:hover {
-      color: var(--primary-color);
-    }
-
-    /* Form Styles */
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color: var(--text-primary);
-    }
-
-    .required {
-      color: #ef4444;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 2px solid var(--border-color);
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary-color);
-    }
-
-    /* Button Styles */
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 2rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 500;
-      text-decoration: none;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary {
-      background: var(--gradient-primary);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--bg-dark);
-      color: white;
-      padding: 3rem 0 1rem;
-    }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      gap: 3rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-logo p {
-      margin: 1rem 0;
-      opacity: 0.8;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .social-links a {
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .social-links a:hover {
-      background: var(--primary-color);
-    }
-
-    .footer-links {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-
-    .footer-links h4 {
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .footer-links ul {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-      color: white;
-    }
-
-    .footer-contact address {
-      font-style: normal;
-      opacity: 0.8;
-    }
-
-    .footer-contact a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-    }
-
-    .footer-contact a:hover {
-      color: white;
-    }
-
-    .footer-bottom {
-      grid-column: 1 / -1;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      opacity: 0.8;
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .footer-bottom-links a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .footer-bottom-links a:hover {
-      color: white;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slide {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-100%);
-      }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .nav-list {
-        display: none;
-      }
-
-      .mobile-menu-btn {
-        display: flex;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
-        font-size: 1.125rem;
-      }
-
-      .section-heading h2,
-      .section-header h2 {
-        font-size: 2rem;
-      }
-
-      .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .footer-links {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-      }
-
-      .clients-track {
-        gap: 2rem;
-      }
-
-      .client-logo {
-        height: 40px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 0 15px;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .leadership-card {
-        padding: 1.5rem;
-      }
-
-      .leader-image {
-        width: 100px;
-        height: 100px;
-      }
-    }
-
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Loading animation for images */
-    img {
-      loading: lazy;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIG Solutions | Click. Close. Collect.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo img {
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Trusted By Section */
+        .trusted-by {
+            padding: 5rem 2rem;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .trusted-by h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .client-logos img {
+            height: 60px;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+        }
+
+        .client-logos img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+        /* Solutions Section */
+        .solutions {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .solutions h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 800;
+        }
+
+        .solutions-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .solution-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .solution-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .solution-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .solution-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #333;
+            font-weight: 800;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Leadership Section */
+        .leadership {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .leadership h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 800;
+        }
+
+        .leadership-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 5rem;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .leader-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .leader-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .leader-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .leader-card .role {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-leader {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-leader:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 800;
+        }
+
+        .contact-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 5rem;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .info-item {
+            margin-bottom: 2rem;
+        }
+
+        .info-item h4 {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-item p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .solutions h2,
+            .about h2,
+            .leadership h2,
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <!-- Header Section -->
-  <header class="header" id="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">
-          <a href="/"><img src="https://i.ibb.co/hRCxX3Dt/sig-logo.png" alt="SIG Solutions Logo" class="logo-img" width="180" height="45"></a>
-        </div>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li><a href="#about">About</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <div class="mobile-menu-btn" id="mobileMenuBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-animation">
-        <canvas id="waveCanvas" class="wave-canvas"></canvas>
-      </div>
-      <div class="hero-carousel">
-        <div class="carousel-slides">
-          <div class="carousel-slide active slide-1"></div>
-          <div class="carousel-slide slide-2"></div>
-          <div class="carousel-slide slide-3"></div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="hero-content">
-          <h1>Click. Close. Collect.</h1>
-          <p>We generate leads, sell your products, and manage collections for subscription-based businesses.</p>
-          <h2 class="client-header">Trusted By Industry Leaders</h2>
-          <div class="clients-slider">
-            <div class="clients-track">
-              <div class="client-logo"><img src="https://i.ibb.co/pBH32q98/download-1.png" alt="Client 1" loading="lazy"></div>
-              <div class="client-logo"><img src="https://i.ibb.co/MxBZV0RL/Firearms-Guardian-Logo.png" alt="Client 2" loading="lazy"></div>
-              <div class="client-logo"><img src="https://i.ibb.co/spRGF3Ln/CL-Stacked-Logo.png" alt="Client 3" loading="lazy"></div>
-              <div class="client-logo"><img src="https://i.ibb.co/1fHx0YVV/download-2.png" alt="Client 4" loading="lazy"></div>
-              <div class="client-logo"><img src="https://i.ibb.co/67WrsrGC/Free-SA-Logo-Main.png" alt="Client 5" loading="lazy"></div>
-              <div class="client-logo"><img src="https://i.ibb.co/pBH32q98/download-1.png" alt="Client 1" loading="lazy"></div>
-              <div class="client-logo"><img src="https://i.ibb.co/MxBZV0RL/Firearms-Guardian-Logo.png" alt="Client 2" loading="lazy"></div>
-              <div class="client-logo"><img src="https://i.ibb.co/spRGF3Ln/CL-Stacked-Logo.png" alt="Client 3" loading="lazy"></div>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="https://i.ibb.co/hRCxX3Dt/sig-logo.png" alt="SIG Solutions Logo">
+                </a>
             </div>
-          </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Click. Close. Collect.</h1>
+            <p>We transform your subscription business with seamless lead generation, expert sales support, and reliable fund collection—all in one integrated solution.</p>
+            <a href="#contact" class="cta-button">Start Growing Today</a>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted-by">
+        <h2>Trusted By Industry Leaders</h2>
+        <div class="client-logos">
+            <img src="https://i.ibb.co/67WrsrGC/Free-SA-Logo-Main.png" alt="Client 1">
+            <img src="https://i.ibb.co/pBH32q98/download-1.png" alt="Client 2">
+            <img src="https://i.ibb.co/MxBZV0RL/Firearms-Guardian-Logo.png" alt="Client 3">
+            <img src="https://i.ibb.co/spRGF3Ln/CL-Stacked-Logo.png" alt="Client 4">
+            <img src="https://i.ibb.co/1fHx0YVV/download-2.png" alt="Client 5">
+        </div>
     </section>
 
     <!-- Solutions Section -->
-    <section id="solutions" class="solutions-section">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Our Click-Close-Collect Solution</h2>
-          <p>A comprehensive, three-step process designed to fuel your growth, from initial contact to recurring revenue.</p>
+    <section id="solutions" class="solutions">
+        <h2>Our Click-Close-Collect Solution</h2>
+        <p class="solutions-subtitle">A proven three-step process that drives sustainable growth from first contact to recurring revenue.</p>
+        <div class="solution-cards">
+            <div class="solution-card">
+                <div class="solution-number">01</div>
+                <h3>Click: Lead Generation</h3>
+                <p>We identify and attract high-quality prospects using data-driven strategies and cutting-edge technology. Our targeted approach ensures your sales pipeline stays full with leads that convert.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-number">02</div>
+                <h3>Close: Sales Support</h3>
+                <p>Our experienced sales team works seamlessly with yours to convert prospects into customers. From initial contact to contract signing, we provide expert support that drives results.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-number">03</div>
+                <h3>Collect: Fund Management</h3>
+                <p>We manage the entire collections process for your subscription revenue, ensuring consistent cash flow and reducing administrative burden. Focus on growth while we handle the details.</p>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-      <div class="container">
-        <div class="section-header">
-          <h2>Who We Are</h2>
-        </div>
         <div class="about-content">
-          <div class="about-text">
-            <p>At SIG Solutions, we understand the challenges of growing a subscription-based business. Our comprehensive approach combines cutting-edge technology with human expertise to deliver measurable results for our clients.</p>
-            <p>We take pride in our ability to seamlessly integrate with your existing processes, providing the support you need to focus on your core business while we handle the critical aspects of customer acquisition and revenue management.</p>
-          </div>
+            <h2>Who We Are</h2>
+            <p>At SIG Solutions, we understand that growing a subscription-based business requires more than just a good product—it demands expertise in customer acquisition, sales optimization, and revenue management.</p>
+            <p>Our comprehensive approach combines cutting-edge technology with proven human expertise to deliver measurable results. We don't just provide services; we become a strategic extension of your team, integrating seamlessly with your existing processes.</p>
+            <p>We take pride in our ability to scale alongside our clients, providing the support you need to focus on your core business while we handle the critical aspects of customer acquisition and revenue management. Your success is our success.</p>
         </div>
-      </div>
     </section>
 
     <!-- Leadership Section -->
-    <section class="leadership-section">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Our Leadership</h2>
-          <p>Meet the experienced team driving our success and yours.</p>
-        </div>
+    <section class="leadership">
+        <h2>Our Leadership</h2>
+        <p class="leadership-subtitle">Meet the experienced team driving our success and yours.</p>
         <div class="leadership-grid">
-          <div class="leadership-card">
-            <div class="leader-image">
-              <img src="https://i.ibb.co/yQW2k8J/Johannes.png" alt="Johannes Stoker" loading="lazy">
+            <div class="leader-card">
+                <div class="leader-avatar">JS</div>
+                <h3>Johannes Stoker</h3>
+                <p class="role">Shareholder</p>
+                <a href="#contact" class="contact-leader">Contact</a>
             </div>
-            <div class="card-content">
-              <h3>Johannes Stoker</h3>
-              <p class="leader-title">Shareholder</p>
+            <div class="leader-card">
+                <div class="leader-avatar">CC</div>
+                <h3>Charles Castle</h3>
+                <p class="role">Shareholder</p>
+                <a href="#contact" class="contact-leader">Contact</a>
             </div>
-            <a href="mailto:johannes@sigsolutions.co.za" class="btn btn-primary">Contact</a>
-          </div>
-          <div class="leadership-card">
-            <div class="leader-image">
-              <img src="https://i.ibb.co/vBF7Bfc/Charles.png" alt="Charles Castle" loading="lazy">
+            <div class="leader-card">
+                <div class="leader-avatar">FB</div>
+                <h3>Franz Badenhorst</h3>
+                <p class="role">Shareholder</p>
+                <a href="#contact" class="contact-leader">Contact</a>
             </div>
-            <div class="card-content">
-              <h3>Charles Castle</h3>
-              <p class="leader-title">Shareholder</p>
+            <div class="leader-card">
+                <div class="leader-avatar">IT</div>
+                <h3>Ivan Taljard</h3>
+                <p class="role">Shareholder</p>
+                <a href="#contact" class="contact-leader">Contact</a>
             </div>
-            <a href="mailto:charles@sigsolutions.co.za" class="btn btn-primary">Contact</a>
-          </div>
-          <div class="leadership-card">
-            <div class="leader-image">
-              <img src="https://i.ibb.co/N1XqP2w/Franz.png" alt="Franz Badenhorst" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Franz Badenhorst</h3>
-              <p class="leader-title">Shareholder</p>
-            </div>
-            <a href="mailto:franz@sigsolutions.co.za" class="btn btn-primary">Contact</a>
-          </div>
-          <div class="leadership-card">
-            <div class="leader-image">
-              <img src="https://i.ibb.co/bK6wY2M/Ivan.png" alt="Ivan Taljard" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Ivan Taljard</h3>
-              <p class="leader-title">Shareholder</p>
-            </div>
-            <a href="mailto:ivan@sigsolutions.co.za" class="btn btn-primary">Contact</a>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-header">
-          <h2>Work With Us</h2>
-          <p>Get in touch with our team to discuss how SIG Solutions can help you achieve your business goals.</p>
-        </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <h3>Company Contact Details</h3>
-            <div class="info-grid">
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-envelope"></i>
+        <div class="contact-container">
+            <h2>Work With Us</h2>
+            <p class="contact-subtitle">Get in touch to discuss how SIG Solutions can accelerate your business growth.</p>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Company Contact Details</h3>
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p>sales@sigsolutions.co.za</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Location</h4>
+                        <p>Riviera, Pretoria<br>South Africa</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday<br>8:00 AM - 5:00 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Phone</h4>
+                        <p>Available upon request</p>
+                    </div>
                 </div>
-                <div class="info-text">
-                  <h4>Email</h4>
-                  <a href="mailto:sales@sigsolutions.co.za">sales@sigsolutions.co.za</a>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
                 </div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="info-text">
-                  <h4>Location</h4>
-                  <address>Riviera, Pretoria, South Africa</address>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-clock"></i>
-                </div>
-                <div class="info-text">
-                  <h4>Business Hours</h4>
-                  <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="info-text">
-                  <h4>Phone</h4>
-                  <p>Available upon request</p>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="contact-form">
-            <h3>Send Us a Message</h3>
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="name">Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company">
-              </div>
-              <div class="form-group">
-                <label for="message">Message <span class="required">*</span></label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-          </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <a href="/"><img src="https://i.ibb.co/hRCxX3Dt/sig-logo.png" alt="SIG Solutions Logo" class="logo-img"></a>
-          <p>Optimizing Revenue Flow with Minimal Complexity</p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="mailto:sales@sigsolutions.co.za" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SIG Solutions</h3>
+                <p>Optimizing Revenue Flow with Minimal Complexity</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Solutions</h3>
+                <ul>
+                    <li><a href="#solutions">Lead Generation</a></li>
+                    <li><a href="#solutions">Sales Support</a></li>
+                    <li><a href="#solutions">Fund Collection</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Riviera, Pretoria, South Africa</p>
+                <p>sales@sigsolutions.co.za</p>
+            </div>
         </div>
-        <div class="footer-links">
-          <div class="footer-links-column">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#solutions">Solutions</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-links-column">
-            <h4>Our Solutions</h4>
-            <ul>
-              <li><a href="#solutions">Lead Generation</a></li>
-              <li><a href="#solutions">Sales Support</a></li>
-              <li><a href="#solutions">Fund Collection</a></li>
-            </ul>
-          </div>
+        <div class="footer-bottom">
+            <p>© 2025 SIG Solutions – Optimizing Revenue Flow with Minimal Complexity</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
         </div>
-        <div class="footer-contact">
-          <h4>Contact Us</h4>
-          <address>
-            <p>Riviera, Pretoria, South Africa</p>
-            <p><a href="mailto:sales@sigsolutions.co.za">sales@sigsolutions.co.za</a></p>
-          </address>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span id="copyrightYear">2025</span> SIG Solutions – Optimizing Revenue Flow with Minimal Complexity</p>
-        <div class="footer-bottom-links">
-          <a href="https://sigsolutions.co.za/privacy" target="_blank" rel="noopener">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script>
-    // Header scroll effect
-    window.addEventListener('scroll', function() {
-      const header = document.getElementById('header');
-      if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navList = document.querySelector('.nav-list');
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
 
-    mobileMenuBtn.addEventListener('click', function() {
-      navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Hero carousel
-    const slides = document.querySelectorAll('.carousel-slide');
-    let currentSlide = 0;
-
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-
-    setInterval(nextSlide, 5000);
-
-    // Wave animation
-    const canvas = document.getElementById('waveCanvas');
-    const ctx = canvas.getContext('2d');
-    let animationId;
-
-    function resizeCanvas() {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    }
-
-    function drawWave() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      const waves = [
-        { amplitude: 50, frequency: 0.01, phase: Date.now() * 0.001, color: 'rgba(59, 130, 246, 0.3)' },
-        { amplitude: 30, frequency: 0.015, phase: Date.now() * 0.0015, color: 'rgba(6, 182, 212, 0.2)' },
-        { amplitude: 40, frequency: 0.008, phase: Date.now() * 0.0008, color: 'rgba(30, 64, 175, 0.1)' }
-      ];
-
-      waves.forEach(wave => {
-        ctx.beginPath();
-        ctx.strokeStyle = wave.color;
-        ctx.lineWidth = 2;
-        
-        for (let x = 0; x < canvas.width; x++) {
-          const y = canvas.height / 2 + Math.sin(x * wave.frequency + wave.phase) * wave.amplitude;
-          if (x === 0) {
-            ctx.moveTo(x, y);
-          } else {
-            ctx.lineTo(x, y);
-          }
-        }
-        ctx.stroke();
-      });
-
-      animationId = requestAnimationFrame(drawWave);
-    }
-
-    // Initialize wave animation
-    resizeCanvas();
-    drawWave();
-
-    window.addEventListener('resize', resizeCanvas);
-
-    // Contact form
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formData = new FormData(this);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const company = formData.get('company');
-      const message = formData.get('message');
-
-      // Create mailto link with form data
-      const subject = encodeURIComponent('Contact from ' + (company ? company + ' - ' : '') + name);
-      const body = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        (company ? 'Company: ' + company + '\n' : '') +
-        'Message: ' + message
-      );
-
-      window.location.href = 'mailto:sales@sigsolutions.co.za?subject=' + subject + '&body=' + body;
-    });
-
-    // Set copyright year
-    document.addEventListener('DOMContentLoaded', function() {
-      const yearSpan = document.getElementById('copyrightYear');
-      if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-      }
-    });
-
-    // Intersection Observer for animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
-        }
-      });
-    }, observerOptions);
-
-    // Observe animated elements
-    document.querySelectorAll('.leadership-card, .about-text, .contact-content').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
+</html>
