@@ -74,15 +74,11 @@ const Index = () => {
             <h2 className="section-title">Click. Close. Collect.</h2>
             
             {/* Click */}
-            <div className="pipeline-block">
+            <div className="pipeline-block" data-number="01">
               <h3 className="pipeline-title">Click – Lead Generation</h3>
+              <p className="pipeline-dominant">Most lead generation fails because volume is chased without accountability.</p>
               
               <div className="pipeline-content">
-                <div className="pipeline-col">
-                  <h4>Reality</h4>
-                  <p>Most lead generation fails because volume is chased without accountability.</p>
-                </div>
-                
                 <div className="pipeline-col">
                   <h4>What breaks</h4>
                   <ul>
@@ -112,15 +108,11 @@ const Index = () => {
             </div>
 
             {/* Close */}
-            <div className="pipeline-block">
+            <div className="pipeline-block" data-number="02">
               <h3 className="pipeline-title">Close – Sales Support</h3>
+              <p className="pipeline-dominant">Sales fails when follow-up is inconsistent and pressure isn't managed.</p>
               
               <div className="pipeline-content">
-                <div className="pipeline-col">
-                  <h4>Reality</h4>
-                  <p>Sales fails when follow-up is inconsistent and pressure isn't managed.</p>
-                </div>
-                
                 <div className="pipeline-col">
                   <h4>What breaks</h4>
                   <ul>
@@ -150,15 +142,11 @@ const Index = () => {
             </div>
 
             {/* Collect */}
-            <div className="pipeline-block">
+            <div className="pipeline-block" data-number="03">
               <h3 className="pipeline-title">Collect – Fund & Subscription Management</h3>
+              <p className="pipeline-dominant">Revenue collapses when collections are treated as admin.</p>
               
               <div className="pipeline-content">
-                <div className="pipeline-col">
-                  <h4>Reality</h4>
-                  <p>Revenue collapses when collections are treated as admin.</p>
-                </div>
-                
                 <div className="pipeline-col">
                   <h4>What breaks</h4>
                   <ul>
