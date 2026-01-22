@@ -4,14 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SIG Solutions</title>
+    <title>SIG Solutions - Revenue Operations</title>
     
     <!-- Import fonts and icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Carousel CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     
     <style>
       /* Reset and base styles */
@@ -23,53 +20,74 @@
 
       body {
         font-family: 'Inter', sans-serif;
-        line-height: 1.6;
-        color: #1e293b;
-        background-color: #f8fafc;
+        line-height: 1.65;
+        color: #e2e8f0;
+        background-color: #1a1d26;
         overflow-x: hidden;
       }
 
       .container {
         width: 100%;
-        max-width: 1280px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 0 1.5rem;
+        padding: 0 2rem;
       }
 
-      /* Typography */
+      /* Typography - Strong hierarchy */
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
         line-height: 1.2;
+        color: #f8fafc;
       }
 
       h1 {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        letter-spacing: -0.02em;
       }
 
       h2 {
         font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.01em;
       }
 
       h3 {
         font-size: 1.5rem;
-        margin-bottom: 0.75rem;
-      }
-
-      p {
+        font-weight: 600;
         margin-bottom: 1rem;
       }
 
+      h4 {
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #cbd5e1;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.875rem;
+      }
+
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1.0625rem;
+        line-height: 1.75;
+      }
+
       a {
-        color: #2563eb;
+        color: #94a3b8;
         text-decoration: none;
-        transition: color 0.3s ease;
+        transition: color 0.2s ease;
       }
 
       a:hover {
-        color: #1d4ed8;
+        color: #e2e8f0;
+      }
+
+      ul {
+        list-style: none;
       }
 
       /* Header */
@@ -79,10 +97,9 @@
         left: 0;
         width: 100%;
         z-index: 100;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(26, 29, 38, 0.95);
         backdrop-filter: blur(10px);
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.1);
       }
 
       .header .container {
@@ -93,14 +110,14 @@
       }
 
       .logo {
-        height: 62.5px;
+        height: 50px;
         display: flex;
         align-items: center;
       }
 
       .logo img {
         height: 100%;
-        max-width: 250px;
+        max-width: 200px;
       }
 
       .desktop-nav {
@@ -113,40 +130,25 @@
       }
 
       .desktop-nav li {
-        margin: 0 1rem;
+        margin: 0 1.5rem;
       }
 
       .desktop-nav a {
-        color: #1e293b;
+        color: #cbd5e1;
         font-weight: 500;
-        transition: color 0.3s ease;
-        position: relative;
-      }
-
-      .desktop-nav a:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background-color: #2563eb;
-        transition: width 0.3s ease;
+        font-size: 0.9375rem;
+        transition: color 0.2s ease;
       }
 
       .desktop-nav a:hover {
-        color: #2563eb;
-      }
-
-      .desktop-nav a:hover:after {
-        width: 100%;
+        color: #f8fafc;
       }
 
       .mobile-nav-trigger {
         display: none;
         font-size: 1.5rem;
         cursor: pointer;
-        color: #1e293b;
+        color: #cbd5e1;
       }
 
       /* Mobile Menu */
@@ -157,8 +159,8 @@
         width: 70%;
         max-width: 300px;
         height: 100vh;
-        background-color: white;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        background-color: #0f1117;
+        border-left: 1px solid rgba(148, 163, 184, 0.1);
         z-index: 1000;
         transition: right 0.3s ease;
         padding: 2rem;
@@ -174,7 +176,7 @@
         right: 1rem;
         font-size: 1.5rem;
         cursor: pointer;
-        color: #1e293b;
+        color: #cbd5e1;
       }
 
       .mobile-menu ul {
@@ -187,764 +189,500 @@
       }
 
       .mobile-menu a {
-        color: #1e293b;
-        font-size: 1.2rem;
+        color: #cbd5e1;
+        font-size: 1.125rem;
         font-weight: 500;
-        transition: color 0.3s ease;
-      }
-
-      .mobile-menu a:hover {
-        color: #2563eb;
       }
 
       /* Hero Section */
       .hero {
-        height: 100vh;
-        min-height: 700px;
-        background: linear-gradient(to right, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.6)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
-        display: flex;
-        align-items: center;
-        padding-top: 80px;
-        color: white;
+        padding: 12rem 0 8rem;
+        margin-top: 0;
       }
 
       .hero-content {
-        max-width: 700px;
+        max-width: 900px;
       }
 
       .hero h1 {
         font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: 1.5rem;
+        line-height: 1.15;
+        margin-bottom: 2rem;
       }
 
-      .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 2.5rem;
-        opacity: 0.9;
+      .hero-subheadline {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        color: #cbd5e1;
+        margin-bottom: 1.5rem;
+        max-width: 800px;
+      }
+
+      .hero-supporting {
+        font-size: 1.0625rem;
+        line-height: 1.7;
+        color: #94a3b8;
+        margin-bottom: 3rem;
+        max-width: 750px;
       }
 
       .hero-cta {
         display: flex;
         gap: 1rem;
-      }
-
-      /* Carousel */
-      .hero-carousel {
-        width: 100%;
-        margin-top: 2rem;
-      }
-
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-
-      /* Client Carousel */
-      .client-carousel {
-        background-color: #f8fafc;
-        padding: 2rem 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
-
-      .carousel-title {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 1.5rem;
-        color: #475569;
-      }
-
-      .carousel-track {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-        animation: scroll 30s linear infinite;
-      }
-
-      .carousel-slide {
-        flex: 0 0 auto;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .carousel-slide img {
-        max-height: 80px;
-        max-width: 200px;
-        filter: grayscale(100%) opacity(60%);
-        transition: filter 0.3s ease;
-      }
-
-      .carousel-slide:hover img {
-        filter: grayscale(0%) opacity(100%);
-      }
-
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
-
-      /* Section Styling */
-      section {
-        padding: 6rem 0;
-      }
-
-      .section-heading {
-        text-align: center;
-        margin-bottom: 4rem;
-      }
-
-      .section-heading h2 {
-        font-size: 2.5rem;
-        color: #1e293b;
-        margin-bottom: 0.5rem;
-      }
-
-      .section-heading p {
-        font-size: 1.2rem;
-        color: #475569;
-      }
-
-      /* About Section */
-      .about-section {
-        background-color: white;
-      }
-
-      .about-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-      }
-
-      .about-text p {
-        font-size: 1.1rem;
-        color: #334155;
-        margin-bottom: 1.5rem;
-      }
-
-      .about-stats {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-      }
-
-      .stat-item {
-        text-align: center;
-        background-color: #f1f5f9;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .stat-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
-      }
-
-      .stat-item h3 {
-        font-size: 2.5rem;
-        color: #2563eb;
-        margin-bottom: 0.5rem;
-      }
-
-      .stat-item p {
-        font-size: 1rem;
-        color: #475569;
-        margin-bottom: 0;
-      }
-
-      /* Solutions Section */
-      .solutions-section {
-        background-color: #f8fafc;
-      }
-
-      .process-flow {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 4rem;
         flex-wrap: wrap;
-      }
-
-      .process-item {
-        flex: 1;
-        min-width: 250px;
-        text-align: center;
-        padding: 2rem;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-      }
-
-      .process-item:hover {
-        transform: translateY(-10px);
-      }
-
-      .process-icon {
-        width: 80px;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 1.5rem;
-        border-radius: 50%;
-        font-size: 2rem;
-      }
-
-      .process-icon.blue {
-        background-color: rgba(37, 99, 235, 0.1);
-        color: #2563eb;
-      }
-
-      .process-icon.purple {
-        background-color: rgba(124, 58, 237, 0.1);
-        color: #7c3aed;
-      }
-
-      .process-icon.green {
-        background-color: rgba(16, 185, 129, 0.1);
-        color: #10b981;
-      }
-
-      .process-connector {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 1rem;
-        color: #94a3b8;
-        font-size: 1.5rem;
-      }
-
-      .solutions-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-      }
-
-      .solution-card {
-        padding: 2rem;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .solution-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
-      }
-
-      .solution-icon {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.5rem;
-        border-radius: 12px;
-        background-color: #f1f5f9;
-        color: #2563eb;
-        font-size: 1.5rem;
-      }
-
-      .solution-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-      }
-
-      .solution-card p {
-        color: #475569;
-        margin-bottom: 0;
-      }
-
-      /* Leadership Section */
-      .leadership-section {
-        background-color: white;
-      }
-
-      .leadership-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      .leadership-card {
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-        background-color: #f8fafc;
-      }
-
-      .leadership-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .leadership-icon {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.5rem;
-        border-radius: 50%;
-        background-color: #2563eb;
-        color: white;
-        font-size: 1.5rem;
-      }
-
-      .leadership-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-      }
-
-      .leadership-card p {
-        color: #475569;
-        margin-bottom: 0;
-      }
-
-      /* Directors section */
-      .glass {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .glass:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Contact Section */
-      .contact-section {
-        background-color: #f8fafc;
-      }
-
-      .contact-container {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 4rem;
-      }
-
-      .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
-
-      .contact-item {
-        display: flex;
-        gap: 1.5rem;
-      }
-
-      .contact-icon {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background-color: #2563eb;
-        color: white;
-        font-size: 1.2rem;
-        flex-shrink: 0;
-      }
-
-      .contact-text h4 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .contact-text p {
-        color: #475569;
-        margin-bottom: 0;
-      }
-
-      .contact-form {
-        background-color: white;
-        padding: 2.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      }
-
-      .form-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .form-group {
-        margin-bottom: 1.5rem;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        color: #334155;
-      }
-
-      .form-group input,
-      .form-group textarea {
-        width: 100%;
-        padding: 0.75rem 1rem;
-        border: 1px solid #e2e8f0;
-        border-radius: 6px;
-        font-family: inherit;
-        font-size: 1rem;
-        transition: border-color 0.3s ease;
-      }
-
-      .form-group input:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: #2563eb;
-      }
-
-      /* Footer */
-      .footer {
-        background-color: #1e293b;
-        color: #f1f5f9;
-        padding: 5rem 0 2rem;
-      }
-
-      .footer-grid {
-        display: grid;
-        grid-template-columns: 2fr repeat(3, 1fr);
-        gap: 4rem;
-        margin-bottom: 3rem;
-      }
-
-      .footer-about {
-        max-width: 350px;
-      }
-
-      .footer-logo {
-        height: 50px;
-        margin-bottom: 1.5rem;
-        filter: brightness(0) invert(1);
-      }
-
-      .footer-about p {
-        margin-bottom: 1.5rem;
-        opacity: 0.8;
-      }
-
-      .social-links {
-        display: flex;
-        gap: 1rem;
-      }
-
-      .social-links a {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        color: white;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-      }
-
-      .social-links a:hover {
-        background-color: #2563eb;
-      }
-
-      .footer-links-group h4 {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-        color: white;
-      }
-
-      .footer-links {
-        list-style: none;
-      }
-
-      .footer-links li {
-        margin-bottom: 0.75rem;
-      }
-
-      .footer-links a {
-        color: #cbd5e1;
-        transition: color 0.3s ease;
-      }
-
-      .footer-links a:hover {
-        color: white;
-      }
-
-      .footer-bottom {
-        padding-top: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        text-align: center;
-      }
-
-      .footer-bottom p {
-        opacity: 0.6;
-        margin-bottom: 0;
       }
 
       /* Buttons */
       .btn {
         display: inline-block;
-        padding: 0.75rem 1.5rem;
-        border-radius: 6px;
+        padding: 1rem 2rem;
+        font-size: 1rem;
         font-weight: 500;
         text-align: center;
-        transition: all 0.3s ease;
+        border: none;
         cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
       }
 
       .btn-primary {
-        background-color: #2563eb;
-        color: white;
-        border: 2px solid #2563eb;
+        background-color: #64748b;
+        color: #f8fafc;
       }
 
       .btn-primary:hover {
-        background-color: #1d4ed8;
-        border-color: #1d4ed8;
-        color: white;
+        background-color: #475569;
+        color: #f8fafc;
       }
 
       .btn-outline {
         background-color: transparent;
-        border: 2px solid white;
-        color: white;
+        color: #cbd5e1;
+        border: 1px solid #475569;
       }
 
       .btn-outline:hover {
-        background-color: white;
-        color: #1e293b;
+        background-color: #1e293b;
+        color: #f8fafc;
+        border-color: #64748b;
       }
 
-      /* Animations */
-      .animate-fade-in {
-        opacity: 0;
-        animation: fadeIn 1s forwards;
+      /* Proof Section */
+      .proof-section {
+        padding: 4rem 0;
+        border-top: 1px solid rgba(148, 163, 184, 0.1);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.1);
       }
 
-      .delay-200 {
-        animation-delay: 200ms;
-      }
-
-      .delay-400 {
-        animation-delay: 400ms;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Utility Classes */
-      .mt-16 {
-        margin-top: 4rem;
-      }
-
-      .grid {
+      .proof-grid {
         display: grid;
-      }
-
-      .grid-cols-1 {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-      }
-
-      .gap-8 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
+        margin-bottom: 3rem;
       }
 
-      .text-center {
+      .proof-item {
+        font-size: 0.9375rem;
+        color: #94a3b8;
+        padding: 1.5rem 0;
+        border-left: 2px solid #475569;
+        padding-left: 1.5rem;
+      }
+
+      .positioning-line {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: #cbd5e1;
+        max-width: 800px;
+        margin: 0 auto;
         text-align: center;
       }
 
-      .rounded-xl {
-        border-radius: 0.75rem;
+      /* Pipeline Section */
+      .pipeline-section {
+        padding: 8rem 0;
       }
 
-      .text-lg {
-        font-size: 1.125rem;
+      .section-title {
+        text-align: center;
+        margin-bottom: 5rem;
+        font-size: 2.5rem;
       }
 
-      .font-semibold {
-        font-weight: 600;
+      .pipeline-block {
+        margin-bottom: 6rem;
+        padding-bottom: 6rem;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.1);
       }
 
-      .mb-1 {
-        margin-bottom: 0.25rem;
-      }
-
-      .text-gray-600 {
-        color: #4b5563;
-      }
-
-      .mb-0 {
+      .pipeline-block:last-child {
         margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
       }
 
-      .w-16 {
-        width: 4rem;
+      .pipeline-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        color: #f8fafc;
       }
 
-      .h-16 {
-        height: 4rem;
+      .pipeline-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 3rem;
       }
 
-      .bg-blue-500\/10 {
-        background-color: rgba(59, 130, 246, 0.1);
-      }
-
-      .rounded-full {
-        border-radius: 9999px;
-      }
-
-      .mx-auto {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .mb-4 {
+      .pipeline-col h4 {
         margin-bottom: 1rem;
       }
 
-      .flex {
-        display: flex;
+      .pipeline-col p {
+        color: #94a3b8;
       }
 
-      .items-center {
-        align-items: center;
+      .pipeline-col ul {
+        list-style: none;
+        padding: 0;
       }
 
-      .justify-center {
-        justify-content: center;
+      .pipeline-col ul li {
+        color: #94a3b8;
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
       }
 
-      .text-blue-500 {
-        color: #3b82f6;
+      .pipeline-col ul li:before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: #475569;
       }
 
-      .text-xl {
+      /* Why Section */
+      .why-section {
+        padding: 8rem 0;
+        background-color: #0f1117;
+      }
+
+      .why-section p {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: #cbd5e1;
+      }
+
+      .emphasis-lines {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.6;
+        margin: 3rem auto;
+        color: #f8fafc;
+      }
+
+      .why-list {
+        max-width: 600px;
+        margin: 2rem auto 3rem;
+        text-align: center;
+      }
+
+      .why-list li {
+        color: #94a3b8;
+        padding: 0.5rem 0;
+        font-style: italic;
+      }
+
+      .why-conclusion {
+        font-size: 1.125rem;
+        margin-top: 3rem;
+      }
+
+      /* Who Section */
+      .who-section {
+        padding: 8rem 0;
+      }
+
+      .who-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 4rem;
+        margin-top: 3rem;
+      }
+
+      .who-col h3 {
         font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+        color: #cbd5e1;
+      }
+
+      .who-col ul li {
+        color: #94a3b8;
+        padding: 0.75rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .who-col ul li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #64748b;
+      }
+
+      /* Leadership Section */
+      .leadership-section {
+        padding: 8rem 0;
+        background-color: #0f1117;
+      }
+
+      .leadership-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .leader-card {
+        padding: 2rem;
+        background-color: #1a1d26;
+        border: 1px solid rgba(148, 163, 184, 0.1);
+      }
+
+      .leader-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .leader-title {
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #64748b;
+        margin-bottom: 1rem;
+      }
+
+      .leader-responsibility {
+        font-size: 0.9375rem;
+        color: #94a3b8;
+        line-height: 1.6;
+      }
+
+      .leadership-note {
+        text-align: center;
+        font-size: 0.9375rem;
+        color: #64748b;
+        font-style: italic;
+        margin-top: 2rem;
+      }
+
+      /* Engagement Section */
+      .engagement-section {
+        padding: 8rem 0;
+      }
+
+      .engagement-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .engagement-item {
+        padding: 1.5rem;
+        background-color: #0f1117;
+        border-left: 2px solid #475569;
+        color: #cbd5e1;
+        font-size: 0.9375rem;
+      }
+
+      .engagement-performance {
+        max-width: 700px;
+        margin: 4rem auto;
+        padding: 2rem;
+        background-color: #0f1117;
+        border: 1px solid rgba(148, 163, 184, 0.1);
+      }
+
+      .engagement-performance h3 {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+        color: #cbd5e1;
+      }
+
+      .engagement-performance ul li {
+        color: #94a3b8;
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .engagement-performance ul li:before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: #475569;
+      }
+
+      .engagement-note {
+        text-align: center;
+        font-size: 1.125rem;
+        color: #cbd5e1;
+        margin-top: 3rem;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 8rem 0;
+        background-color: #0f1117;
+      }
+
+      .contact-intro {
+        max-width: 700px;
+        margin: 2rem auto;
+        text-align: center;
+        font-size: 1.0625rem;
+        color: #cbd5e1;
+      }
+
+      .contact-principles {
+        max-width: 500px;
+        margin: 3rem auto;
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: #94a3b8;
+      }
+
+      .contact-details {
+        max-width: 600px;
+        margin: 3rem auto;
+      }
+
+      .contact-item {
+        padding: 1rem 0;
+        font-size: 1rem;
+        color: #cbd5e1;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+      }
+
+      .contact-item:last-child {
+        border-bottom: none;
+      }
+
+      .contact-item strong {
+        color: #64748b;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: 0.05em;
+        display: inline-block;
+        min-width: 140px;
+      }
+
+      .contact-item a {
+        color: #cbd5e1;
+      }
+
+      .contact-item a:hover {
+        color: #f8fafc;
+      }
+
+      .contact-cta {
+        text-align: center;
+        margin-top: 3rem;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 4rem 0 3rem;
+        border-top: 1px solid rgba(148, 163, 184, 0.1);
+      }
+
+      .footer-line {
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        text-align: center;
+        font-size: 1.0625rem;
+        line-height: 1.7;
+        color: #94a3b8;
+      }
+
+      .footer-copyright {
+        text-align: center;
+        font-size: 0.875rem;
+        color: #64748b;
+        margin-bottom: 0;
       }
 
       /* Responsive Design */
-      @media (max-width: 992px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-        
-        h2 {
-          font-size: 2rem;
-        }
-        
-        .contact-container {
-          grid-template-columns: 1fr;
-        }
-        
-        .footer-grid {
-          grid-template-columns: 1fr 1fr;
-          gap: 2rem;
-        }
-        
-        .about-content {
-          grid-template-columns: 1fr;
-          gap: 3rem;
-        }
-        
-        .process-flow {
-          flex-direction: column;
-          gap: 2rem;
-        }
-        
-        .process-item {
-          width: 100%;
-        }
-        
-        .process-connector {
-          transform: rotate(90deg);
-          margin: 0.5rem 0;
-        }
-      }
-
       @media (max-width: 768px) {
         .desktop-nav {
           display: none;
         }
-        
+
         .mobile-nav-trigger {
           display: block;
         }
-        
-        .form-row {
-          grid-template-columns: 1fr;
+
+        h1 {
+          font-size: 2.5rem;
         }
-        
+
         .hero h1 {
           font-size: 2.5rem;
         }
-        
-        .footer-grid {
+
+        .hero {
+          padding: 10rem 0 6rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .pipeline-title {
+          font-size: 1.5rem;
+        }
+
+        .pipeline-content {
           grid-template-columns: 1fr;
         }
-        
-        .about-stats {
+
+        .who-grid {
           grid-template-columns: 1fr;
         }
-      }
 
-      @media (min-width: 768px) {
-        .md\\:grid-cols-2 {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        .leadership-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-cta {
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
         }
       }
 
-      @media (min-width: 1024px) {
-        .lg\\:grid-cols-4 {
-          grid-template-columns: repeat(4, minmax(0, 1fr));
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 1.25rem;
         }
-      }
 
-      /* JavaScript Activation Classes (These will be applied with JS) */
-      .scrolled {
-        height: 70px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        h1 {
+          font-size: 2rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .section-title {
+          font-size: 1.75rem;
+        }
       }
     </style>
 
@@ -954,471 +692,33 @@
   </head>
   
   <body>
-    <div class="app-container">
-      <header class="header">
-        <div class="container">
-          <div class="logo">
-            <img src="https://raw.githubusercontent.com/yourusername/sig-solutions/main/sig-solutions-logo.png" alt="SIG Solutions Logo" />
-          </div>
-          <nav class="desktop-nav">
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#solutions">Solutions</a></li>
-              <li><a href="#leadership">Leadership</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="mobile-nav-trigger">
-            <i class="fas fa-bars"></i>
-          </div>
-        </div>
-      </header>
-
-      <div class="mobile-menu">
-        <div class="mobile-menu-close">
-          <i class="fas fa-times"></i>
-        </div>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#leadership">Leadership</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <main>
-        <section class="hero">
-          <div class="container">
-            <div class="hero-content">
-              <h1 class="animate-fade-in">Click. Close. Collect.</h1>
-              <p class="animate-fade-in delay-200">We generate leads, sell your products, and manage collections for subscription-based businesses.</p>
-              <div class="hero-cta animate-fade-in delay-400">
-                <a href="#contact" class="btn btn-primary">Get Started</a>
-                <a href="#solutions" class="btn btn-outline">Explore Solutions</a>
-              </div>
-              
-              <!-- Hero Carousel -->
-              <div class="hero-carousel animate-fade-in delay-400">
-                <div class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Digital Innovation" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Team Collaboration" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Business Growth" />
-                    </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="client-carousel" id="content">
-          <div class="container">
-            <h3 class="carousel-title">Trusted By Industry Leaders</h3>
-            <div class="carousel-track" id="carousel-track">
-              <div class="carousel-slide">
-                <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="Client 1" />
-              </div>
-              <div class="carousel-slide">
-                <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="Client 2" />
-              </div>
-              <div class="carousel-slide">
-                <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="Client 3" />
-              </div>
-              <div class="carousel-slide">
-                <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="Client 4" />
-              </div>
-              <div class="carousel-slide">
-                <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="Client 5" />
-              </div>
-              <div class="carousel-slide">
-                <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="Client 6" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <section id="about" class="about-section">
-          <div class="container">
-            <div class="section-heading">
-              <h2>About SIG Solutions</h2>
-              <p>Innovative Solutions for Modern Businesses</p>
-            </div>
-            <div class="about-content">
-              <div class="about-text">
-                <p>SIG Solutions is a leading provider of innovative digital solutions designed to streamline operations, enhance customer experiences, and drive business growth. With our expertise in technology and strategic planning, we help businesses navigate the complexities of the digital landscape and achieve their objectives.</p>
-                <p>Our team of experts brings together years of industry experience and technical know-how to deliver tailored solutions that address your specific needs and challenges. We are committed to excellence, innovation, and client satisfaction in everything we do.</p>
-              </div>
-              <div class="about-stats">
-                <div class="stat-item">
-                  <h3>10+</h3>
-                  <p>Years of Experience</p>
-                </div>
-                <div class="stat-item">
-                  <h3>200+</h3>
-                  <p>Satisfied Clients</p>
-                </div>
-                <div class="stat-item">
-                  <h3>95%</h3>
-                  <p>Client Retention</p>
-                </div>
-                <div class="stat-item">
-                  <h3>24/7</h3>
-                  <p>Expert Support</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="solutions" class="solutions-section">
-          <div class="container">
-            <div class="section-heading">
-              <h2>Our Click-Close-Collect Solution</h2>
-              <p>Comprehensive Digital Transformation Services</p>
-            </div>
-            
-            <div class="process-flow">
-              <div class="process-item">
-                <div class="process-icon blue">
-                  <i class="fas fa-mouse-pointer"></i>
-                </div>
-                <h3>Click</h3>
-                <p style="font-weight: 500; margin-bottom: 1rem;">We generate qualified leads to fuel your sales pipeline.</p>
-                <p style="color: rgba(15, 23, 42, 0.7); font-size: 0.875rem;">Our advanced lead generation strategies target high-value prospects tailored to your subscription-based products and services.</p>
-              </div>
-              
-              <div class="process-connector">
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              
-              <div class="process-item">
-                <div class="process-icon purple">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <h3>Close</h3>
-                <p style="font-weight: 500; margin-bottom: 1rem;">We close YOUR products to OUR qualified leads, maximizing conversion rates.</p>
-                <p style="color: rgba(15, 23, 42, 0.7); font-size: 0.875rem;">Our expert sales teams are trained in your subscription-based products, ensuring persuasive and accurate representation to our qualified leads.</p>
-              </div>
-              
-              <div class="process-connector">
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              
-              <div class="process-item">
-                <div class="process-icon green">
-                  <i class="fas fa-money-bill-wave"></i>
-                </div>
-                <h3>Collect</h3>
-                <p style="font-weight: 500; margin-bottom: 1rem;">We manage recurring billing, minimizing churn and maximizing cash flow.</p>
-                <p style="color: rgba(15, 23, 42, 0.7); font-size: 0.875rem;">Our specialized recovery strategies and customer retention techniques ensure consistent revenue stream maintenance for your subscription services.</p>
-              </div>
-            </div>
-            
-            <div class="solutions-grid">
-              <div class="solution-card">
-                <div class="solution-icon">
-                  <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Strategic Growth</h3>
-                <p>Data-driven approaches to scale your business effectively and sustainably.</p>
-              </div>
-              <div class="solution-card">
-                <div class="solution-icon">
-                  <i class="fas fa-users"></i>
-                </div>
-                <h3>Customer Acquisition</h3>
-                <p>Targeted strategies to attract and convert high-value customers.</p>
-              </div>
-              <div class="solution-card">
-                <div class="solution-icon">
-                  <i class="fas fa-robot"></i>
-                </div>
-                <h3>Process Automation</h3>
-                <p>Streamline operations with intelligent automation solutions.</p>
-              </div>
-              <div class="solution-card">
-                <div class="solution-icon">
-                  <i class="fas fa-headset"></i>
-                </div>
-                <h3>Customer Success</h3>
-                <p>Proactive approaches to maximize customer satisfaction and retention.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section id="leadership" class="leadership-section">
-          <div class="container">
-            <div class="section-heading">
-              <h2>Our Leadership</h2>
-              <p>Meet the Team Behind Our Success</p>
-            </div>
-            
-            <div class="leadership-grid">
-              <div class="leadership-card">
-                <div class="leadership-icon">
-                  <i class="fas fa-bullseye"></i>
-                </div>
-                <h3>Strategic Vision</h3>
-                <p>Our leadership team brings clarity and foresight to navigate complex business landscapes.</p>
-              </div>
-              <div class="leadership-card">
-                <div class="leadership-icon">
-                  <i class="fas fa-lightbulb"></i>
-                </div>
-                <h3>Innovation Focus</h3>
-                <p>We drive continuous improvement and embrace cutting-edge solutions.</p>
-              </div>
-              <div class="leadership-card">
-                <div class="leadership-icon">
-                  <i class="fas fa-handshake"></i>
-                </div>
-                <h3>Client Partnership</h3>
-                <p>We build lasting relationships based on trust, transparency, and mutual success.</p>
-              </div>
-              <div class="leadership-card">
-                <div class="leadership-icon">
-                  <i class="fas fa-bolt"></i>
-                </div>
-                <h3>Execution Excellence</h3>
-                <p>Our systems ensure every lead is engaged promptly, driving efficient growth.</p>
-              </div>
-            </div>
-            
-            <!-- Directors Section -->
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div class="text-center glass p-6 rounded-xl">
-                <div class="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <i class="fas fa-user text-blue-500 text-xl"></i>
-                </div>
-                <h4 class="text-lg font-semibold mb-1">Johannes Stoker</h4>
-                <p class="text-gray-600 mb-0">Shareholder</p>
-                <a href="mailto:johannes@sigsolutions.co.za" class="text-blue-500 hover:underline">johannes@sigsolutions.co.za</a>
-              </div>
-              
-              <div class="text-center glass p-6 rounded-xl">
-                <div class="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <i class="fas fa-user text-blue-500 text-xl"></i>
-                </div>
-                <h4 class="text-lg font-semibold mb-1">Charles Castle</h4>
-                <p class="text-gray-600 mb-0">Shareholder</p>
-                <a href="mailto:charles@sigsolutions.co.za" class="text-blue-500 hover:underline">charles@sigsolutions.co.za</a>
-              </div>
-              
-              <div class="text-center glass p-6 rounded-xl">
-                <div class="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <i class="fas fa-user text-blue-500 text-xl"></i>
-                </div>
-                <h4 class="text-lg font-semibold mb-1">Franz Badenhorst</h4>
-                <p class="text-gray-600 mb-0">Shareholder</p>
-                <a href="mailto:franz@sigsolutions.co.za" class="text-blue-500 hover:underline">franz@sigsolutions.co.za</a>
-              </div>
-              
-              <div class="text-center glass p-6 rounded-xl">
-                <div class="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <i class="fas fa-user text-blue-500 text-xl"></i>
-                </div>
-                <h4 class="text-lg font-semibold mb-1">Ivan Taljard</h4>
-                <p class="text-gray-600 mb-0">Shareholder</p>
-                <a href="mailto:ivan@sigsolutions.co.za" class="text-blue-500 hover:underline">ivan@sigsolutions.co.za</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section id="contact" class="contact-section">
-          <div class="container">
-            <div class="section-heading">
-              <h2>Contact Us</h2>
-              <p>Get in Touch to Discuss Your Business Needs</p>
-            </div>
-            
-            <div class="contact-container">
-              <div class="contact-info">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div class="contact-text">
-                    <h4>Location</h4>
-                    <p>123 Business Avenue, Suite 500<br />Cape Town, South Africa</p>
-                  </div>
-                </div>
-                
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                  <div class="contact-text">
-                    <h4>Email</h4>
-                    <p>info@sigsolutions.co.za</p>
-                  </div>
-                </div>
-                
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fas fa-phone"></i>
-                  </div>
-                  <div class="contact-text">
-                    <h4>Phone</h4>
-                    <p>+27 21 123 4567</p>
-                  </div>
-                </div>
-              </div>
-              
-              <form class="contact-form">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" />
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="subject">Subject</label>
-                  <input type="text" id="subject" name="subject" placeholder="Subject" />
-                </div>
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-              </form>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-grid">
-            <div class="footer-about">
-              <img src="https://raw.githubusercontent.com/yourusername/sig-solutions/main/sig-solutions-logo.png" alt="SIG Solutions Logo" class="footer-logo" />
-              <p>SIG Solutions helps businesses thrive in the digital era with innovative strategies and technologies.</p>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-            
-            <div class="footer-links-group">
-              <h4>Services</h4>
-              <ul class="footer-links">
-                <li><a href="#solutions">Click - Lead Generation</a></li>
-                <li><a href="#solutions">Close - Conversion Solutions</a></li>
-                <li><a href="#solutions">Collect - Customer Retention</a></li>
-              </ul>
-            </div>
-            
-            <div class="footer-links-group">
-              <h4>Company</h4>
-              <ul class="footer-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#leadership">Our Team</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </div>
-            
-            <div class="footer-links-group">
-              <h4>Support</h4>
-              <ul class="footer-links">
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="footer-bottom">
-            <p>© 2025 SIG Solutions. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-
-    <!-- Swiper JS for Carousel -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Custom JavaScript -->
     <script>
-      // Initialize Swiper
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        autoplay: {
-          delay: 3500,
-          disableOnInteraction: false,
-        },
-      });
-      
-      // Mobile menu toggle
+      // Mobile menu functionality
       document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuTrigger = document.querySelector('.mobile-nav-trigger');
-        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const mobileNavTrigger = document.querySelector('.mobile-nav-trigger');
         const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
         const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
         
-        if (mobileMenuTrigger && mobileMenuClose && mobileMenu) {
-          mobileMenuTrigger.addEventListener('click', function() {
+        if (mobileNavTrigger) {
+          mobileNavTrigger.addEventListener('click', function() {
             mobileMenu.classList.add('active');
-          });
-          
-          mobileMenuClose.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-          });
-          
-          mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', function() {
-              mobileMenu.classList.remove('active');
-            });
           });
         }
         
-        // Smooth scrolling for anchor links
-        const anchors = document.querySelectorAll('a[href^="#"]');
-        anchors.forEach(anchor => {
-          anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-              const offsetTop = targetElement.offsetTop - 80; // Adjust for header height
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
-            }
+        if (mobileMenuClose) {
+          mobileMenuClose.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
           });
-        });
+        }
         
-        // Header scroll effect
-        const header = document.querySelector('.header');
-        window.addEventListener('scroll', function() {
-          if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-          } else {
-            header.classList.remove('scrolled');
-          }
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+          });
         });
       });
     </script>

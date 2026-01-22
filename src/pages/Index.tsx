@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "SIG Solutions";
+    document.title = "SIG Solutions - Revenue Operations";
   }, []);
 
   return (
@@ -11,13 +11,13 @@ const Index = () => {
       <header className="header">
         <div className="container">
           <div className="logo">
-            <img src="/lovable-uploads/sig-solutions-logo.png" alt="SIG Solutions Logo" />
+            <img src="/lovable-uploads/sig-solutions-logo.png" alt="SIG Solutions" />
           </div>
           <nav className="desktop-nav">
             <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#solutions">Solutions</a></li>
+              <li><a href="#pipeline">Pipeline</a></li>
               <li><a href="#leadership">Leadership</a></li>
+              <li><a href="#engagement">Engagement</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
@@ -32,351 +32,291 @@ const Index = () => {
           <i className="fa-solid fa-times"></i>
         </div>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#pipeline">Pipeline</a></li>
           <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#engagement">Engagement</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
       <main>
+        {/* Hero Section */}
         <section className="hero">
           <div className="container">
             <div className="hero-content">
-              <h1 className="animate-fade-in">Supercharge Your Business with Digital Innovation</h1>
-              <p className="animate-fade-in delay-200">We deliver strategic solutions that drive growth and maximize efficiency in your organization.</p>
-              <div className="hero-cta animate-fade-in delay-400">
-                <a href="#contact" className="btn btn-primary">Get Started</a>
-                <a href="#solutions" className="btn btn-outline">Explore Solutions</a>
+              <h1>We run the system that turns attention into collected revenue.</h1>
+              <p className="hero-subheadline">SIG Solutions designs, operates, and manages lead generation, sales execution, and subscription collections for organisations that need consistency, not campaigns.</p>
+              <p className="hero-supporting">If your growth depends on people following up, money being collected on time, and systems not breaking under pressure, this is what we do.</p>
+              <div className="hero-cta">
+                <a href="#contact" className="btn btn-primary">Start a serious conversation</a>
+                <a href="#pipeline" className="btn btn-outline">See how Click. Close. Collect works in practice</a>
               </div>
             </div>
           </div>
         </section>
 
-        <div className="client-carousel">
+        {/* Proof Section */}
+        <section className="proof-section">
           <div className="container">
-            <h3 className="carousel-title">Trusted By Industry Leaders</h3>
-            <div className="carousel-track" id="carousel-track">
-              <div className="carousel-slide">
-                <img src="client1.png" alt="Client 1" />
-              </div>
-              <div className="carousel-slide">
-                <img src="client2.png" alt="Client 2" />
-              </div>
-              <div className="carousel-slide">
-                <img src="client3.png" alt="Client 3" />
-              </div>
-              <div className="carousel-slide">
-                <img src="client4.png" alt="Client 4" />
-              </div>
-              <div className="carousel-slide">
-                <img src="client5.png" alt="Client 5" />
-              </div>
-              <div className="carousel-slide">
-                <img src="client6.png" alt="Client 6" />
-              </div>
+            <div className="proof-grid">
+              <div className="proof-item">Operating nationally in South Africa</div>
+              <div className="proof-item">Call-centre based execution team</div>
+              <div className="proof-item">Built for NGOs, membership organisations, and subscription businesses</div>
+              <div className="proof-item">Designed for long-term revenue, not once-off spikes</div>
             </div>
-          </div>
-        </div>
-
-        <section id="about" className="about-section">
-          <div className="container">
-            <div className="section-heading">
-              <h2>About SIG Solutions</h2>
-              <p>Innovative Solutions for Modern Businesses</p>
-            </div>
-            <div className="about-content">
-              <div className="about-text">
-                <p>SIG Solutions is a leading provider of innovative digital solutions designed to streamline operations, enhance customer experiences, and drive business growth. With our expertise in technology and strategic planning, we help businesses navigate the complexities of the digital landscape and achieve their objectives.</p>
-                <p>Our team of experts brings together years of industry experience and technical know-how to deliver tailored solutions that address your specific needs and challenges. We are committed to excellence, innovation, and client satisfaction in everything we do.</p>
-              </div>
-              <div className="about-stats">
-                <div className="stat-item">
-                  <h3>10+</h3>
-                  <p>Years of Experience</p>
-                </div>
-                <div className="stat-item">
-                  <h3>200+</h3>
-                  <p>Satisfied Clients</p>
-                </div>
-                <div className="stat-item">
-                  <h3>95%</h3>
-                  <p>Client Retention</p>
-                </div>
-                <div className="stat-item">
-                  <h3>24/7</h3>
-                  <p>Expert Support</p>
-                </div>
-              </div>
-            </div>
+            <p className="positioning-line">We are not a marketing agency. We are an operating partner responsible for outcomes across the full revenue chain.</p>
           </div>
         </section>
 
-        <section id="solutions" className="solutions-section">
+        {/* Click. Close. Collect. Section */}
+        <section id="pipeline" className="pipeline-section">
           <div className="container">
-            <div className="section-heading">
-              <h2>Our Click-Close-Collect Solution</h2>
-              <p>Comprehensive Digital Transformation Services</p>
-            </div>
+            <h2 className="section-title">Click. Close. Collect.</h2>
             
-            <div className="process-flow">
-              <div className="process-item">
-                <div className="process-icon blue">
-                  <i className="fa-solid fa-mouse-pointer"></i>
+            {/* Click */}
+            <div className="pipeline-block" data-number="01">
+              <h3 className="pipeline-title">Click – Lead Generation</h3>
+              <p className="pipeline-dominant">Most lead generation fails because volume is chased without accountability.</p>
+              
+              <div className="pipeline-content">
+                <div className="pipeline-col">
+                  <h4>What breaks</h4>
+                  <ul>
+                    <li>Cheap leads that don't convert</li>
+                    <li>Sales teams blaming quality</li>
+                    <li>Marketing blaming follow-up</li>
+                  </ul>
                 </div>
-                <h3>Click</h3>
-                <p style={{ fontWeight: 500, marginBottom: '1rem' }}>We generate qualified leads to fuel your sales pipeline.</p>
-                <p style={{ color: 'rgba(15, 23, 42, 0.7)', fontSize: '0.875rem' }}>Our advanced lead generation strategies target high-value prospects tailored to your subscription-based products and services.</p>
-              </div>
-              
-              <div className="process-connector">
-                <i className="fa-solid fa-arrow-right"></i>
-              </div>
-              
-              <div className="process-item">
-                <div className="process-icon purple">
-                  <i className="fa-solid fa-phone"></i>
+                
+                <div className="pipeline-col">
+                  <h4>What SIG Solutions owns</h4>
+                  <ul>
+                    <li>Lead source control across paid and data channels</li>
+                    <li>Qualification logic aligned to sales and collections</li>
+                    <li>Lead standards measured by downstream performance</li>
+                  </ul>
                 </div>
-                <h3>Close</h3>
-                <p style={{ fontWeight: 500, marginBottom: '1rem' }}>We close YOUR products to OUR qualified leads, maximizing conversion rates.</p>
-                <p style={{ color: 'rgba(15, 23, 42, 0.7)', fontSize: '0.875rem' }}>Our expert sales teams are trained in your subscription-based products, ensuring persuasive and accurate representation to our qualified leads.</p>
-              </div>
-              
-              <div className="process-connector">
-                <i className="fa-solid fa-arrow-right"></i>
-              </div>
-              
-              <div className="process-item">
-                <div className="process-icon green">
-                  <i className="fa-solid fa-money-bill-wave"></i>
+                
+                <div className="pipeline-col">
+                  <h4>What the client stops worrying about</h4>
+                  <ul>
+                    <li>Wasted sales time</li>
+                    <li>Endless arguments about lead quality</li>
+                  </ul>
                 </div>
-                <h3>Collect</h3>
-                <p style={{ fontWeight: 500, marginBottom: '1rem' }}>We manage recurring billing, minimizing churn and maximizing cash flow.</p>
-                <p style={{ color: 'rgba(15, 23, 42, 0.7)', fontSize: '0.875rem' }}>Our specialized recovery strategies and customer retention techniques ensure consistent revenue stream maintenance for your subscription services.</p>
               </div>
             </div>
-            
-            <div className="solutions-grid">
-              <div className="solution-card">
-                <div className="solution-icon">
-                  <i className="fa-solid fa-chart-line"></i>
+
+            {/* Close */}
+            <div className="pipeline-block" data-number="02">
+              <h3 className="pipeline-title">Close – Sales Support</h3>
+              <p className="pipeline-dominant">Sales fails when follow-up is inconsistent and pressure isn't managed.</p>
+              
+              <div className="pipeline-content">
+                <div className="pipeline-col">
+                  <h4>What breaks</h4>
+                  <ul>
+                    <li>Leads go cold</li>
+                    <li>Staff turnover kills momentum</li>
+                    <li>No visibility into conversations</li>
+                  </ul>
                 </div>
-                <h3>Strategic Growth</h3>
-                <p>Data-driven approaches to scale your business effectively and sustainably.</p>
+                
+                <div className="pipeline-col">
+                  <h4>What SIG Solutions owns</h4>
+                  <ul>
+                    <li>Trained agents running structured follow-ups</li>
+                    <li>Sales activity tracking and accountability</li>
+                    <li>Consistent execution from first contact to commitment</li>
+                  </ul>
+                </div>
+                
+                <div className="pipeline-col">
+                  <h4>What the client stops worrying about</h4>
+                  <ul>
+                    <li>Whether leads are being contacted</li>
+                    <li>Deals dying silently</li>
+                  </ul>
+                </div>
               </div>
-              <div className="solution-card">
-                <div className="solution-icon">
-                  <i className="fa-solid fa-users"></i>
+            </div>
+
+            {/* Collect */}
+            <div className="pipeline-block" data-number="03">
+              <h3 className="pipeline-title">Collect – Fund & Subscription Management</h3>
+              <p className="pipeline-dominant">Revenue collapses when collections are treated as admin.</p>
+              
+              <div className="pipeline-content">
+                <div className="pipeline-col">
+                  <h4>What breaks</h4>
+                  <ul>
+                    <li>Failed debit orders</li>
+                    <li>Unpredictable cashflow</li>
+                    <li>Burnt-out internal teams</li>
+                  </ul>
                 </div>
-                <h3>Customer Acquisition</h3>
-                <p>Targeted strategies to attract and convert high-value customers.</p>
-              </div>
-              <div className="solution-card">
-                <div className="solution-icon">
-                  <i className="fa-solid fa-robot"></i>
+                
+                <div className="pipeline-col">
+                  <h4>What SIG Solutions owns</h4>
+                  <ul>
+                    <li>Subscription and fund collection workflows</li>
+                    <li>Failed payment recovery</li>
+                    <li>Reporting on collected revenue, not promises</li>
+                  </ul>
                 </div>
-                <h3>Process Automation</h3>
-                <p>Streamline operations with intelligent automation solutions.</p>
-              </div>
-              <div className="solution-card">
-                <div className="solution-icon">
-                  <i className="fa-solid fa-headset"></i>
+                
+                <div className="pipeline-col">
+                  <h4>What the client stops worrying about</h4>
+                  <ul>
+                    <li>Month-end surprises</li>
+                    <li>Chasing money internally</li>
+                  </ul>
                 </div>
-                <h3>Customer Success</h3>
-                <p>Proactive approaches to maximize customer satisfaction and retention.</p>
               </div>
             </div>
           </div>
         </section>
-        
+
+        {/* Why SIG Solutions Exists */}
+        <section className="why-section">
+          <div className="container">
+            <h2 className="section-title">Why SIG Solutions Exists</h2>
+            
+            <p>SIG Solutions exists because internal teams struggle once volume increases.</p>
+            
+            <p className="emphasis-lines">Leads are easy.<br />Sales pressure is not.<br />Collections are where most organisations quietly bleed.</p>
+            
+            <p>We were built to run the uncomfortable middle:</p>
+            <ul className="why-list">
+              <li>the follow-ups that don't happen</li>
+              <li>the payments that fail</li>
+              <li>the systems that break under scale</li>
+            </ul>
+            
+            <p className="why-conclusion">Our role is simple.<br />We take responsibility where most organisations lose control.</p>
+          </div>
+        </section>
+
+        {/* Who This Is For */}
+        <section className="who-section">
+          <div className="container">
+            <h2 className="section-title">Who This Is For</h2>
+            
+            <div className="who-grid">
+              <div className="who-col">
+                <h3>We are a fit if</h3>
+                <ul>
+                  <li>Your revenue is recurring or subscription-based</li>
+                  <li>You rely on people, not just software</li>
+                  <li>You care about retention and cashflow stability</li>
+                </ul>
+              </div>
+              
+              <div className="who-col">
+                <h3>We are not a fit if</h3>
+                <ul>
+                  <li>You want a once-off campaign</li>
+                  <li>You want vanity metrics</li>
+                  <li>You avoid operational transparency</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Leadership Section */}
         <section id="leadership" className="leadership-section">
           <div className="container">
-            <div className="section-heading">
-              <h2>Our Leadership</h2>
-              <p>Meet the Team Behind Our Success</p>
-            </div>
+            <h2 className="section-title">Leadership</h2>
             
             <div className="leadership-grid">
-              <div className="leadership-card">
-                <div className="leadership-icon">
-                  <i className="fa-solid fa-bullseye"></i>
-                </div>
-                <h3>Strategic Vision</h3>
-                <p>Our leadership team brings clarity and foresight to navigate complex business landscapes.</p>
+              <div className="leader-card">
+                <h3>Johannes Stoker</h3>
+                <p className="leader-title">Managing Director</p>
+                <p className="leader-responsibility">Responsible for execution, client alignment, and operational delivery.</p>
               </div>
-              <div className="leadership-card">
-                <div className="leadership-icon">
-                  <i className="fa-solid fa-lightbulb"></i>
-                </div>
-                <h3>Innovation Focus</h3>
-                <p>We drive continuous improvement and embrace cutting-edge solutions.</p>
+              
+              <div className="leader-card">
+                <h3>Franz Badenhorst</h3>
+                <p className="leader-title">Sales & Revenue Operations</p>
+                <p className="leader-responsibility">Oversees lead generation strategy, sales systems, and revenue performance.</p>
               </div>
-              <div className="leadership-card">
-                <div className="leadership-icon">
-                  <i className="fa-solid fa-handshake"></i>
-                </div>
-                <h3>Client Partnership</h3>
-                <p>We build lasting relationships based on trust, transparency, and mutual success.</p>
+              
+              <div className="leader-card">
+                <h3>Charles Castle</h3>
+                <p className="leader-title">Client & Commercial Operations</p>
+                <p className="leader-responsibility">Ensures delivery consistency, reporting, and long-term outcomes.</p>
               </div>
-              <div className="leadership-card">
-                <div className="leadership-icon">
-                  <i className="fa-solid fa-bolt"></i>
-                </div>
-                <h3>Execution Excellence</h3>
-                <p>Our systems ensure every lead is engaged promptly, driving efficient growth.</p>
+              
+              <div className="leader-card">
+                <h3>Ivan Taljard</h3>
+                <p className="leader-title">Technology & Systems</p>
+                <p className="leader-responsibility">Responsible for infrastructure, automation, and data integrity.</p>
               </div>
             </div>
             
-            {/* Directors Section */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center glass p-6 rounded-xl">
-                <div className="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <i className="fa-solid fa-user text-blue-500 text-xl"></i>
-                </div>
-                <h4 className="text-lg font-semibold mb-1">Franz Badenhorst</h4>
-                <p className="text-gray-600 mb-0">Shareholder</p>
-              </div>
-              
-              <div className="text-center glass p-6 rounded-xl">
-                <div className="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <i className="fa-solid fa-user text-blue-500 text-xl"></i>
-                </div>
-                <h4 className="text-lg font-semibold mb-1">Johannes Stoker</h4>
-                <p className="text-gray-600 mb-0">Shareholder</p>
-              </div>
-              
-              <div className="text-center glass p-6 rounded-xl">
-                <div className="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <i className="fa-solid fa-user text-blue-500 text-xl"></i>
-                </div>
-                <h4 className="text-lg font-semibold mb-1">Charles Castle</h4>
-                <p className="text-gray-600 mb-0">Shareholder</p>
-              </div>
-              
-              <div className="text-center glass p-6 rounded-xl">
-                <div className="w-16 h-16 bg-blue-500/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <i className="fa-solid fa-user text-blue-500 text-xl"></i>
-                </div>
-                <h4 className="text-lg font-semibold mb-1">Ivan Taljard</h4>
-                <p className="text-gray-600 mb-0">Shareholder</p>
-              </div>
-            </div>
+            <p className="leadership-note">Leadership is structured around responsibility, not titles.</p>
           </div>
         </section>
-        
-        <section id="contact" className="contact-section">
+
+        {/* How Engagement Works */}
+        <section id="engagement" className="engagement-section">
           <div className="container">
-            <div className="section-heading">
-              <h2>Contact Us</h2>
-              <p>Get in Touch to Discuss Your Business Needs</p>
+            <h2 className="section-title">How Engagement Works</h2>
+            
+            <div className="engagement-grid">
+              <div className="engagement-item">Revenue pipeline scoped end-to-end</div>
+              <div className="engagement-item">Responsibilities defined upfront</div>
+              <div className="engagement-item">Performance tracked continuously</div>
+              <div className="engagement-item">Reporting focused on outcomes, not activity</div>
             </div>
             
-            <div className="contact-container">
-              <div className="contact-info">
-                <div className="contact-item">
-                  <div className="contact-icon">
-                    <i className="fa-solid fa-map-marker-alt"></i>
-                  </div>
-                  <div className="contact-text">
-                    <h4>Location</h4>
-                    <p>123 Business Avenue, Suite 500<br />Cape Town, South Africa</p>
-                  </div>
-                </div>
-                
-                <div className="contact-item">
-                  <div className="contact-icon">
-                    <i className="fa-solid fa-envelope"></i>
-                  </div>
-                  <div className="contact-text">
-                    <h4>Email</h4>
-                    <p>info@sigsolutions.co.za</p>
-                  </div>
-                </div>
-                
-                <div className="contact-item">
-                  <div className="contact-icon">
-                    <i className="fa-solid fa-phone"></i>
-                  </div>
-                  <div className="contact-text">
-                    <h4>Phone</h4>
-                    <p>+27 21 123 4567</p>
-                  </div>
-                </div>
+            <div className="engagement-performance">
+              <h3>When performance dips</h3>
+              <ul>
+                <li>It is visible immediately</li>
+                <li>Causes are identified operationally</li>
+                <li>Adjustments are made without finger-pointing</li>
+              </ul>
+            </div>
+            
+            <p className="engagement-note">This is a working relationship, not a marketing retainer.</p>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="contact-section">
+          <div className="container">
+            <h2 className="section-title">Let's talk if revenue consistency matters.</h2>
+            
+            <p className="contact-intro">If you are evaluating partners, replacing internal strain, or fixing a broken revenue process, we'll tell you quickly whether we are a fit.</p>
+            
+            <p className="contact-principles">No pitch decks.<br />No pressure.<br />Just a clear conversation.</p>
+            
+            <div className="contact-details">
+              <div className="contact-item">
+                <strong>Email:</strong> <a href="mailto:sales@sigsolutions.co.za">sales@sigsolutions.co.za</a>
               </div>
-              
-              <form className="contact-form">
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email" />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="subject">Subject</label>
-                  <input type="text" id="subject" name="subject" placeholder="Subject" />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="message">Message</label>
-                  <textarea id="message" name="message" rows={5} placeholder="Your message"></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">Send Message</button>
-              </form>
+              <div className="contact-item">
+                <strong>Location:</strong> Riviera, Pretoria, South Africa
+              </div>
+              <div className="contact-item">
+                <strong>Business hours:</strong> Monday to Friday, 08:00 to 17:00
+              </div>
+            </div>
+            
+            <div className="contact-cta">
+              <a href="mailto:sales@sigsolutions.co.za" className="btn btn-primary">Request a conversation</a>
             </div>
           </div>
         </section>
       </main>
       
+      {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <div className="footer-grid">
-            <div className="footer-about">
-              <img src="/lovable-uploads/sig-solutions-logo.png" alt="SIG Solutions Logo" className="footer-logo" />
-              <p>SIG Solutions helps businesses thrive in the digital era with innovative strategies and technologies.</p>
-              <div className="social-links">
-                <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i className="fa-brands fa-instagram"></i></a>
-              </div>
-            </div>
-            
-            <div className="footer-links-group">
-              <h4>Services</h4>
-              <ul className="footer-links">
-                <li><a href="#solutions">Click - Lead Generation</a></li>
-                <li><a href="#solutions">Close - Conversion Solutions</a></li>
-                <li><a href="#solutions">Collection - Customer Retention</a></li>
-              </ul>
-            </div>
-            
-            <div className="footer-links-group">
-              <h4>Company</h4>
-              <ul className="footer-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#leadership">Our Team</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </div>
-            
-            <div className="footer-links-group">
-              <h4>Support</h4>
-              <ul className="footer-links">
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="footer-bottom">
-            <p>&copy; 2025 SIG Solutions. All rights reserved.</p>
-          </div>
+          <p className="footer-line">SIG Solutions operates where lead generation, sales execution, and collections meet.<br />We don't optimise parts. We run the whole.</p>
+          <p className="footer-copyright">&copy; 2025 SIG Solutions. All rights reserved.</p>
         </div>
       </footer>
     </div>
