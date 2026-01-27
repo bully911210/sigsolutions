@@ -44,12 +44,13 @@ const Index = () => {
         <section className="hero">
           <div className="container">
             <div className="hero-content">
-              <h1>We run the system that turns attention into collected revenue.</h1>
-              <p className="hero-subheadline">SIG Solutions designs, operates, and manages lead generation, sales execution, and subscription collections for organisations that need consistency, not campaigns.</p>
-              <p className="hero-supporting">If your growth depends on people following up, money being collected on time, and systems not breaking under pressure, this is what we do.</p>
+              <h1>Turn Attention Into Collected Revenue — Reliably.</h1>
+              <p className="hero-framework">Click · Close · Collect</p>
+              <p className="hero-subheadline">SIG Solutions designs, operates, and manages the full revenue chain for organisations that need consistency, not campaigns.</p>
+              <p className="hero-supporting">If your growth depends on leads being followed up, money being collected on time, and systems not breaking under pressure — this is what we do.</p>
               <div className="hero-cta">
-                <a href="#contact" className="btn btn-primary">Start a serious conversation</a>
-                <a href="#pipeline" className="btn btn-outline">See how Click. Close. Collect works in practice</a>
+                <a href="#contact" className="btn btn-primary">Discuss Revenue Growth</a>
+                <a href="#pipeline" className="btn btn-outline">See How We Work</a>
               </div>
             </div>
           </div>
@@ -71,7 +72,37 @@ const Index = () => {
         {/* Click. Close. Collect. Section */}
         <section id="pipeline" className="pipeline-section">
           <div className="container">
-            <h2 className="section-title">Click. Close. Collect.</h2>
+            <h2 className="section-title">Click · Close · Collect</h2>
+            
+            {/* Pipeline Overview Cards */}
+            <div className="pipeline-cards">
+              <div className="pipeline-card">
+                <div className="pipeline-card-number">01</div>
+                <div className="pipeline-card-icon">
+                  <i className="fa-solid fa-bullseye"></i>
+                </div>
+                <h3>Click</h3>
+                <p className="pipeline-card-outcome">Generate qualified leads that your sales team actually wants to call.</p>
+              </div>
+              
+              <div className="pipeline-card">
+                <div className="pipeline-card-number">02</div>
+                <div className="pipeline-card-icon">
+                  <i className="fa-solid fa-handshake"></i>
+                </div>
+                <h3>Close</h3>
+                <p className="pipeline-card-outcome">Execute consistent follow-up until prospects commit — no leads go cold.</p>
+              </div>
+              
+              <div className="pipeline-card">
+                <div className="pipeline-card-number">03</div>
+                <div className="pipeline-card-icon">
+                  <i className="fa-solid fa-coins"></i>
+                </div>
+                <h3>Collect</h3>
+                <p className="pipeline-card-outcome">Manage subscriptions and recover failed payments to ensure predictable cashflow.</p>
+              </div>
+            </div>
             
             {/* Click */}
             <div className="pipeline-block" data-number="01">
@@ -287,7 +318,7 @@ const Index = () => {
         {/* Contact Section */}
         <section id="contact" className="contact-section">
           <div className="container">
-            <h2 className="section-title">Let's talk if revenue consistency matters.</h2>
+            <h2 className="section-title">Let's Talk Revenue Consistency</h2>
             
             <p className="contact-intro">If you are evaluating partners, replacing internal strain, or fixing a broken revenue process, we'll tell you quickly whether we are a fit.</p>
             
@@ -306,7 +337,7 @@ const Index = () => {
             </div>
             
             <div className="contact-cta">
-              <a href="mailto:sales@sigsolutions.co.za" className="btn btn-primary">Request a conversation</a>
+              <a href="mailto:sales@sigsolutions.co.za" className="btn btn-primary">Start the Conversation</a>
             </div>
           </div>
         </section>
