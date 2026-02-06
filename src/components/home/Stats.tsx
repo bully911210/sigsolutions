@@ -37,6 +37,14 @@ export default function Stats() {
             );
           })}
         </div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-8 text-center text-xs text-slate-500"
+        >
+          Across subscription, fundraising, and outbound sales campaigns
+        </motion.p>
       </Container>
     </section>
   );

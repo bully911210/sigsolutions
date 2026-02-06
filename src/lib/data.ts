@@ -345,6 +345,6 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'How is pricing structured?',
-    answer: 'Pricing depends on the scope of services, team size, and campaign complexity. We offer transparent, performance-aligned pricing models. Book a strategy call to get a tailored proposal.',
+    answer: 'Pricing depends on the scope of services, team size, and campaign complexity. We offer transparent, performance-aligned pricing models. Get in touch for a tailored proposal.',
   },
 ];

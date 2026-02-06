@@ -21,10 +21,10 @@ const contactDetails = [
 ];
 
 const trustPoints = [
-  'Structured initial assessment',
+  'Direct access to operations leadership',
   'Response within one business day',
-  '30-minute operational assessment',
-  'No-obligation evaluation',
+  '30-minute fit assessment, no obligation',
+  'No sales scripts, no junior hand-offs',
 ];
 
 export default function ContactPage() {
@@ -37,11 +37,11 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="max-w-3xl font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            Operational Enquiry
+            Talk to us
           </h1>
-          <p className="mt-6 max-w-2xl text-slate-600 leading-relaxed">
-            Whether you are evaluating partners, replacing internal strain, or addressing
-            a broken revenue process, we will assess fit within one conversation.
+          <p className="mt-6 max-w-2xl text-sm text-slate-600 leading-relaxed">
+            You&apos;ll speak directly with an operations lead. No junior hand-offs, no
+            sales scripts. We&apos;ll assess fit in one conversation.
           </p>
         </div>
       </section>
@@ -53,10 +53,10 @@ export default function ContactPage() {
             {/* Contact form - primary */}
             <div>
               <h2 className="mb-2 font-heading text-xl font-bold text-navy">
-                Submit an Enquiry
+                Send us a message
               </h2>
               <p className="mb-8 text-sm text-slate-600">
-                Describe your operational requirements and our team will respond within one business day.
+                Tell us what you need. An operations lead will respond within one business day.
               </p>
               <ContactForm />
             </div>

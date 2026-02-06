@@ -31,7 +31,10 @@ export default function Footer() {
               className="mb-4 h-[54px] brightness-0 invert"
             />
             <p className="text-sm text-slate-400">
-              Riviera, Pretoria<br />South Africa
+              Riviera, Pretoria, South Africa
+            </p>
+            <p className="mt-3 text-xs text-slate-500">
+              Direct access to operations leadership.<br />No junior hand-offs.
             </p>
           </div>
 

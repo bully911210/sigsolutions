@@ -17,7 +17,7 @@ export default function WhySIG() {
           transition={{ duration: 0.6 }}
           className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600"
         >
-          Operational Rationale
+          Why us
         </motion.p>
 
         <motion.h2
@@ -26,19 +26,8 @@ export default function WhySIG() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl"
         >
-          Why SIG Solutions Exists
+          Your team can&apos;t do this at scale. Ours can.
         </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-6 text-slate-600 leading-relaxed"
-        >
-          Internal teams struggle once volume increases. Lead generation,
-          sales execution, and collections each require dedicated operational
-          capacity that most organisations cannot sustain internally.
-        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,9 +36,9 @@ export default function WhySIG() {
           className="my-10 rounded-xl border border-slate-200 bg-slate-50 p-8 lg:p-10"
         >
           <p className="font-heading text-lg font-bold leading-relaxed text-navy sm:text-xl">
-            Lead acquisition is straightforward.<br />
-            Sustained sales pressure is not.<br />
-            Collections are where most organisations lose revenue.
+            Getting leads is easy.<br />
+            Following up consistently is hard.<br />
+            Collecting payments at scale is where most organisations break.
           </p>
         </motion.div>
 
@@ -57,10 +46,10 @@ export default function WhySIG() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="text-slate-600 leading-relaxed"
+          className="text-sm text-slate-600 leading-relaxed"
         >
-          We take responsibility where most organisations lose control: the follow-ups that
-          don&apos;t happen, the payments that fail, and the systems that break under scale.
+          We own the follow-ups that don&apos;t happen, the payments that fail,
+          and the systems that break under volume. That&apos;s the job.
         </motion.p>
       </Container>
     </section>

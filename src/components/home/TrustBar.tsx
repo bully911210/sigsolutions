@@ -5,11 +5,11 @@ import { useRef } from 'react';
 import Container from '@/components/ui/Container';
 
 const clients = [
-  { name: 'TLU', src: 'https://www.tlu.co.za/wp-content/uploads/2021/07/Logo2025.png', height: 'h-10 lg:h-12' },
-  { name: 'Firearms Guardian', src: 'https://firearmsguardian.co.za/wp-content/uploads/2023/12/Firearms-Guardian-Logo_Firearms-Guardian-Web-1536x941.png', height: 'h-8 lg:h-10' },
-  { name: 'Free South Africa', src: 'https://www.freesa.org.za/wp-content/uploads/2022/07/Free-SA_Logo_Main.png', height: 'h-10 lg:h-12' },
-  { name: 'Civil Society SA', src: 'https://civilsociety.lovable.app/assets/logo-Czk94Wx-.png', height: 'h-8 lg:h-10' },
-  { name: 'Acorn Brokers', src: 'https://acornbrokers.co.za/images/logo.png', height: 'h-9 lg:h-11' },
+  { name: 'TLU', src: 'https://www.tlu.co.za/wp-content/uploads/2021/07/Logo2025.png' },
+  { name: 'Free South Africa', src: 'https://www.freesa.org.za/wp-content/uploads/2022/07/Free-SA_Logo_Main.png' },
+  { name: 'Firearms Guardian', src: 'https://firearmsguardian.co.za/wp-content/uploads/2023/12/Firearms-Guardian-Logo_Firearms-Guardian-Web-1536x941.png' },
+  { name: 'Acorn Brokers', src: 'https://acornbrokers.co.za/images/logo.png' },
+  { name: 'Civil Society SA', src: 'https://civilsociety.lovable.app/assets/logo-Czk94Wx-.png' },
 ];
 
 export default function TrustBar() {
@@ -23,24 +23,44 @@ export default function TrustBar() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-8 text-center text-xs font-medium uppercase tracking-widest text-slate-400"
+          className="mb-10 text-center text-xs font-medium uppercase tracking-widest text-slate-400"
         >
-          Trusted by
+          Trusted by organisations running high-volume outbound, fundraising, and recurring collections
         </motion.p>
 
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:gap-16">
+        {/* Desktop: single row, large logos */}
+        <div className="hidden sm:flex items-center justify-center gap-14 lg:gap-20">
           {clients.map((client, i) => (
             <motion.div
               key={client.name}
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center px-2"
             >
               <img
                 src={client.src}
                 alt={client.name}
-                className={`${client.height} w-auto object-contain`}
+                className="h-12 lg:h-14 w-auto max-w-[180px] object-contain brightness-0 invert opacity-80"
+              />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile: 2 per row, large and legible */}
+        <div className="grid grid-cols-2 gap-8 sm:hidden">
+          {clients.map((client, i) => (
+            <motion.div
+              key={client.name}
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
+              className="flex items-center justify-center px-2 py-2"
+            >
+              <img
+                src={client.src}
+                alt={client.name}
+                className="h-10 w-auto max-w-full object-contain brightness-0 invert opacity-80"
               />
             </motion.div>
           ))}

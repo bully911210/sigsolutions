@@ -20,17 +20,17 @@ export default function CTABanner() {
           transition={{ duration: 0.6 }}
           className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl"
         >
-          Evaluate Operational Fit
+          Not sure if we&apos;re the right fit?
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300"
+          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300"
         >
-          If you are evaluating partners, replacing internal strain, or addressing
-          a broken revenue process, we will assess fit within one conversation.
+          One 30-minute call with an operations lead. No sales scripts. We&apos;ll
+          tell you honestly whether we can help.
         </motion.p>
 
         <motion.div
@@ -40,7 +40,7 @@ export default function CTABanner() {
           className="mt-10"
         >
           <Button href={CONTACT_URL} variant="primary" size="lg">
-            Request Operational Review
+            Talk to an operations lead
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </motion.div>

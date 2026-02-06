@@ -19,10 +19,10 @@ export default function HowWeWork() {
           className="mb-12 text-center"
         >
           <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Engagement Process
+            How it works
           </p>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            How We Work
+            Four steps to operational delivery
           </h2>
         </motion.div>
 
