@@ -18,16 +18,16 @@ export default function TechnologyPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-gradient-to-b from-slate-50 to-white pt-32 pb-16 lg:pt-40 lg:pb-20">
+      <section className="bg-gradient-to-b from-slate-50 to-white pt-32 pb-12 lg:pt-40 lg:pb-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Our Stack
+            Infrastructure
           </p>
-          <h1 className="max-w-3xl font-heading text-4xl font-bold tracking-tight text-navy sm:text-5xl">
+          <h1 className="max-w-3xl font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
             Technology That Powers Reliable Operations
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-            Our technology stack is purpose-built for high-volume operational delivery:
+          <p className="mt-6 max-w-2xl text-slate-600 leading-relaxed">
+            Purpose-built for high-volume operational delivery:
             from telephony and CRM to payments and automation.
           </p>
         </div>

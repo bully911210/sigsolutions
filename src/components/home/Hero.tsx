@@ -17,20 +17,7 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white pt-32 pb-20 lg:pt-44 lg:pb-32">
-      {/* Background decoration */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 -right-40 h-[600px] w-[600px] rounded-full bg-blue-50/80 blur-3xl" />
-        <div className="absolute top-1/2 -left-20 h-[400px] w-[400px] rounded-full bg-blue-50/60 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgb(100 116 139) 1px, transparent 0)',
-            backgroundSize: '40px 40px',
-          }}
-        />
-      </div>
-
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white pt-32 pb-16 lg:pt-40 lg:pb-24">
       <Container className="relative">
         <div className="max-w-4xl">
           <motion.p
@@ -48,12 +35,9 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="font-heading text-4xl font-bold leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-6xl xl:text-7xl"
+            className="font-heading text-3xl font-bold leading-[1.15] tracking-tight text-navy sm:text-4xl lg:text-5xl"
           >
-            Performance-Driven BPO &amp;{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-              Growth Infrastructure
-            </span>
+            Performance-Driven BPO &amp; Revenue Operations Infrastructure
           </motion.h1>
 
           <motion.p
@@ -61,7 +45,7 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 lg:text-xl"
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600"
           >
             SIG Solutions operates where lead generation, outbound sales, and revenue
             collection meet. We don&apos;t optimise parts. We run the whole.
@@ -75,11 +59,11 @@ export default function Hero() {
             className="mt-10 flex flex-wrap gap-4"
           >
             <Button href={CONTACT_URL} variant="primary" size="lg">
-              Book a Strategy Call
+              Request Operational Review
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button href="#services" variant="outline" size="lg">
-              Explore Our Services
+            <Button href="/services" variant="outline" size="lg">
+              View Service Capabilities
               <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </motion.div>

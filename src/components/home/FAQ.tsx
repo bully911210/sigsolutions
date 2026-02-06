@@ -23,17 +23,17 @@ function FAQItem({
       <button
         type="button"
         onClick={onToggle}
-        className="flex w-full items-center justify-between py-6 text-left transition-colors duration-200 hover:text-blue-600"
+        className="flex w-full items-center justify-between py-5 text-left transition-colors duration-200 hover:text-blue-600"
       >
-        <span className="pr-4 font-heading text-lg font-semibold text-navy">
+        <span className="pr-4 font-heading text-base font-semibold text-navy">
           {question}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-50"
+          className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-slate-100"
         >
-          <ChevronDown className="h-5 w-5 text-blue-600" />
+          <ChevronDown className="h-4 w-4 text-slate-600" />
         </motion.span>
       </button>
 
@@ -46,7 +46,7 @@ function FAQItem({
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-base leading-relaxed text-slate-600">
+            <p className="pb-5 text-sm leading-relaxed text-slate-600">
               {answer}
             </p>
           </motion.div>
@@ -66,7 +66,7 @@ export default function FAQ() {
   };
 
   return (
-    <section ref={ref} className="bg-white py-24 lg:py-32">
+    <section ref={ref} className="bg-white py-16 lg:py-20">
       <Container>
         <div className="mx-auto max-w-3xl">
         {/* Section header */}
@@ -77,7 +77,7 @@ export default function FAQ() {
             transition={{ duration: 0.6 }}
             className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600"
           >
-            Got Questions?
+            Common Questions
           </motion.p>
 
           <motion.h2
@@ -95,7 +95,7 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-16 border-t border-slate-200"
+          className="mt-12 border-t border-slate-200"
         >
           {FAQ_ITEMS.map((item, index) => (
             <FAQItem
@@ -113,17 +113,17 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 rounded-2xl border border-blue-100 bg-blue-50 p-8 text-center lg:p-12"
+          className="mt-12 rounded-xl border border-slate-200 bg-slate-50 p-8 text-center"
         >
-          <p className="font-heading text-xl font-bold text-navy">
-            Still have questions? Let&apos;s talk.
+          <p className="font-heading text-lg font-bold text-navy">
+            Additional Questions
           </p>
-          <p className="mt-2 text-slate-600">
-            Book a call and we will walk you through everything.
+          <p className="mt-2 text-sm text-slate-600">
+            Submit an enquiry and our team will respond within one business day.
           </p>
           <div className="mt-6">
             <Button href="/contact" variant="primary">
-              Get in Touch
+              Submit Enquiry
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

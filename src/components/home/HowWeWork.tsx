@@ -10,16 +10,16 @@ export default function HowWeWork() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="bg-slate-50 py-24 lg:py-32">
+    <section ref={ref} className="bg-slate-50 py-16 lg:py-20">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          className="mb-12 text-center"
         >
           <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Our Process
+            Engagement Process
           </p>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
             How We Work
@@ -28,7 +28,7 @@ export default function HowWeWork() {
 
         <div className="relative">
           {/* Connecting line - desktop */}
-          <div className="absolute left-0 right-0 top-8 hidden h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent lg:block" />
+          <div className="absolute left-0 right-0 top-8 hidden h-px bg-slate-300 lg:block" />
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS_STEPS.map((step, i) => (
@@ -39,10 +39,10 @@ export default function HowWeWork() {
                 transition={{ duration: 0.6, delay: i * 0.12 }}
                 className="relative text-center"
               >
-                <div className="relative mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border-2 border-blue-200 bg-white font-heading text-lg font-bold text-blue-600 shadow-sm">
+                <div className="relative mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border-2 border-slate-300 bg-white font-heading text-base font-bold text-navy">
                   {step.number}
                 </div>
-                <h3 className="font-heading text-lg font-bold text-navy">{step.title}</h3>
+                <h3 className="font-heading text-base font-bold text-navy">{step.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{step.description}</p>
               </motion.div>
             ))}

@@ -2,12 +2,11 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FloatingCTA from '@/components/home/FloatingCTA';
-import WhatsAppButton from '@/components/home/WhatsAppButton';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'SIG Solutions | Performance-Driven BPO & Growth Infrastructure',
+    default: 'SIG Solutions | Performance-Driven BPO & Revenue Operations',
     template: '%s | SIG Solutions',
   },
   description:
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
     'revenue operations outsourcing',
   ],
   openGraph: {
-    title: 'SIG Solutions | Performance-Driven BPO & Growth Infrastructure',
+    title: 'SIG Solutions | Performance-Driven BPO & Revenue Operations',
     description:
       'SIG Solutions operates where lead generation, outbound sales, and revenue collection meet. We don\'t optimise parts. We run the whole.',
     type: 'website',
@@ -46,7 +45,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <FloatingCTA />
-        <WhatsAppButton />
       </body>
     </html>
   );

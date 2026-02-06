@@ -6,10 +6,10 @@ import Container from '@/components/ui/Container';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with SIG Solutions. Send us a message or book a strategy call. Based in Riviera, Pretoria, South Africa.',
+    'Contact SIG Solutions for operational enquiries. Based in Riviera, Pretoria, South Africa.',
   openGraph: {
     title: 'Contact | SIG Solutions',
-    description: 'Get in touch with SIG Solutions. We respond within one business day.',
+    description: 'Contact SIG Solutions. We respond within one business day.',
   },
 };
 
@@ -21,42 +21,42 @@ const contactDetails = [
 ];
 
 const trustPoints = [
-  'No pitch decks. No pressure.',
+  'Structured initial assessment',
   'Response within one business day',
-  'Free 30-minute strategy consultation',
-  'Transparent, no-obligation conversation',
+  '30-minute operational assessment',
+  'No-obligation evaluation',
 ];
 
 export default function ContactPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-gradient-to-b from-slate-50 to-white pt-32 pb-16 lg:pt-40 lg:pb-20">
+      <section className="bg-gradient-to-b from-slate-50 to-white pt-32 pb-12 lg:pt-40 lg:pb-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Get In Touch
+            Contact
           </p>
-          <h1 className="max-w-3xl font-heading text-4xl font-bold tracking-tight text-navy sm:text-5xl">
-            Let&apos;s Discuss Your Growth Strategy
+          <h1 className="max-w-3xl font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+            Operational Enquiry
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-            Whether you&apos;re evaluating partners, replacing internal strain, or fixing a broken
-            revenue process, we&apos;ll tell you quickly whether we are a fit.
+          <p className="mt-6 max-w-2xl text-slate-600 leading-relaxed">
+            Whether you are evaluating partners, replacing internal strain, or addressing
+            a broken revenue process, we will assess fit within one conversation.
           </p>
         </div>
       </section>
 
       {/* Main content */}
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-white py-12 lg:py-20">
         <Container>
           <div className="grid gap-16 lg:grid-cols-2">
             {/* Contact form - primary */}
             <div>
-              <h2 className="mb-2 font-heading text-2xl font-bold text-navy">
-                Send Us a Message
+              <h2 className="mb-2 font-heading text-xl font-bold text-navy">
+                Submit an Enquiry
               </h2>
-              <p className="mb-8 text-slate-600">
-                Tell us about your challenges and we&apos;ll get back to you with a clear plan of action.
+              <p className="mb-8 text-sm text-slate-600">
+                Describe your operational requirements and our team will respond within one business day.
               </p>
               <ContactForm />
             </div>
@@ -64,8 +64,8 @@ export default function ContactPage() {
             {/* Sidebar info */}
             <div>
               {/* Contact details */}
-              <div className="mb-10 rounded-2xl border border-slate-200 bg-slate-50 p-8">
-                <h3 className="mb-6 font-heading text-lg font-bold text-navy">
+              <div className="mb-10 rounded-xl border border-slate-200 bg-slate-50 p-8">
+                <h3 className="mb-6 font-heading text-base font-bold text-navy">
                   Contact Details
                 </h3>
                 <div className="space-y-5">
@@ -73,8 +73,8 @@ export default function ContactPage() {
                     const Icon = item.icon;
                     return (
                       <div key={item.label} className="flex items-start gap-4">
-                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
-                          <Icon className="h-5 w-5" />
+                        <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                          <Icon className="h-4 w-4" />
                         </div>
                         <div>
                           <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
@@ -95,10 +95,10 @@ export default function ContactPage() {
               </div>
 
               {/* Trust points */}
-              <div className="rounded-2xl border border-blue-100 bg-blue-50/50 p-8">
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-8">
                 <div className="mb-4 flex items-center gap-3">
-                  <Shield className="h-5 w-5 text-blue-600" />
-                  <h3 className="font-heading text-lg font-bold text-navy">
+                  <Shield className="h-4 w-4 text-blue-600" />
+                  <h3 className="font-heading text-base font-bold text-navy">
                     What to Expect
                   </h3>
                 </div>
@@ -124,7 +124,7 @@ export default function ContactPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'SIG Solutions',
-            description: 'Performance-Driven BPO & Growth Infrastructure',
+            description: 'Performance-Driven BPO & Revenue Operations',
             email: 'sales@sigsolutions.co.za',
             address: {
               '@type': 'PostalAddress',
