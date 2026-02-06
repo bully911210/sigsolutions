@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+}
+
+/* Trust bar logo scroll animation */
+.logo-scroll-track {
+  display: flex;
+  width: max-content;
+}
+
+.logo-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+/* Animated counter tabular numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
