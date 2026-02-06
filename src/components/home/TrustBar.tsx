@@ -5,11 +5,11 @@ import { useRef } from 'react';
 import Container from '@/components/ui/Container';
 
 const clients = [
-  { name: 'TLU', src: 'https://www.tlu.co.za/wp-content/uploads/2021/07/Logo2025.png' },
-  { name: 'Free South Africa', src: 'https://www.freesa.org.za/wp-content/uploads/2022/07/Free-SA_Logo_Main.png' },
-  { name: 'Firearms Guardian', src: 'https://firearmsguardian.co.za/wp-content/uploads/2023/12/Firearms-Guardian-Logo_Firearms-Guardian-Web-1536x941.png' },
-  { name: 'Acorn Brokers', src: 'https://acornbrokers.co.za/images/logo.png' },
-  { name: 'Civil Society SA', src: 'https://civilsociety.lovable.app/assets/logo-Czk94Wx-.png' },
+  { name: 'TLU', src: 'https://www.tlu.co.za/wp-content/uploads/2021/07/Logo2025.png', desktopH: 'h-12 lg:h-14', mobileH: 'h-10' },
+  { name: 'Free South Africa', src: 'https://www.freesa.org.za/wp-content/uploads/2022/07/Free-SA_Logo_Main.png', desktopH: 'h-12 lg:h-14', mobileH: 'h-10' },
+  { name: 'Firearms Guardian', src: 'https://firearmsguardian.co.za/wp-content/uploads/2023/12/Firearms-Guardian-Logo_Firearms-Guardian-Web-1536x941.png', desktopH: 'h-[53px] lg:h-[62px]', mobileH: 'h-[44px]' },
+  { name: 'Acorn Brokers', src: 'https://acornbrokers.co.za/images/logo.png', desktopH: 'h-[53px] lg:h-[62px]', mobileH: 'h-[44px]' },
+  { name: 'Civil Society SA', src: 'https://civilsociety.lovable.app/assets/logo-Czk94Wx-.png', desktopH: 'h-12 lg:h-14', mobileH: 'h-10' },
 ];
 
 export default function TrustBar() {
@@ -17,7 +17,7 @@ export default function TrustBar() {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section ref={ref} className="bg-navy pt-14 lg:pt-16 pb-0">
+    <section ref={ref} className="bg-navy pt-14 lg:pt-16 pb-10 lg:pb-12">
       <Container>
         <motion.p
           initial={{ opacity: 0 }}
@@ -29,7 +29,7 @@ export default function TrustBar() {
         </motion.p>
 
         {/* Desktop: single row, large logos */}
-        <div className="hidden sm:flex items-center justify-center gap-14 lg:gap-20">
+        <div className="hidden sm:flex items-center justify-center gap-16 lg:gap-24">
           {clients.map((client, i) => (
             <motion.div
               key={client.name}
@@ -41,7 +41,7 @@ export default function TrustBar() {
               <img
                 src={client.src}
                 alt={client.name}
-                className="h-12 lg:h-14 w-auto max-w-[180px] object-contain brightness-0 invert opacity-80"
+                className={`${client.desktopH} w-auto max-w-[180px] object-contain brightness-0 invert opacity-80`}
               />
             </motion.div>
           ))}
@@ -60,12 +60,15 @@ export default function TrustBar() {
               <img
                 src={client.src}
                 alt={client.name}
-                className="h-10 w-auto max-w-full object-contain brightness-0 invert opacity-80"
+                className={`${client.mobileH} w-auto max-w-full object-contain brightness-0 invert opacity-80`}
               />
             </motion.div>
           ))}
         </div>
       </Container>
+
+      {/* Visual separator between logos and stats */}
+      <div className="mt-10 lg:mt-12 border-t border-slate-700/30" />
     </section>
   );
 }

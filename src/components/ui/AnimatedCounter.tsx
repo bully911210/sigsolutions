@@ -43,7 +43,7 @@ export default function AnimatedCounter({
 
   return (
     <span ref={ref} className="tabular-nums">
-      {prefix}{count}{suffix}
+      {prefix}{count}<span className="text-[0.7em] font-semibold">{suffix}</span>
     </span>
   );
 }
