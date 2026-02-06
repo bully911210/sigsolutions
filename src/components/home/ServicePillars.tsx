@@ -27,7 +27,7 @@ export default function ServicePillars() {
             Sales, collections, and lead generation
           </h2>
           <p className="mt-4 text-sm text-slate-600">
-            Two core services backed by specialist support.
+            Core services backed by specialist support.
           </p>
         </motion.div>
 

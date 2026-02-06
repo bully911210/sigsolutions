@@ -48,7 +48,7 @@ export default function Hero() {
             className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600"
           >
             50–100 trained agents in Pretoria handling outbound calls, payment recovery,
-            and lead qualification. You get consistent revenue. We handle the operations.
+            and lead qualification. You get consistent revenue. We handle the operations end-to-end.
           </motion.p>
 
           <motion.div
