@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
-import { CALENDLY_URL } from '@/lib/data';
+import { CONTACT_URL } from '@/lib/data';
 
 export default function CTABanner() {
   const ref = useRef(null);
@@ -36,7 +36,7 @@ export default function CTABanner() {
           className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300"
         >
           If you are evaluating partners, replacing internal strain, or fixing a broken
-          revenue process — we&apos;ll tell you quickly whether we are a fit.
+          revenue process, we&apos;ll tell you quickly whether we are a fit.
         </motion.p>
 
         <motion.p
@@ -54,7 +54,7 @@ export default function CTABanner() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-10"
         >
-          <Button href={CALENDLY_URL} variant="primary" size="lg">
+          <Button href={CONTACT_URL} variant="primary" size="lg">
             Book a Strategy Call
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

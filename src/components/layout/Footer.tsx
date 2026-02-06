@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Linkedin, Facebook, Instagram } from 'lucide-react';
 import Container from '@/components/ui/Container';
+import { LOGO_URL } from '@/lib/data';
 
 const quickLinks = [
   { label: 'Home', href: '/' },
@@ -26,7 +27,7 @@ export default function Footer() {
           {/* Company */}
           <div>
             <img
-              src="/lovable-uploads/sig-solutions-logo.png"
+              src={LOGO_URL}
               alt="SIG Solutions"
               className="mb-4 h-9 brightness-0 invert"
             />
@@ -93,7 +94,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>Riviera, Pretoria, South Africa</li>
-              <li>Mon – Fri, 08:00 – 17:00</li>
+              <li>Mon - Fri, 08:00 – 17:00</li>
             </ul>
           </div>
         </div>

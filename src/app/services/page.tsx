@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'SIG Solutions provides lead generation, outbound sales, collections, and campaign strategy services. Full-service BPO covering the entire revenue chain.',
   openGraph: {
     title: 'Services | SIG Solutions',
-    description: 'Lead generation, outbound sales, collections, and campaign strategy — the full revenue chain.',
+    description: 'Lead generation, outbound sales, collections, and campaign strategy: the full revenue chain.',
   },
 };
 
@@ -26,7 +26,7 @@ export default function ServicesPage() {
             Full-Service Revenue Operations
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-            Four integrated capabilities that cover every stage of the revenue chain — from
+            Four integrated capabilities that cover every stage of the revenue chain, from
             first click to collected payment. Each service is designed to work independently
             or as part of your complete revenue infrastructure.
           </p>

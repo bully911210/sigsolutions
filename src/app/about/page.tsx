@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'SIG Solutions is a hybrid BPO based in Pretoria, South Africa with 50-100 active agents. Meet our leadership team of four Managing Directors.',
   openGraph: {
     title: 'About | SIG Solutions',
-    description: 'Meet the leadership team behind SIG Solutions — a hybrid BPO based in Pretoria, South Africa.',
+    description: 'Meet the leadership team behind SIG Solutions, a hybrid BPO based in Pretoria, South Africa.',
   },
 };
 

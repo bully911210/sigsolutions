@@ -27,7 +27,7 @@ export default function ServicePillars() {
             Core Service Pillars
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Four integrated capabilities that cover the full revenue chain — from first click to collected payment.
+            Four integrated capabilities that cover the full revenue chain, from first click to collected payment.
           </p>
         </motion.div>
 

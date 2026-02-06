@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-import { NAV_LINKS, CALENDLY_URL } from '@/lib/data';
+import { LOGO_URL, CONTACT_URL, NAV_LINKS } from '@/lib/data';
 import { cn } from '@/lib/utils';
 
 export default function Navbar() {
@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2">
             <img
-              src="/lovable-uploads/sig-solutions-logo.png"
+              src={LOGO_URL}
               alt="SIG Solutions"
               className="h-10"
             />
@@ -59,9 +59,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={CONTACT_URL}
               className="inline-flex items-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-blue-600/40"
             >
               Book a Strategy Call
@@ -120,9 +118,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={CONTACT_URL}
             className="mt-4 block rounded-lg bg-blue-600 px-4 py-3 text-center text-base font-semibold text-white shadow-lg shadow-blue-600/25"
           >
             Book a Strategy Call
