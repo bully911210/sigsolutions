@@ -5,10 +5,30 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SIG Solutions - Revenue Operations</title>
-    
+    <meta name="description" content="SIG Solutions designs, operates, and manages the full revenue chain — lead generation, sales execution, and collections — for organisations in South Africa that need consistency, not campaigns." />
+    <meta name="theme-color" content="#1a1d26" />
+    <link rel="canonical" href="https://sigsolutions.co.za/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sigsolutions.co.za/" />
+    <meta property="og:title" content="SIG Solutions - Revenue Operations" />
+    <meta property="og:description" content="SIG Solutions designs, operates, and manages the full revenue chain — lead generation, sales execution, and collections — for organisations in South Africa." />
+    <meta property="og:site_name" content="SIG Solutions" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="SIG Solutions - Revenue Operations" />
+    <meta name="twitter:description" content="SIG Solutions designs, operates, and manages the full revenue chain — lead generation, sales execution, and collections — for organisations in South Africa." />
+
+    <!-- Preconnect to external origins for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
     <!-- Import fonts and icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     
     <style>
       /* Reset and base styles */
@@ -692,6 +712,17 @@
   </head>
   
   <body>
+    <!-- GitHub Pages SPA redirect handler (counterpart to 404.html) -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location))
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     

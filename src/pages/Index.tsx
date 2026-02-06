@@ -347,7 +347,7 @@ const Index = () => {
       <footer className="footer">
         <div className="container">
           <p className="footer-line">SIG Solutions operates where lead generation, sales execution, and collections meet.<br />We don't optimise parts. We run the whole.</p>
-          <p className="footer-copyright">&copy; 2025 SIG Solutions. All rights reserved.</p>
+          <p className="footer-copyright">&copy; {new Date().getFullYear()} SIG Solutions. All rights reserved.</p>
         </div>
       </footer>
     </div>
