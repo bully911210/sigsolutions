@@ -116,14 +116,14 @@ export default function FAQ() {
           className="mt-12 rounded-xl border border-slate-200 bg-slate-50 p-8 text-center"
         >
           <p className="font-heading text-lg font-bold text-navy">
-            Additional Questions
+            Have a specific question?
           </p>
           <p className="mt-2 text-sm text-slate-600">
-            Submit an enquiry and our team will respond within one business day.
+            Talk to our operations team directly. No scripts, no hand-offs.
           </p>
           <div className="mt-6">
             <Button href="/contact" variant="primary">
-              Submit Enquiry
+              Get in touch
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

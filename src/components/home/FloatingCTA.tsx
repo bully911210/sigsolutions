@@ -34,7 +34,7 @@ export default function FloatingCTA() {
               href="/contact"
               className="flex w-full items-center justify-center rounded-lg bg-blue-600 px-6 py-3.5 font-heading text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all duration-200 hover:bg-blue-700 hover:shadow-blue-600/40 active:scale-[0.98]"
             >
-              Request Operational Review
+              See if we&apos;re a fit
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </div>

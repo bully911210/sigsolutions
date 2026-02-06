@@ -21,13 +21,13 @@ export default function ServicePillars() {
           className="mb-12 max-w-2xl"
         >
           <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Service Capabilities
+            What we run for you
           </p>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            Core Service Pillars
+            Sales, collections, and lead generation
           </h2>
-          <p className="mt-4 text-slate-600">
-            Four integrated capabilities that cover the full revenue chain, from first click to collected payment.
+          <p className="mt-4 text-sm text-slate-600">
+            Two core services backed by specialist support.
           </p>
         </motion.div>
 
@@ -40,8 +40,13 @@ export default function ServicePillars() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
-                className="rounded-xl border border-slate-200 bg-white p-8 lg:p-10"
+                className="relative rounded-xl border border-slate-200 bg-white p-8 lg:p-10"
               >
+                {i === 0 && (
+                  <span className="absolute top-4 right-4 rounded-full bg-blue-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
+                    Most clients start here
+                  </span>
+                )}
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
                   <Icon className="h-6 w-6" />
                 </div>

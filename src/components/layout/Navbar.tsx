@@ -62,7 +62,7 @@ export default function Navbar() {
               href={CONTACT_URL}
               className="inline-flex items-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-blue-600/40"
             >
-              Request Operational Review
+              Talk to our team
             </a>
           </nav>
 

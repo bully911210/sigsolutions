@@ -85,7 +85,7 @@ export default function ServiceDetail({
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} className="mt-10">
           <Button href={CONTACT_URL} variant="primary">
-            Enquire About This Service <ArrowRight className="ml-2 h-4 w-4" />
+            Discuss this service <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </motion.div>
       </Container>
