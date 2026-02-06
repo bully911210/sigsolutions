@@ -24,7 +24,7 @@ export default function Button({
 
   const variants = {
     primary:
-      'bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5',
+      'bg-blue-600 text-white hover:bg-blue-700',
     outline:
       'border-2 border-slate-300 text-slate-700 hover:border-blue-600 hover:text-blue-600 bg-transparent',
     ghost:
@@ -33,7 +33,7 @@ export default function Button({
 
   const sizes = {
     default: 'px-6 py-3 text-sm',
-    lg: 'px-8 py-4 text-base',
+    lg: 'px-8 py-3.5 text-sm',
   };
 
   const classes = cn(base, variants[variant], sizes[size], className);

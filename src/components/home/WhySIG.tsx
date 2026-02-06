@@ -9,7 +9,7 @@ export default function WhySIG() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="bg-white py-24 lg:py-32">
+    <section ref={ref} className="bg-white py-16 lg:py-20">
       <Container className="max-w-3xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ export default function WhySIG() {
           transition={{ duration: 0.6 }}
           className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600"
         >
-          Why SIG Solutions
+          Operational Rationale
         </motion.p>
 
         <motion.h2
@@ -33,21 +33,23 @@ export default function WhySIG() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-8 text-lg leading-relaxed text-slate-600"
+          className="mt-6 text-slate-600 leading-relaxed"
         >
-          We exist because internal teams struggle once volume increases.
+          Internal teams struggle once volume increases. Lead generation,
+          sales execution, and collections each require dedicated operational
+          capacity that most organisations cannot sustain internally.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="my-12 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white p-8 lg:p-12"
+          className="my-10 rounded-xl border border-slate-200 bg-slate-50 p-8 lg:p-10"
         >
-          <p className="font-heading text-xl font-bold leading-relaxed text-navy sm:text-2xl lg:text-3xl">
-            Leads are easy.<br />
-            Sales pressure is not.<br />
-            Collections are where most organisations quietly bleed.
+          <p className="font-heading text-lg font-bold leading-relaxed text-navy sm:text-xl">
+            Lead acquisition is straightforward.<br />
+            Sustained sales pressure is not.<br />
+            Collections are where most organisations lose revenue.
           </p>
         </motion.div>
 
@@ -55,7 +57,7 @@ export default function WhySIG() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="text-lg leading-relaxed text-slate-600"
+          className="text-slate-600 leading-relaxed"
         >
           We take responsibility where most organisations lose control: the follow-ups that
           don&apos;t happen, the payments that fail, and the systems that break under scale.

@@ -17,18 +17,18 @@ export default function TrustBar() {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section ref={ref} className="border-y border-slate-100 bg-slate-50/50 py-12">
+    <section ref={ref} className="border-y border-slate-100 bg-slate-50/50 py-8">
       <Container>
         <motion.p
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-slate-400"
+          className="mb-6 text-center text-xs font-medium uppercase tracking-widest text-slate-400"
         >
-          Trusted by organisations across multiple sectors
+          Sectors served
         </motion.p>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
           {sectors.map((sector, i) => {
             const Icon = sector.icon;
             return (
@@ -37,10 +37,10 @@ export default function TrustBar() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
-                className="flex items-center gap-2.5 rounded-lg border border-slate-200/60 bg-white px-5 py-3"
+                className="flex items-center gap-2 rounded-lg border border-slate-200/60 bg-white px-4 py-2.5"
               >
-                <Icon className="h-4 w-4 text-blue-600" />
-                <span className="text-sm font-medium text-slate-600">{sector.label}</span>
+                <Icon className="h-3.5 w-3.5 text-blue-600" />
+                <span className="text-xs font-medium text-slate-600">{sector.label}</span>
               </motion.div>
             );
           })}

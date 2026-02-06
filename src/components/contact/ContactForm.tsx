@@ -19,13 +19,13 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-green-200 bg-green-50 p-8 text-center">
-        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
-          <Send className="h-5 w-5 text-green-600" />
+      <div className="rounded-xl border border-green-200 bg-green-50 p-8 text-center">
+        <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
+          <Send className="h-4 w-4 text-green-600" />
         </div>
-        <h3 className="font-heading text-lg font-bold text-navy">Message Sent</h3>
+        <h3 className="font-heading text-base font-bold text-navy">Enquiry Submitted</h3>
         <p className="mt-2 text-sm text-slate-600">
-          Thank you for reaching out. Our team will be in touch within one business day.
+          Our team will respond within one business day.
         </p>
       </div>
     );
@@ -43,7 +43,7 @@ export default function ContactForm() {
           name="name"
           required
           className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-colors focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
-          placeholder="Your full name"
+          placeholder="Full name"
         />
       </div>
 
@@ -63,14 +63,14 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="company" className="mb-1 block text-sm font-medium text-slate-700">
-          Company
+          Organisation
         </label>
         <input
           type="text"
           id="company"
           name="company"
           className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-colors focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
-          placeholder="Your company name"
+          placeholder="Organisation name"
         />
       </div>
 
@@ -84,23 +84,23 @@ export default function ContactForm() {
           rows={4}
           required
           className="w-full resize-none rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-colors focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
-          placeholder="Tell us about your needs..."
+          placeholder="Describe your operational requirements"
         />
       </div>
 
       <button
         type="submit"
         disabled={submitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-heading text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-blue-600/40 disabled:pointer-events-none disabled:opacity-60"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-heading text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all duration-200 hover:bg-blue-700 hover:shadow-blue-600/40 disabled:pointer-events-none disabled:opacity-60"
       >
         {submitting ? (
           <>
             <Loader2 className="h-4 w-4 animate-spin" />
-            Sending...
+            Submitting...
           </>
         ) : (
           <>
-            Send Message
+            Submit Enquiry
             <Send className="h-4 w-4" />
           </>
         )}
