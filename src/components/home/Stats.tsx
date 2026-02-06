@@ -32,7 +32,7 @@ export default function Stats() {
                     suffix={stat.suffix}
                   />
                 </div>
-                <p className="mt-2 text-sm text-slate-400">{stat.label}</p>
+                <p className="mt-2 text-xs text-slate-400">{stat.label}</p>
               </motion.div>
             );
           })}

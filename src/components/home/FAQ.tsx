@@ -119,7 +119,7 @@ export default function FAQ() {
             Have a specific question?
           </p>
           <p className="mt-2 text-sm text-slate-600">
-            Talk to our operations team directly. No scripts, no hand-offs.
+            Talk to our operations team directly. No scripts. No hand-offs.
           </p>
           <div className="mt-6">
             <Button href="/contact" variant="primary">
