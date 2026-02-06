@@ -27,7 +27,7 @@ export default function TechnologyPage() {
             Technology That Powers Reliable Operations
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-            Our technology stack is purpose-built for high-volume operational delivery —
+            Our technology stack is purpose-built for high-volume operational delivery:
             from telephony and CRM to payments and automation.
           </p>
         </div>

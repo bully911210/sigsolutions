@@ -1,3 +1,5 @@
+export const LOGO_URL = 'https://sigsolutions-production.up.railway.app/images/logo.png';
+
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
@@ -7,7 +9,7 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '/contact' },
 ];
 
-export const CALENDLY_URL = 'https://calendly.com/sigsolutions';
+export const CONTACT_URL = '/contact';
 
 export type IconName =
   | 'Target' | 'Handshake' | 'Coins' | 'LineChart'
@@ -26,7 +28,7 @@ export const PRIMARY_SERVICES = [
   {
     icon: 'Target' as IconName,
     title: 'Lead Generation & Paid Media',
-    description: 'We generate qualified leads across Meta, Google, and TikTok — built for conversion, not vanity metrics.',
+    description: 'We generate qualified leads across Meta, Google, and TikTok. Built for conversion, not vanity metrics.',
     points: [
       'Lead source control across paid and organic data channels',
       'Qualification logic aligned to sales and collections outcomes',
@@ -40,7 +42,7 @@ export const PRIMARY_SERVICES = [
     points: [
       'Consistent follow-up from first contact to commitment',
       'Sales activity tracking, QA, and performance management',
-      'No leads go cold — every prospect is worked systematically',
+      'No leads go cold. Every prospect is worked systematically',
     ],
   },
 ];
@@ -133,8 +135,8 @@ export const TECH_CATEGORIES = [
     title: 'Telephony & Dialler Infrastructure',
     icon: 'MonitorSmartphone' as IconName,
     items: [
-      'Vicidial \u2014 high-volume outbound campaigns',
-      '3CX \u2014 inbound, blended, and hybrid environments',
+      'Vicidial: high-volume outbound campaigns',
+      '3CX: inbound, blended, and hybrid environments',
       'SIP-based telephony infrastructure',
     ],
   },
@@ -172,7 +174,7 @@ export const TECH_CATEGORIES = [
       'n8n (self-hosted)',
       'Make.com (premium)',
       'Webhooks & Conversion API pipelines',
-      'Custom automation flows: lead \u2192 call \u2192 sale \u2192 billing',
+      'Custom automation flows: lead > call > sale > billing',
     ],
   },
   {
@@ -200,13 +202,13 @@ export const SERVICE_DETAILS = [
     icon: 'Target' as IconName,
     title: 'Lead Generation & Paid Media',
     headline: 'Qualified leads built for conversion, not vanity metrics.',
-    description: 'We manage the full lead generation process \u2014 from ad creative and targeting to qualification and handover. Every lead is measured by what happens downstream, not just cost-per-click.',
+    description: 'We manage the full lead generation process, from ad creative and targeting to qualification and handover. Every lead is measured by what happens downstream, not just cost-per-click.',
     capabilities: [
       'Paid campaign management across Meta Ads (Facebook & Instagram), Google Ads (Search, Display, YouTube), TikTok Ads',
       'Lead capture via forms, APIs, and webhooks',
       'Funnel architecture and conversion optimisation',
       'Lead qualification aligned to downstream sales and collections performance',
-      'Full-funnel accountability \u2014 we own the quality, not just the volume',
+      'Full-funnel accountability: we own the quality, not just the volume',
     ],
     breaks: [
       'Cheap leads that never convert',
@@ -225,14 +227,14 @@ export const SERVICE_DETAILS = [
     id: 'outbound-sales',
     icon: 'Handshake' as IconName,
     title: 'Outbound Sales & Telesales',
-    headline: 'Structured outbound execution at scale \u2014 no leads die silently.',
+    headline: 'Structured outbound execution at scale. No leads die silently.',
     description: 'Our trained agent teams run structured outbound campaigns with consistent follow-up cadences, quality assurance, and performance tracking. Every prospect is worked systematically until resolution.',
     capabilities: [
       'High-volume outbound calling via Vicidial',
       'Blended inbound/outbound environments via 3CX',
       'Trained agent teams with structured scripts and QA',
       'Sales activity tracking and performance management',
-      'Consistent follow-up cadences \u2014 no leads die silently',
+      'Consistent follow-up cadences. No leads die silently',
     ],
     breaks: [
       'Leads going cold from inconsistent follow-up',
@@ -252,7 +254,7 @@ export const SERVICE_DETAILS = [
     icon: 'Coins' as IconName,
     title: 'Collections & Payment Recovery',
     headline: 'Revenue protection through systematic collection workflows.',
-    description: 'We manage subscription billing, debit order processing, and failed payment recovery. Our reporting focuses on collected revenue \u2014 not promises or projections.',
+    description: 'We manage subscription billing, debit order processing, and failed payment recovery. Our reporting focuses on collected revenue, not promises or projections.',
     capabilities: [
       'Subscription and recurring billing management',
       'Debit order processing via Netcash and DebiCheck-enabled providers',
@@ -277,7 +279,7 @@ export const SERVICE_DETAILS = [
     icon: 'LineChart' as IconName,
     title: 'Campaign Strategy & Consulting',
     headline: 'Strategic growth architecture for sustainable demand generation.',
-    description: 'We design and optimise the systems that drive demand \u2014 from offer design and funnel architecture to market expansion strategies and conversion experiments.',
+    description: 'We design and optimise the systems that drive demand: from offer design and funnel architecture to market expansion strategies and conversion experiments.',
     capabilities: [
       'Growth strategy and market expansion',
       'Offer design and demand generation systems',
@@ -296,5 +298,53 @@ export const SERVICE_DETAILS = [
       'Growth experiments and demand system design',
       'Data-driven campaign iteration',
     ],
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    quote: 'SIG Solutions took over our entire outbound sales process and within 90 days we saw a 40% increase in qualified appointments. Their agents are professional and the reporting is exceptional.',
+    name: 'Operations Director',
+    company: 'National NGO',
+    metric: '40% more qualified appointments',
+  },
+  {
+    quote: 'We were losing thousands every month to failed debit orders. SIG implemented a recovery process that recaptured revenue we had written off. They treat our money like their own.',
+    name: 'Finance Manager',
+    company: 'Subscription Business',
+    metric: 'Significant revenue recovered monthly',
+  },
+  {
+    quote: 'The difference is accountability. Before SIG, leads went into a black hole. Now every lead is tracked, followed up, and reported on. We finally have visibility into our pipeline.',
+    name: 'Managing Director',
+    company: 'Insurance Brokerage',
+    metric: 'Full pipeline visibility achieved',
+  },
+];
+
+export const FAQ_ITEMS = [
+  {
+    question: 'How quickly can you get started?',
+    answer: 'Typically within 2 to 4 weeks. We scope the pipeline, set up systems, onboard agents, and begin execution. Complex campaigns may take slightly longer for proper QA and training.',
+  },
+  {
+    question: 'What industries do you work with?',
+    answer: 'We specialise in NGOs, membership organisations, subscription businesses, insurance, legal services, and advocacy sectors. Any organisation with recurring revenue or high-volume sales processes is a strong fit.',
+  },
+  {
+    question: 'Do you replace our internal team?',
+    answer: 'Not necessarily. We can operate as your full outsourced sales and collections team, or work alongside your existing staff to handle overflow, specific campaigns, or specialised functions.',
+  },
+  {
+    question: 'How do you measure success?',
+    answer: 'We report on outcomes, not activity. That means leads that convert, calls that close, and revenue that is actually collected. You will receive transparent dashboards tracking every metric that matters.',
+  },
+  {
+    question: 'What is the minimum contract period?',
+    answer: 'We typically work on 3-month initial engagements. This gives enough time to set up, optimise, and demonstrate measurable results. Most clients continue long-term once they see the impact.',
+  },
+  {
+    question: 'How is pricing structured?',
+    answer: 'Pricing depends on the scope of services, team size, and campaign complexity. We offer transparent, performance-aligned pricing models. Book a strategy call to get a tailored proposal.',
   },
 ];

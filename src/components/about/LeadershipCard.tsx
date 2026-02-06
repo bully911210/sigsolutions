@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, User } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface LeadershipCardProps {
@@ -30,11 +30,6 @@ export default function LeadershipCard({
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="group rounded-2xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:border-blue-200 hover:shadow-lg"
     >
-      {/* Photo placeholder */}
-      <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-slate-100">
-        <User className="h-8 w-8 text-blue-300" />
-      </div>
-
       <h3 className="font-heading text-xl font-bold text-navy">{name}</h3>
       <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-blue-600">
         {title}

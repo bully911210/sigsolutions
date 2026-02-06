@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
-import { CALENDLY_URL } from '@/lib/data';
+import { CONTACT_URL } from '@/lib/data';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -64,7 +64,7 @@ export default function Hero() {
             className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 lg:text-xl"
           >
             SIG Solutions operates where lead generation, outbound sales, and revenue
-            collection meet. We don&apos;t optimise parts — we run the whole.
+            collection meet. We don&apos;t optimise parts. We run the whole.
           </motion.p>
 
           <motion.div
@@ -74,7 +74,7 @@ export default function Hero() {
             animate="visible"
             className="mt-10 flex flex-wrap gap-4"
           >
-            <Button href={CALENDLY_URL} variant="primary" size="lg">
+            <Button href={CONTACT_URL} variant="primary" size="lg">
               Book a Strategy Call
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

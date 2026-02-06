@@ -19,51 +19,30 @@ export default function CompanyOverview() {
   return (
     <section ref={ref} className="bg-white py-24 lg:py-32">
       <Container>
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
-              About SIG Solutions
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
+            About SIG Solutions
+          </p>
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+            An Operating Partner Responsible for Outcomes
+          </h2>
+          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
+            <p>
+              SIG Solutions is a hybrid BPO operating nationally in South Africa, based in Pretoria.
+              With 50–100 active agents and 3–5 years of operational delivery, we serve NGOs,
+              membership organisations, subscription businesses, insurance, legal, and advocacy sectors.
             </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              An Operating Partner Responsible for Outcomes
-            </h2>
-            <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-              <p>
-                SIG Solutions is a hybrid BPO operating nationally in South Africa, based in Pretoria.
-                With 50–100 active agents and 3–5 years of operational delivery, we serve NGOs,
-                membership organisations, subscription businesses, insurance, legal, and advocacy sectors.
-              </p>
-              <p>
-                We are not a marketing agency. We are an operating partner responsible for outcomes
-                across the full revenue chain — from lead generation and sales execution to collections
-                and payment recovery.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Company photo placeholder */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative"
-          >
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-blue-100 to-slate-100">
-              <div className="flex h-full items-center justify-center p-8 text-center">
-                <div>
-                  <Building2 className="mx-auto mb-4 h-16 w-16 text-blue-300" />
-                  <p className="text-sm font-medium text-slate-400">
-                    Professional team photo placeholder
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+            <p>
+              We are not a marketing agency. We are an operating partner responsible for outcomes
+              across the full revenue chain, from lead generation and sales execution to collections
+              and payment recovery.
+            </p>
+          </div>
+        </motion.div>
 
         {/* Highlight grid */}
         <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

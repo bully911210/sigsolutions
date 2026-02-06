@@ -57,7 +57,7 @@ export default function WhySIG() {
           transition={{ duration: 0.6, delay: 0.25 }}
           className="text-lg leading-relaxed text-slate-600"
         >
-          We take responsibility where most organisations lose control — the follow-ups that
+          We take responsibility where most organisations lose control: the follow-ups that
           don&apos;t happen, the payments that fail, and the systems that break under scale.
         </motion.p>
       </Container>

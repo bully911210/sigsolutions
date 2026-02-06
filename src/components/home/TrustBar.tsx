@@ -2,14 +2,14 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Building2, Shield, Users, TrendingUp } from 'lucide-react';
 import Container from '@/components/ui/Container';
 
-const placeholderLogos = [
-  'Client Logo 1',
-  'Client Logo 2',
-  'Client Logo 3',
-  'Client Logo 4',
-  'Client Logo 5',
+const sectors = [
+  { icon: Building2, label: 'NGO & Advocacy' },
+  { icon: Shield, label: 'Insurance' },
+  { icon: Users, label: 'Legal' },
+  { icon: TrendingUp, label: 'Financial Services' },
 ];
 
 export default function TrustBar() {
@@ -25,30 +25,27 @@ export default function TrustBar() {
           transition={{ duration: 0.5 }}
           className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-slate-400"
         >
-          Trusted by organisations across NGO, insurance, legal, and advocacy sectors
+          Trusted by organisations across multiple sectors
         </motion.p>
-      </Container>
 
-      <div className="relative overflow-hidden">
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-slate-50/80 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-slate-50/80 to-transparent" />
-
-        <div className="logo-scroll-track animate-scroll">
-          {[...placeholderLogos, ...placeholderLogos].map((name, i) => (
-            <div
-              key={i}
-              className="mx-8 flex h-12 w-36 flex-shrink-0 items-center justify-center rounded-lg border border-slate-200/60 bg-white px-6 text-xs font-medium text-slate-400"
-            >
-              {name}
-            </div>
-          ))}
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+          {sectors.map((sector, i) => {
+            const Icon = sector.icon;
+            return (
+              <motion.div
+                key={sector.label}
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
+                className="flex items-center gap-2.5 rounded-lg border border-slate-200/60 bg-white px-5 py-3"
+              >
+                <Icon className="h-4 w-4 text-blue-600" />
+                <span className="text-sm font-medium text-slate-600">{sector.label}</span>
+              </motion.div>
+            );
+          })}
         </div>
-      </div>
-
-      <p className="mt-6 text-center text-xs text-slate-400">
-        Client logos to be finalised prior to launch
-      </p>
+      </Container>
     </section>
   );
 }

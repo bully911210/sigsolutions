@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { AlertTriangle, Shield, ArrowRight } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
-import { CALENDLY_URL } from '@/lib/data';
+import { CONTACT_URL } from '@/lib/data';
 import type { IconName } from '@/lib/data';
 import { getIcon } from '@/lib/icons';
 
@@ -84,7 +84,7 @@ export default function ServiceDetail({
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} className="mt-12">
-          <Button href={CALENDLY_URL} variant="primary">
+          <Button href={CONTACT_URL} variant="primary">
             Discuss This Service <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </motion.div>

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import FloatingCTA from '@/components/home/FloatingCTA';
+import WhatsAppButton from '@/components/home/WhatsAppButton';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SIG Solutions | Performance-Driven BPO & Growth Infrastructure',
     description:
-      'SIG Solutions operates where lead generation, outbound sales, and revenue collection meet. We don\'t optimise parts — we run the whole.',
+      'SIG Solutions operates where lead generation, outbound sales, and revenue collection meet. We don\'t optimise parts. We run the whole.',
     type: 'website',
     locale: 'en_ZA',
     siteName: 'SIG Solutions',
@@ -43,6 +45,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingCTA />
+        <WhatsAppButton />
       </body>
     </html>
   );
