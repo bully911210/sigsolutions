@@ -896,7 +896,212 @@ ul {
   margin-bottom: 0;
 }
 
-/* Responsive Design */
+/* ========================================
+   VISUAL POLISH — Animations & Effects
+   ======================================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero gradient text */
+.hero h1 {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 55%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero staggered load animation */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero h1 { animation: hero-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+.hero .hero-framework { animation: hero-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+.hero .hero-subheadline { animation: hero-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both; }
+.hero .hero-supporting { animation: hero-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
+.hero .hero-cta { animation: hero-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both; }
+
+/* Ambient glow effects */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: -15%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.why-section,
+.leadership-section,
+.contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.why-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.leadership-section::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact-section::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Gradient section dividers */
+.proof-section,
+.why-section,
+.leadership-section,
+.contact-section {
+  border-top: none;
+}
+
+.proof-section::before,
+.why-section::before,
+.leadership-section::before,
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(80%, 800px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+  z-index: 1;
+}
+
+.proof-section {
+  position: relative;
+}
+
+/* Scroll reveal system */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.12s; }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.24s; }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.36s; }
+
+.reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Preserve who-col last-child dimming after reveal */
+.who-grid.reveal-stagger.visible > :last-child {
+  opacity: 0.85;
+}
+
+/* Enhanced primary button — light sweep + glow */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.45), 0 0 60px rgba(59, 130, 246, 0.1);
+}
+
+/* Enhanced nav — transparent at top, solid on scroll */
+.header {
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  background-color: transparent;
+  backdrop-filter: none;
+  border-bottom-color: transparent;
+}
+
+.header.scrolled {
+  background-color: rgba(26, 29, 38, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom-color: rgba(148, 163, 184, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
 @media (max-width: 768px) {
   .desktop-nav {
     display: none;
@@ -921,6 +1126,13 @@ ul {
 
   .hero {
     padding: 10rem 0 6rem;
+  }
+
+  .hero::after {
+    width: 400px;
+    height: 400px;
+    right: -30%;
+    top: 10%;
   }
 
   .section-title {
@@ -968,6 +1180,15 @@ ul {
   .contact-details {
     padding: 2rem;
   }
+
+  /* Tighter reveal on mobile */
+  .reveal {
+    transform: translateY(25px);
+  }
+
+  .reveal-stagger > * {
+    transform: translateY(18px);
+  }
 }
 
 @media (max-width: 480px) {
@@ -985,6 +1206,10 @@ ul {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .hero::after {
+    display: none;
   }
 
   .section-title {
@@ -1016,5 +1241,43 @@ ul {
 
   .engagement-performance {
     padding: 2rem 1.5rem;
+  }
+}
+
+/* Accessibility: Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero h1,
+  .hero .hero-framework,
+  .hero .hero-subheadline,
+  .hero .hero-supporting,
+  .hero .hero-cta {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .who-grid.reveal-stagger > :last-child {
+    opacity: 0.85;
+  }
+
+  .btn-primary::before {
+    display: none;
   }
 }
