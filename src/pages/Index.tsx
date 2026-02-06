@@ -4,6 +4,35 @@ import React, { useEffect } from 'react';
 const Index = () => {
   useEffect(() => {
     document.title = "SIG Solutions - Revenue Operations";
+
+    // Scroll reveal — IntersectionObserver must run after React renders
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+
+    if (!prefersReduced) {
+      const revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealElements.forEach(function(el) {
+        revealObserver.observe(el);
+      });
+
+      return () => {
+        revealElements.forEach(function(el) {
+          revealObserver.unobserve(el);
+        });
+      };
+    } else {
+      revealElements.forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }
   }, []);
 
   return (
