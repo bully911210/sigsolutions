@@ -12,13 +12,13 @@ export default function ServicePillars() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="services" ref={ref} className="bg-white py-16 lg:py-20">
+    <section id="services" ref={ref} className="bg-slate-50 py-12 lg:py-14">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-12 max-w-2xl"
+          className="mb-10 max-w-2xl"
         >
           <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
             What we run for you
@@ -31,7 +31,7 @@ export default function ServicePillars() {
           </p>
         </motion.div>
 
-        <div className="mb-8 grid gap-8 lg:grid-cols-2">
+        <div className="mb-6 grid gap-6 lg:grid-cols-2">
           {PRIMARY_SERVICES.map((service, i) => {
             const Icon = getIcon(service.icon);
             return (
@@ -40,9 +40,13 @@ export default function ServicePillars() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
-                className="relative rounded-xl border border-slate-200 bg-white p-8 lg:p-10"
+                className={`relative rounded-xl border bg-white p-8 lg:p-10 ${
+                  i === 1
+                    ? 'border-blue-200 ring-2 ring-blue-100'
+                    : 'border-slate-200'
+                }`}
               >
-                {i === 0 && (
+                {i === 1 && (
                   <span className="absolute top-4 right-4 rounded-full bg-blue-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
                     Most clients start here
                   </span>
@@ -60,7 +64,19 @@ export default function ServicePillars() {
                     </li>
                   ))}
                 </ul>
-                <a href="/services" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700">
+
+                {service.testimonial && (
+                  <div className="mt-6 rounded-lg border border-slate-100 bg-slate-50 p-4">
+                    <p className="text-xs italic leading-relaxed text-slate-500">
+                      &ldquo;{service.testimonial.quote}&rdquo;
+                    </p>
+                    <p className="mt-2 text-[11px] font-medium text-slate-400">
+                      — {service.testimonial.attribution}
+                    </p>
+                  </div>
+                )}
+
+                <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700">
                   View details <ArrowRight className="h-4 w-4" />
                 </a>
               </motion.div>
@@ -68,7 +84,7 @@ export default function ServicePillars() {
           })}
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {SECONDARY_SERVICES.map((service, i) => {
             const Icon = getIcon(service.icon);
             return (
@@ -77,14 +93,26 @@ export default function ServicePillars() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
-                className="rounded-xl border border-slate-200 bg-slate-50/50 p-8"
+                className="rounded-xl border border-slate-200 bg-white p-8"
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-navy">{service.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.description}</p>
-                <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700">
+
+                {service.testimonial && (
+                  <div className="mt-4 rounded-lg border border-slate-100 bg-slate-50 p-4">
+                    <p className="text-xs italic leading-relaxed text-slate-500">
+                      &ldquo;{service.testimonial.quote}&rdquo;
+                    </p>
+                    <p className="mt-2 text-[11px] font-medium text-slate-400">
+                      — {service.testimonial.attribution}
+                    </p>
+                  </div>
+                )}
+
+                <a href="/services" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700">
                   View details <ArrowRight className="h-4 w-4" />
                 </a>
               </motion.div>

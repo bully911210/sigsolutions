@@ -17,7 +17,7 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white pt-32 pb-16 lg:pt-40 lg:pb-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white pt-32 pb-12 lg:pt-40 lg:pb-16">
       <Container className="relative">
         <div className="max-w-3xl">
           <motion.p
@@ -37,7 +37,7 @@ export default function Hero() {
             animate="visible"
             className="font-heading text-3xl font-bold leading-[1.15] tracking-tight text-navy sm:text-4xl lg:text-5xl"
           >
-            We run your sales, collections, and lead generation so you don&apos;t have to.
+            Your outbound team isn&apos;t following up. We will.
           </motion.h1>
 
           <motion.p
@@ -56,15 +56,15 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-10 flex flex-wrap items-center gap-4"
           >
             <Button href={CONTACT_URL} variant="primary" size="lg">
-              See if we&apos;re a fit
+              Book a 30-minute pipeline review
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button href="/services" variant="outline" size="lg">
+            <a href="/services" className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700">
               View services
-            </Button>
+            </a>
           </motion.div>
         </div>
       </Container>

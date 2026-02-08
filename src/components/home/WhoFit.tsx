@@ -11,23 +11,23 @@ export default function WhoFit() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="bg-slate-50 py-16 lg:py-20">
+    <section ref={ref} className="bg-slate-50 py-12 lg:py-14">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-12 text-center"
+          className="mb-10 text-center"
         >
           <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Engagement Criteria
+            Is this you?
           </p>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            Who This Is For
+            See if we&apos;re the right fit
           </h2>
         </motion.div>
 
-        <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl gap-6 lg:grid-cols-2">
           {/* Fit */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

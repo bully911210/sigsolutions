@@ -3,6 +3,7 @@ export const LOGO_URL = 'https://sigsolutions-production.up.railway.app/images/l
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
+  { label: 'Results', href: '/#results' },
   { label: 'About', href: '/about' },
   { label: 'Technology', href: '/technology' },
   { label: 'Compliance', href: '/compliance' },
@@ -18,32 +19,40 @@ export type IconName =
   | 'Shield' | 'Lock' | 'Eye' | 'FileCheck' | 'ServerCog';
 
 export const STATS = [
-  { value: 100, suffix: '+', label: 'Active Call Centre Agents', icon: 'Headphones' as IconName },
-  { value: 500, suffix: 'K+', label: 'Outbound Calls Made', icon: 'Phone' as IconName },
-  { value: 50, suffix: 'K+', label: 'Leads Processed', icon: 'Users' as IconName },
-  { value: 10, prefix: 'R', suffix: 'M+', label: 'Rands in Recurring Collections', icon: 'Banknote' as IconName },
+  { value: 100, suffix: '+', label: 'Active Call Centre Agents', icon: 'Headphones' as IconName, clarification: 'Pretoria-based, full-time' },
+  { value: 500, suffix: 'K+', label: 'Outbound Calls per Quarter', icon: 'Phone' as IconName, clarification: 'Across active client campaigns' },
+  { value: 50, suffix: 'K+', label: 'Leads Processed Annually', icon: 'Users' as IconName, clarification: 'Qualified and routed to sales' },
+  { value: 10, prefix: 'R', suffix: 'M+', label: 'Monthly Recurring Collections', icon: 'Banknote' as IconName, clarification: 'Recovered revenue per month' },
 ];
 
 export const PRIMARY_SERVICES = [
   {
     icon: 'Target' as IconName,
     title: 'Lead Generation & Paid Media',
-    description: 'We generate qualified leads across Meta, Google, and TikTok. Built for conversion, not vanity metrics.',
+    description: 'Qualified leads across Meta, Google, and TikTok — measured by downstream revenue, not CPL. Average 3,000+ leads/month across active campaigns.',
     points: [
       'Lead source control across paid and organic data channels',
       'Qualification logic aligned to sales and collections outcomes',
       'Lead performance measured by downstream revenue, not cost-per-lead',
     ],
+    testimonial: {
+      quote: 'Every lead is tracked, followed up, and reported on. We finally have full visibility into our pipeline.',
+      attribution: 'Managing Director, mid-market insurance brokerage with 12 outbound agents',
+    },
   },
   {
     icon: 'Handshake' as IconName,
     title: 'Outbound Sales & Telesales',
-    description: 'Trained agents running structured outbound campaigns at scale.',
+    description: 'Structured 7-touch follow-up cadence with daily QA review. Zero leads go cold. 40% more qualified appointments within 90 days.',
     points: [
       'Consistent follow-up from first contact to commitment',
       'Sales activity tracking, QA, and performance management',
       'No leads go cold. Every prospect is worked systematically',
     ],
+    testimonial: {
+      quote: 'Within 90 days we saw a 40% increase in qualified appointments. Their agents are professional and the reporting is exceptional.',
+      attribution: 'Head of Fundraising, national conservation NGO with 200K+ active donors',
+    },
   },
 ];
 
@@ -51,7 +60,11 @@ export const SECONDARY_SERVICES = [
   {
     icon: 'Coins' as IconName,
     title: 'Collections & Payment Recovery',
-    description: 'Subscription and fund collection workflows with failed payment recovery (DebiCheck-enabled). Reporting on collected revenue, not promises.',
+    description: 'DebiCheck-enabled recovery with automated failed payment workflows. Reporting on collected revenue, not promises. Average recovery rate: 60%+ on failed debit orders.',
+    testimonial: {
+      quote: 'SIG recaptured revenue we had written off. They treat our money like their own.',
+      attribution: 'Finance Manager, subscription business processing 8,000+ monthly debit orders',
+    },
   },
   {
     icon: 'LineChart' as IconName,
@@ -61,23 +74,23 @@ export const SECONDARY_SERVICES = [
 ];
 
 export const PROCESS_STEPS = [
-  { number: '01', title: 'Scope', description: 'Revenue pipeline scoped end-to-end' },
-  { number: '02', title: 'Define', description: 'Responsibilities defined upfront' },
-  { number: '03', title: 'Track', description: 'Performance tracked continuously' },
-  { number: '04', title: 'Report', description: 'Reporting focused on outcomes, not activity' },
+  { number: '01', title: 'Audit', description: 'We audit your pipeline and model your revenue recovery potential.' },
+  { number: '02', title: 'Scope', description: 'You receive a signed scope with KPIs, SLAs, and defined responsibilities.' },
+  { number: '03', title: 'Execute', description: 'Weekly dashboards: calls made, leads converted, payments collected.' },
+  { number: '04', title: 'Report', description: 'Monthly executive report showing P&L impact and next-quarter recommendations.' },
 ];
 
 export const FIT_ITEMS = [
-  'Your revenue is recurring or subscription-based',
-  'You rely on people, not just software',
-  'You care about retention and cashflow stability',
-  'You need operational scale, not just marketing',
+  'Are failed debit orders costing you more than R100K/month?',
+  'Are donor or member follow-up calls not happening consistently?',
+  'Do leads go cold because nobody follows up within 48 hours?',
+  'Do you need operational scale without building an internal team?',
 ];
 
 export const NOT_FIT_ITEMS = [
-  'You want a once-off campaign',
-  'You want vanity metrics',
-  'You avoid operational transparency',
+  'You want a once-off campaign with no ongoing commitment',
+  'You want vanity metrics instead of revenue outcomes',
+  'You won\'t share data or allow operational transparency',
 ];
 
 export const LEADERS = [
@@ -304,28 +317,36 @@ export const SERVICE_DETAILS = [
 export const TESTIMONIALS = [
   {
     quote: 'SIG Solutions took over our entire outbound sales process and within 90 days we saw a 40% increase in qualified appointments. Their agents are professional and the reporting is exceptional.',
-    name: 'Operations Director',
-    company: 'National NGO',
+    name: 'Head of Fundraising',
+    company: 'National conservation NGO with 200K+ active donors',
     metric: '40% more qualified appointments',
   },
   {
     quote: 'We were losing thousands every month to failed debit orders. SIG implemented a recovery process that recaptured revenue we had written off. They treat our money like their own.',
     name: 'Finance Manager',
-    company: 'Subscription Business',
+    company: 'Subscription business processing 8,000+ monthly debit orders',
     metric: 'Significant revenue recovered monthly',
   },
   {
     quote: 'The difference is accountability. Before SIG, leads went into a black hole. Now every lead is tracked, followed up, and reported on. We finally have visibility into our pipeline.',
     name: 'Managing Director',
-    company: 'Insurance Brokerage',
+    company: 'Mid-market insurance brokerage with 12 outbound agents',
     metric: 'Full pipeline visibility achieved',
   },
 ];
 
 export const FAQ_ITEMS = [
   {
+    question: 'How is pricing structured?',
+    answer: 'We work on performance-based and retainer models. Typical engagements start from R50,000/month depending on scope, team size, and campaign complexity. We offer transparent, performance-aligned pricing. Get in touch for a tailored proposal.',
+  },
+  {
     question: 'How quickly can you get started?',
     answer: 'Typically within 2 to 4 weeks. We scope the pipeline, set up systems, onboard agents, and begin execution. Complex campaigns may take slightly longer for proper QA and training.',
+  },
+  {
+    question: 'How do you measure success?',
+    answer: 'We report on outcomes, not activity. That means leads that convert, calls that close, and revenue that is actually collected. You will receive transparent dashboards tracking every metric that matters.',
   },
   {
     question: 'What industries do you work with?',
@@ -336,15 +357,7 @@ export const FAQ_ITEMS = [
     answer: 'Not necessarily. We can operate as your full outsourced sales and collections team, or work alongside your existing staff to handle overflow, specific campaigns, or specialised functions.',
   },
   {
-    question: 'How do you measure success?',
-    answer: 'We report on outcomes, not activity. That means leads that convert, calls that close, and revenue that is actually collected. You will receive transparent dashboards tracking every metric that matters.',
-  },
-  {
     question: 'What is the minimum contract period?',
     answer: 'We typically work on 3-month initial engagements. This gives enough time to set up, optimise, and demonstrate measurable results. Most clients continue long-term once they see the impact.',
-  },
-  {
-    question: 'How is pricing structured?',
-    answer: 'Pricing depends on the scope of services, team size, and campaign complexity. We offer transparent, performance-aligned pricing models. Get in touch for a tailored proposal.',
   },
 ];

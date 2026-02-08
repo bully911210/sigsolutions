@@ -10,7 +10,7 @@ export default function Testimonials() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="bg-slate-50 py-16 lg:py-20">
+    <section id="results" ref={ref} className="bg-white py-12 lg:py-14">
       <Container>
         {/* Section header */}
         <div className="text-center">
@@ -29,12 +29,12 @@ export default function Testimonials() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl"
           >
-            Documented Results
+            Client Testimonials
           </motion.h2>
         </div>
 
         {/* Testimonial cards grid */}
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((testimonial, i) => (
             <motion.div
               key={testimonial.name}
@@ -45,23 +45,25 @@ export default function Testimonials() {
                 delay: 0.2 + i * 0.15,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="relative flex flex-col rounded-xl border border-slate-200 bg-white p-8"
+              className="relative flex flex-col rounded-xl border border-slate-200 bg-slate-50 p-8"
             >
+              {/* Metric badge */}
+              <span className="mb-4 inline-flex self-start rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-600">
+                {testimonial.metric}
+              </span>
+
               {/* Quote text */}
               <p className="flex-1 text-sm leading-relaxed text-slate-600">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
 
               {/* Attribution */}
-              <div className="mt-6 border-t border-slate-100 pt-6">
+              <div className="mt-6 border-t border-slate-200 pt-6">
                 <p className="font-heading text-sm font-bold text-navy">
                   {testimonial.name}
                 </p>
-                <p className="mt-0.5 text-sm text-slate-500">
+                <p className="mt-0.5 text-xs text-slate-500">
                   {testimonial.company}
-                </p>
-                <p className="mt-2 text-xs font-medium text-slate-400">
-                  {testimonial.metric}
                 </p>
               </div>
             </motion.div>
