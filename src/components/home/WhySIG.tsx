@@ -9,7 +9,7 @@ export default function WhySIG() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="bg-white py-16 lg:py-20">
+    <section ref={ref} className="bg-white py-12 lg:py-14">
       <Container className="max-w-3xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function WhySIG() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="my-10 rounded-xl border border-slate-200 bg-slate-50 p-8 lg:p-10"
+          className="my-8 rounded-xl border border-slate-200 bg-slate-50 p-8 lg:p-10"
         >
           <p className="font-heading text-lg font-bold leading-relaxed text-navy sm:text-xl">
             Getting leads is easy.<br />

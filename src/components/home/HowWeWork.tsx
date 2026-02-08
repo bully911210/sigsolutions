@@ -10,19 +10,19 @@ export default function HowWeWork() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="bg-slate-50 py-16 lg:py-20">
+    <section ref={ref} className="bg-white py-12 lg:py-14">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-12 text-center"
+          className="mb-10 text-center"
         >
           <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-blue-600">
             How it works
           </p>
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            Four steps to operational delivery
+          <h2 className="font-heading text-2xl font-bold tracking-tight text-navy sm:text-3xl">
+            From audit to executive reporting in four steps
           </h2>
         </motion.div>
 
@@ -30,7 +30,7 @@ export default function HowWeWork() {
           {/* Connecting line - desktop */}
           <div className="absolute left-0 right-0 top-8 hidden h-px bg-slate-300 lg:block" />
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS_STEPS.map((step, i) => (
               <motion.div
                 key={step.number}
@@ -39,7 +39,7 @@ export default function HowWeWork() {
                 transition={{ duration: 0.6, delay: i * 0.12 }}
                 className="relative text-center"
               >
-                <div className="relative mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border-2 border-slate-300 bg-white font-heading text-base font-bold text-navy">
+                <div className="relative mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border-2 border-slate-300 bg-white font-heading text-base font-bold text-navy">
                   {step.number}
                 </div>
                 <h3 className="font-heading text-base font-bold text-navy">{step.title}</h3>

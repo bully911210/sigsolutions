@@ -59,14 +59,23 @@ function FAQItem({
 export default function FAQ() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // Top 3 FAQs expanded by default (pricing, speed, success measurement)
+  const [openIndices, setOpenIndices] = useState<Set<number>>(new Set([0, 1, 2]));
 
   const handleToggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndices((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) {
+        next.delete(index);
+      } else {
+        next.add(index);
+      }
+      return next;
+    });
   };
 
   return (
-    <section ref={ref} className="bg-white py-16 lg:py-20">
+    <section ref={ref} className="bg-white py-12 lg:py-14">
       <Container>
         <div className="mx-auto max-w-3xl">
         {/* Section header */}
@@ -95,14 +104,14 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-12 border-t border-slate-200"
+          className="mt-10 border-t border-slate-200"
         >
           {FAQ_ITEMS.map((item, index) => (
             <FAQItem
               key={index}
               question={item.question}
               answer={item.answer}
-              isOpen={openIndex === index}
+              isOpen={openIndices.has(index)}
               onToggle={() => handleToggle(index)}
             />
           ))}
@@ -113,7 +122,7 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 rounded-xl border border-slate-200 bg-slate-50 p-8 text-center"
+          className="mt-10 rounded-xl border border-slate-200 bg-slate-50 p-8 text-center"
         >
           <p className="font-heading text-lg font-bold text-navy">
             Have a specific question?

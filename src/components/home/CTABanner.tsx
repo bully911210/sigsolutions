@@ -12,7 +12,7 @@ export default function CTABanner() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="bg-navy py-16 lg:py-20">
+    <section ref={ref} className="bg-navy py-14 lg:py-16">
       <Container className="relative text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -20,7 +20,7 @@ export default function CTABanner() {
           transition={{ duration: 0.6 }}
           className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl"
         >
-          Not sure if we&apos;re the right fit?
+          You&apos;ve seen what we do. Let&apos;s talk about your numbers.
         </motion.h2>
 
         <motion.p
@@ -29,18 +29,29 @@ export default function CTABanner() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300"
         >
-          One 30-minute call with an operations lead. No sales scripts. We&apos;ll
-          tell you honestly whether we can help.
+          Book a 30-minute pipeline review — we&apos;ll show you where you&apos;re losing revenue.
+          No sales scripts. Direct access to operations leadership.
+        </motion.p>
+
+        {/* Social proof near CTA */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mx-auto mt-4 max-w-lg text-xs italic text-slate-400"
+        >
+          &ldquo;Their agents are professional and the reporting is exceptional.&rdquo;
+          — Head of Fundraising, national conservation NGO
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-10"
+          className="mt-8"
         >
           <Button href={CONTACT_URL} variant="primary" size="lg">
-            Talk to an operations lead
+            Book a 30-minute pipeline review
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </motion.div>
