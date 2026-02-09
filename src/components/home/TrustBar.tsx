@@ -9,7 +9,7 @@ const clients = [
   { name: 'Free South Africa', src: 'https://www.freesa.org.za/wp-content/uploads/2022/07/Free-SA_Logo_Main.png', desktopH: 'h-16 lg:h-[72px]', mobileH: 'h-12' },
   { name: 'Firearms Guardian', src: 'https://firearmsguardian.co.za/wp-content/uploads/2023/12/Firearms-Guardian-Logo_Firearms-Guardian-Web-1536x941.png', desktopH: 'h-[68px] lg:h-[80px]', mobileH: 'h-14' },
   { name: 'Acorn Brokers', src: 'https://acornbrokers.co.za/images/logo.png', desktopH: 'h-[68px] lg:h-[80px]', mobileH: 'h-14' },
-  { name: 'Civil Society SA', src: 'https://civilsociety.lovable.app/assets/logo-Czk94Wx-.png', desktopH: 'h-16 lg:h-[72px]', mobileH: 'h-12' },
+  { name: 'Civil Society SA', src: 'https://i.ibb.co/ZRtZ9gq5/New-Project-96.png', desktopH: 'h-16 lg:h-[72px]', mobileH: 'h-12' },
 ];
 
 export default function TrustBar() {

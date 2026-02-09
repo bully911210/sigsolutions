@@ -38,6 +38,7 @@ export default function Navbar() {
               src={LOGO_URL}
               alt="SIG Solutions"
               className="h-[60px]"
+              style={{ filter: 'brightness(0) saturate(100%) invert(14%) sepia(42%) saturate(4618%) hue-rotate(193deg) brightness(89%) contrast(98%)' }}
             />
           </Link>
 
