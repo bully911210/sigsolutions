@@ -115,10 +115,13 @@ export default function Footer() {
       </Container>
 
       <div className="border-t border-slate-700/50">
-        <Container className="flex items-center justify-center py-5">
+        <Container className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 py-5">
           <p className="text-xs text-slate-500">
             &copy; {new Date().getFullYear()} SIG Solutions. All rights reserved.
           </p>
+          <Link href="/privacy" className="text-xs text-slate-500 transition-colors hover:text-white">
+            Privacy Policy
+          </Link>
         </Container>
       </div>
     </footer>
